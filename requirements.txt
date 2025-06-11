@@ -1,0 +1,13 @@
+numpy
+pillow
+matplotlib
+tqdm
+json5
+torchvision
+opencv-python
+scikit-learn
+plotly
+PyQt5
+fastapi
+uvicorn
+python3-tk
