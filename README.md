@@ -1,4 +1,8 @@
-# Thermal Images of *Rattus norvegicus* Wistar – Semantic and instance segmentation dataset
+# Strong Vivarium: Thermal Imaging Analysis Software Wistar *Rattus norvegicus* – Semantic and Instance Segmentation Software and Dataset
+![Github version](https://img.shields.io/badge/version-0.0.4-blue)
+![License](https://img.shields.io/badge/license-GNU-green)
+![Status](https://img.shields.io/badge/status-development-yellow)
+
 
 This dataset offers a **comprehensive collection of thermal images of *Rattus norvegicus* Wistar rats**,generated automatic  **segmentation masks** that were subsequently verified. It is specifically curated to support **deep learning tasks** such as **semantic segmentation** and **instance segmentation** in the context of biomedical image analysis **technical benchmarks**
 
@@ -35,12 +39,11 @@ This project aligns with widely accepted precedents in the field of computer vis
 
 These datasets are considered **non-invasive, observational resources**. They demonstrate that **image-based studies involving domestic animals—without physical contact, experimental manipulation, or stress—are ethically acceptable and widely supported by the machine learning research community**. This project follows the same principle: the data involves a **single domestic pet** observed passively through thermal imaging in a home environment, with owner consent and no behavioral or physiological intervention.
 
-
-&gt; ##⚠️ **Important Ethical and Scientific Disclaimer**  
-&gt;  
-&gt; 1. We reiterate that the animal involved in this dataset is a domestic pet. No invasive procedures or confinement protocols were applied.
-&gt; 2. **If this benchmark is used in scientific or academic research, it is highly recommended to repeat the validation tests on real data**, since the environment and behavioral context of a domestic environment are not directly comparable to those of a controlled vivarium.
-&gt; 3. Caution should be exercised when generalizing or comparing results with studies that used laboratory-raised animals under standardized housing conditions.
+> ![IMPORTANT](https://img.shields.io/badge/important-observations-blue) 
+> <h2>⚠️ Important Ethical and Scientific Disclaimer  </h2>
+> 1. We reiterate that the animal involved in this dataset is a domestic pet. No invasive procedures or confinement protocols were applied.
+> 2. **If this benchmark is used in scientific or academic research, it is highly recommended to repeat the validation tests on real data**, since the environment and behavioral context of a domestic environment are not directly comparable to those of a controlled vivarium.
+> 3. Caution should be exercised when generalizing or comparing results with studies that used laboratory-raised animals under standardized housing conditions.
 
 ----
 
@@ -128,7 +131,7 @@ Peres RB. Thermal Images of Rattus norvegicus Wistar for Segmentation [dataset][
 ---
 
 ## 📑 Table of Contents
-* [Thermal Images of *Rattus norvegicus* Wistar – Semantic and Instance Segmentation Dataset](#thermal-images-of-rattus-norvegicus-wistar--semantic-and-instance-segmentation-dataset)
+* [Strong Vivarium: Thermal Imaging Analysis Software Wistar *Rattus norvegicus* – Semantic and Instance Segmentation Software and Dataset](#strong-vivarium-thermal-imaging-analysis-software-wistar-rattus-norvegicus--semantic-and-instance-segmentation-software-and-dataset)
   * [Ethical Considerations / Animal Ethics Statement](#ethical-considerations--animal-ethics-statement)
     * [(c) **Open Licenses and Precedents**](#c-open-licenses-and-precedents)
     * [⚠️ **Important Ethical and Scientific Disclaimer**](#ethical-considerations--animal-ethics-statement)
@@ -170,8 +173,10 @@ Choose your installation method based on your operating system and environment:
 
 ### 🪟 **Windows (with GUI)**
 
-&gt; Just double-click the file:
-&gt; bioterio_forte.exe
+```text
+Just double-click the file:
+bioterio_forte.exe
+```
 
 
 ### 🐧💻 **Linux/macOS with GUI**
@@ -184,17 +189,12 @@ or
 python install.py
 ```
 
-&gt; #### ⚠️ **Warnings:**
-&gt; * 📌 *Note: Linux/macOS must have Python with Tkinter support and required GUI packages installed.*
-&gt; * **Minimalist distributions** (e.g., Alpine Linux) or **headless environments** do **not support `tkinter` by default**.
-&gt; * In **environments without a GUI**, `tkinter` **will not open** and will raise an error like:
-&gt;
-&gt; ```text
-&gt; _tkinter.TclError: no display name and no $DISPLAY environment variable
-&gt; ```
-&gt;
-&gt; If your system does not appear to support a graphical user interface (GUI) or you are unsure, proceed using the GUI-less installation method as it will guide you through the installation
-<br>
+> ![IMPORTANT](https://img.shields.io/badge/important-observations-blue)
+> * 📌 *Note: Linux/macOS must have Python with Tkinter support and required GUI packages installed.*
+> * **Minimalist distributions** (e.g., Alpine Linux) or **headless environments** do **not support `tkinter` by default**.
+> * In **environments without a GUI**, `tkinter` **will not open** and will raise an error like:
+>   * *`_tkinter.TclError: no display name and no $DISPLAY environment variable`*
+> * If your system does not appear to support a graphical user interface (GUI) or you are unsure, proceed using the GUI-less installation method as it will guide you through the installation
 
 
 **Image 2 -**   🖥️ Software GUI – Overview Graphical User Interface
@@ -308,6 +308,7 @@ These figures underscore the significant potential of such technologies to enhan
 |Xinfrared  T2S+ 8mm Macro Thermal Imaging Camera| *Backside of a presentation panel* placed on the floor for a neutral thermal background| The Wistar lineage (albino rat) is one of the most widely used in scientific research worldwide [https://bioteriocentral.ufsc.br/rattus-norvergicus/](url)| Conventional housing: Bioterium Box for Rats and Mice with Drinker No. 3| Housing cover developed for remote thermographic monitoring of pets|
 
 <br>
+
 **Image 3 -** Animal care and housing
 | Meat | Drink | Forage|
 | --- | --- | --- |
