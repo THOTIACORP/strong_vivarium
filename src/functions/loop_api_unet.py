@@ -133,8 +133,18 @@ class MaskSaverApp(QWidget):
         try:
             pixmap_sent = QPixmap(image_path).scaled(256, 256, Qt.KeepAspectRatio, Qt.SmoothTransformation)
             self.label_sent.setPixmap(pixmap_sent)
+
+            # --- DUPLICAR a imagem original com sufixo "_unet" na pasta de entrada
+            nome = os.path.basename(image_path)
+            nome_sem_ext = os.path.splitext(nome)[0]
+            ext = os.path.splitext(nome)[1]
+            nova_imagem_path = os.path.join(os.path.dirname(image_path), f"{nome_sem_ext}_unet{ext}")
+            with open(image_path, "rb") as f_in, open(nova_imagem_path, "wb") as f_out:
+                f_out.write(f_in.read())
         except Exception as e:
             self.label_sent.setText(f"Erro ao carregar imagem enviada:\n{e}")
+
+            
 
         # Mostrar JSON
         self.json_display.setPlainText(str(json_data))
