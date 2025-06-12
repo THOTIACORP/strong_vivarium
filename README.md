@@ -258,7 +258,7 @@ pyinstaller --onefile --noconsole --name bioterio_forte --icon=icon.ico install.
 ### &emsp;&emsp; 1.1.2 - 🐁 `bioterio_forte.spec`: Assistant `bioterio_forte.exe`
 - Created by compiling the parent file `install.py`
 
-&gt; 📁 Control of files in the root in src/install
+> 📁 Control of files in the root in src/install
 
 ---
 
@@ -277,7 +277,7 @@ This PyQt5-based interface serves as a modular control panel for running a therm
 | 🧠       | Inference API U-Net | Runs U-Net model inference on thermal data.      |
 | 🦊       | Combine Animals     | Merges segmented animals for dataset generation. |
 
-&gt; 📁 Control src/functions
+> 📁 Control src/functions
 
 ---
 
@@ -357,27 +357,27 @@ We divide the day into four 6-hour time blocks:
 - **Usage**: Highly reliable semantic segmentation with conventional housing environment study approach
 
 
-&gt; ### ⚠️ **Justification for Sampling Design Housing** – Why This Is a Sampling Strategy
-&gt; 
-&gt; This approach uses **temporal sampling** — we are **not analyzing the full 24 hours**, but a **representative 4-hour subset** of time. This sample is:
-&gt; 
-&gt; - **Systematic**: spans distinct periods of the day  
-&gt; - **Stratified**: aligned with biological activity cycles  
-&gt; - **Efficient**: reduces data volume by ~83% (4h out of 24h)
-&gt; 
-&gt; 📌 **Conclusion**: This is a **probabilistic time sample**, based on the assumption of **behavioral consistency within strata** and **variation across strata**.
-&gt; 
-&gt; ---
-&gt; 
-&gt; #### ⏱️ Why 4 Hours Matters
-&gt; 
-&gt; Behavioral studies (Altmann, 1974; Martin & Bateson, 2007) show that **4–6 hours** of strategically distributed observation can reliably reflect full-day patterns — **if properly stratified**.
-&gt; 
-&gt; Our 4-hour sample:
-&gt; 
-&gt; - Represents **all behavioral phases** (nocturnal, diurnal, crepuscular)  
-&gt; - Captures **cyclical behavior** with two observations per 6-hour block  
-&gt; - Ensures a **feasible and scalable** protocol for long-term studies
+> ### ⚠️ **Justification for Sampling Design Housing** – Why This Is a Sampling Strategy
+> 
+> This approach uses **temporal sampling** — we are **not analyzing the full 24 hours**, but a **representative 4-hour subset** of time. This sample is:
+> 
+> - **Systematic**: spans distinct periods of the day  
+> - **Stratified**: aligned with biological activity cycles  
+> - **Efficient**: reduces data volume by ~83% (4h out of 24h)
+> 
+> 📌 **Conclusion**: This is a **probabilistic time sample**, based on the assumption of **behavioral consistency within strata** and **variation across strata**.
+> 
+> ---
+> 
+> #### ⏱️ Why 4 Hours Matters
+> 
+> Behavioral studies (Altmann, 1974; Martin & Bateson, 2007) show that **4–6 hours** of strategically distributed observation can reliably reflect full-day patterns — **if properly stratified**.
+> 
+> Our 4-hour sample:
+> 
+> - Represents **all behavioral phases** (nocturnal, diurnal, crepuscular)  
+> - Captures **cyclical behavior** with two observations per 6-hour block  
+> - Ensures a **feasible and scalable** protocol for long-term studies
 
 ---
 
@@ -404,7 +404,7 @@ This Python script uses OpenCV to extract all frames from a video file and save 
 **Image 5 -** Running GUI
 ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Fa192f95729bd2ba995a2aa2c5ab83ad4%2FCaptura%20de%20tela%202025-06-09%20132922.png?generation=1749490179589018&alt=media)
 
-&gt; 📁 Control src/functions
+> 📁 Control src/functions
   
 ---
 
@@ -439,7 +439,7 @@ The output is a semantic mask for each image, stored in the `masks_skeleton_ther
 
 **Image 6 -** Running module independently
 ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F78dc1e3e8811d001ded9c860e6ec9c8f%2FCaptura%20de%20tela%202025-06-09%20154955.png?generation=1749498619645861&alt=media)
-&gt; - We use SAM (Segment Anything Model) as an auxiliary tool for universal segmentation, allowing the rapid and accurate identification of objects for later manipulation and recomposition in the library. This way we can duplicate the datasets with different corrections by the same researcher. Note: The image bank will be duplicated with SAM before the image name and the masks corresponding to the image name.
+> - We use SAM (Segment Anything Model) as an auxiliary tool for universal segmentation, allowing the rapid and accurate identification of objects for later manipulation and recomposition in the library. This way we can duplicate the datasets with different corrections by the same researcher. Note: The image bank will be duplicated with SAM before the image name and the masks corresponding to the image name.
 
 **Image 7 -** Running GUI
 ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F78509ab698973f2414206bcd3cd988b5%2FCaptura%20de%20tela%202025-06-09%20134748.png?generation=1749491286610868&alt=media)
@@ -451,14 +451,15 @@ The output is a semantic mask for each image, stored in the `masks_skeleton_ther
 
 - Note on image visualization: Since masks are predominantly very dark (almost black), it can be difficult to visually inspect the details directly. To address this issue, we developed the `view_mask_debug.py` script — a mask visualization and debugging tool. This utility enhances the display of segmentation masks, making it easier to verify and debug the results during analysis.
 
-&gt; ⚙️ TODO: How can I help with this part?
-&gt; - better adjust the definition of the tail, body and head 
-&gt; - Improve the calculation of the percentage of the size of the animal's parts 
-&gt; - It works for any animal that has a similar structure, for example, cat, dog, fish
-&gt; - Make eleptic cuts on head and tail
+> ⚙️ TODO: How can I help with this part?
+> - better adjust the definition of the tail, body and head 
+> - Improve the calculation of the percentage of the size of the animal's parts 
+> - It works for any animal that has a similar structure, for example, cat, dog, fish
+> - Make eleptic cuts on head and tail
 
 <br>
-&gt; 📁 Control src/functions
+
+> 📁 Control src/functions
 
 ---
 
@@ -483,7 +484,7 @@ Use during development to visually evaluate the results of automatic segmentatio
 **Image 10 -** Running GUI
 ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Fdf0ddf72661caddbfd42525d569bed26%2FCaptura%20de%20tela%202025-06-10%20100152.png?generation=1749564240367013&alt=media)
 
-&gt; 📁 Control src/functions
+> 📁 Control src/functions
 
 ---
 
@@ -524,7 +525,7 @@ Usage:
 - Especially useful for preparing high-quality ground truth masks before training deep learning models like U-Net
 - Helps ensure that the dataset’s annotations reflect true anatomical regions, leading to more robust and reliable model training and evaluation
 
-&gt; 📁 Control src/functions
+> 📁 Control src/functions
 
 ---
 
@@ -552,7 +553,7 @@ This Python tool generates new synthetic images of rats over background images u
 | Generates updated masks | Original classes (1/2/3) retained in synthetic masks              |
 | Logging                 | Real-time progress shown in GUI text area                         |
 
-&gt; 📁 Control src/functions
+> 📁 Control src/functions
 
 ---
 
@@ -616,9 +617,9 @@ model_hounsing:
 | `val_loss`     | 0.      | **0.** ✅ |
 | `val_accuracy` | 0.| 0.      |
 
-&gt;### ⚠️ **Attention: note images are converted to grayscale**
-&gt;
-&gt;While the database derives multiple color models from images with their respective masks, we convert the thermal images to grayscale to remove artificial color information, align with sensor outputs, reduce noise, and improve model accuracy and efficiency. Segmentation is one thing, thermal analysis is another; here, we segment thermal images regardless of the sensor or thermal sensor configuration.
+>### ⚠️ **Attention: note images are converted to grayscale**
+>
+>While the database derives multiple color models from images with their respective masks, we convert the thermal images to grayscale to remove artificial color information, align with sensor outputs, reduce noise, and improve model accuracy and efficiency. Segmentation is one thing, thermal analysis is another; here, we segment thermal images regardless of the sensor or thermal sensor configuration.
 
 ### 🔄 **Thermal Image Preprocessing: Grayscale Conversion**
 
@@ -630,7 +631,8 @@ model_hounsing:
 | **Performance**             | 3-channel input, more computation                | 1-channel input, less memory & faster                | Efficient preprocessing and inference                           |
 
 <br>
-&gt; 📁 Control src/train
+
+> 📁 Control src/train
 
 ---
 
@@ -675,7 +677,7 @@ return {
 Integration into web or backend systems for automated analysis of new thermal images
 
 ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Fba2e8d4a9750229cca5d7de29a2253e9%2Foiii.png?generation=1749570558585264&alt=media)
-&gt; 📁 Control src/services
+> 📁 Control src/services
 
 ---
 
