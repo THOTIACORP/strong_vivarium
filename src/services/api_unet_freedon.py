@@ -224,7 +224,6 @@ def track_mouse_movement_in_video(video_bytes, model, device, transform, target_
     print("✅ Processamento concluído.")
 
     return {
-        "positions": positions_per_class,
         "movimentos": deslocamentos_totais,
         "mapa_completo": map_img,
         "head_path": head_path,
@@ -421,8 +420,8 @@ async def predict(image: UploadFile = File(...)):
             content={
                 "filename": image.filename,
                 "pixel_counts": pixel_counts,
-                "masked_image": href,
-                "mask_unet": f"data:image/png;base64,{mask_base64}"
+                "image": href,
+                "mask": f"data:image/png;base64,{mask_base64}"
 
             }
         )

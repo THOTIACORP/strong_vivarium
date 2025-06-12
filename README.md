@@ -397,7 +397,9 @@ This Python script uses OpenCV to extract all frames from a video file and save 
 |  ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Fd3b035db676428a728202496cda5446c%2FCaptura%20de%20tela%202025-06-05%20104755.png?generation=1749134893128358&alt=media)| ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F99ee4d0dddd7b16ea8967304bedd10ce%2FCaptura%20de%20tela%202025-06-05%20104923.png?generation=1749134994187220&alt=media)  |
 
 <br>
+
 **Note on Interference**: 
+
 1. **Step 1 - Loose Environment**: An environment where the animal is freely moving and the background absorbs little of the animal's heat, resulting in minimal interference
 2. **Step 2 - Living Environment**: In this case, heat reflection and absorption caused by the animal itself, as well as the presence of feces and urine, introduce significant interference. This makes it difficult to accurately identify and outline the animal’s edges in thermal images 
 

@@ -212,10 +212,16 @@ class MaskEditor(QWidget):
         self.lock_background = not self.lock_background
 
     def prev_image(self):
-        if self.index>0: self.index-=1; self.load_and_show()
+        if self.index > 0:
+            self.save_mask()  # salva a máscara atual
+            self.index -= 1
+            self.load_and_show()
 
     def next_image(self):
-        if self.index<len(self.img_files)-1: self.index+=1; self.load_and_show()
+        if self.index < len(self.img_files) - 1:
+            self.save_mask()  # salva a máscara atual
+            self.index += 1
+            self.load_and_show()
 
     def save_mask(self):
         sf = self.save_folder.text().strip()
