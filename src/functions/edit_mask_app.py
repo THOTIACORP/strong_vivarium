@@ -128,6 +128,11 @@ class MaskEditor(QWidget):
         shortcut_next = QShortcut(QKeySequence("D"), self)
         shortcut_next.activated.connect(self.next_image)
 
+            # --- Atalhos de teclado para seleção de classe (0 a NUM_CLASSES) ---
+        for i in range(NUM_CLASSES + 1):
+            shortcut = QShortcut(QKeySequence(str(i)), self)
+            shortcut.activated.connect(lambda i=i: self.set_class(i))
+
     def browse_input(self):
         d = QFileDialog.getExistingDirectory(self, "Pasta Imagens")
         if d:
