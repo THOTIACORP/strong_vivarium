@@ -4,10 +4,11 @@ import numpy as np
 import cv2
 from PyQt5.QtWidgets import (
     QApplication, QWidget, QLabel, QVBoxLayout, QHBoxLayout,
-    QPushButton, QSlider, QComboBox, QFileDialog, QLineEdit
+    QPushButton, QSlider, QComboBox, QFileDialog, QLineEdit, QShortcut
 )
-from PyQt5.QtGui import QPixmap, QImage, QCursor, QPainter, QPen
+from PyQt5.QtGui import QPixmap, QImage, QCursor, QPainter, QPen, QKeySequence
 from PyQt5.QtCore import Qt
+
 
 NUM_CLASSES = 3
 CLASS_COLORS = [
@@ -119,6 +120,13 @@ class MaskEditor(QWidget):
 
         self.setLayout(main)
         self.setCursor(create_brush_cursor(self.brush_size))
+
+             # --- Atalhos de teclado para navegação ---
+        shortcut_prev = QShortcut(QKeySequence("A"), self)
+        shortcut_prev.activated.connect(self.prev_image)
+
+        shortcut_next = QShortcut(QKeySequence("D"), self)
+        shortcut_next.activated.connect(self.next_image)
 
     def browse_input(self):
         d = QFileDialog.getExistingDirectory(self, "Pasta Imagens")
