@@ -9,8 +9,8 @@ This dataset offers a **comprehensive collection of thermal images of *Rattus no
 
 **Image 1 -** Images that make up the database 
 
-| 1x1| NxN |
-| --- | --- |
+| 1x1                                                                                                                                                                                     | NxN                                                                                                                                                                                                                   |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Fa33739c57711589dde37332acf4443b6%2Fframe_00090.jpg?generation=1748203874976823&alt=media) | ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Fe5428007ac6621ad734964147f00e54d%2FCaptura%20de%20tela%202025-05-24%20173325.png?generation=1748203895388385&alt=media) |
 
 
@@ -130,40 +130,65 @@ Peres RB. Thermal Images of Rattus norvegicus Wistar for Segmentation [dataset][
 
 ---
 
-## 📑 Table of Contents
-* [Strong Vivarium: Thermal Imaging Analysis Software Wistar *Rattus norvegicus* – Semantic and Instance Segmentation Software and Dataset](#strong-vivarium-thermal-imaging-analysis-software-wistar-rattus-norvegicus--semantic-and-instance-segmentation-software-and-dataset)
-  * [Ethical Considerations / Animal Ethics Statement](#ethical-considerations--animal-ethics-statement)
-    * [(c) **Open Licenses and Precedents**](#c-open-licenses-and-precedents)
-    * [⚠️ **Important Ethical and Scientific Disclaimer**](#ethical-considerations--animal-ethics-statement)
-  * [📦 Dataset Highlights](#-dataset-highlights) 
-  * [📁 Directory Structure](#-directory-structure) 
-  * [👨‍🔬 Author](#-author)
-  * [📜 License](#-license)
-  * [📢 Citation](#-citation)
-* [1 - Installation and use](#1---installation-and-use)
-  * [1.1 - 🎟️ `install.py`](#11---️-installpy-cross-platform-graphical-installer-and-launcher-using-tkinter-with-multi-language-support-enpt)
-  * [1.2 - 🐁 `bioterio_tool_panel.py`](#12----bioterio_tool_panelpy--the-project-features-two-key-interfaces)
-* [2 - 🎥 Data Source  & Generation](#2----data-source---generation)
-* [3 - 🗺️ Justification, Methods and materials](#3---️-justification-methods-and-materials)
-* [4 - Software construction](#-4---software-construction)
-  * [4.1 - 🎞️ opencv.py – Video Frame Extraction Pipeline](#41---️-opencvpy--video-frame-extraction-pipeline)
-  * [4.2 - 🔧 pseudo-class.py – Thermal Image Segmentation Pipeline](#42----pseudo-classpy--ai-free-thermal-image-segmentation-pipeline)
-  * [4.3 - 🧪 `view_mask_debug.py` – **Mask Visualization and Debugging**](#43----view_mask_debugpy--mask-visualization-and-debugging)
-  * [4.4 - 🧰 `edit_mask_app.py` – **Mask Editing GUI**](#7----edit_mask_apppy--mask-editing-gui)
-  * [4.5 - `transforms_fake.py` – **Fake data for intensive training**](#8---transforms_fakepy--fake-data-for-intensive-training)
-  * [4.6 - 🧠 `train_unet.py` – **U-Net Model Training**](#9----train_unetpy--u-net-model-training)
-  * [4.7 - 🔌 `api_unet.py` – Inference API](#10----api_unetpy--inference-api)
-  * [4.8 -  🧪 `transforms_fake_multiple.py` - Fake augmentation of semantic segmentation dataset to train instance segmentation](#12----transforms_fake_multiplepy---fake-augmentation-of-semantic-segmentation-dataset-to-train-instance-segmentation)
-* [5 - 🌐 General Proposition: Why Segment *Rattus norvegicus*?](#5----general-proposition-why-segment-rattus-norvegicus)
-  * [5.1 -📍 Tracking Movement: Why it Also Matters](#-tracking-movement-why-it-also-matters)
-  * [5.2🎯 How the Computer Sees – Why is It Important?](#-how-the-computer-sees---why-is-it-important)
-    * [5.2.1 - 🧩 What is a Kernel?](#-what-is-a-kernel)
-    * [5.2.2 - 🧩 Kernel / CNN](#-kernel--cnn)
-    * [5.2.3 - 📊 Comparison Table: Image AI Models](#-comparison-table-image-ai-models)
-* [6 - ⚛️ Results](#6---️-results)
-* [7 - ⚛️ Partial Conclusion](#7---️-partial-conclusion)
-* [8 - ⚛️ Discussions](#8---️-discussions)
-* [9 - 📚 References](#9----references)
+## 📑 Index
+- [Strong Vivarium: Thermal Imaging Analysis Software Wistar *Rattus norvegicus* – Semantic and Instance Segmentation Software and Dataset](#strong-vivarium-thermal-imaging-analysis-software-wistar-rattus-norvegicus--semantic-and-instance-segmentation-software-and-dataset)
+- [~~*Ethical Considerations / Animal Ethics Statement*~~](#ethical-considerations--animal-ethics-statement)
+  - [(c) **Open Licenses and Precedents**](#c-open-licenses-and-precedents)
+- [📦 Dataset Highlights](#-dataset-highlights)
+- [📁 Directory Structure](#-directory-structure)
+- [👨‍🔬 Author](#-author)
+- [📜 License](#-license)
+- [📢 Citation](#-citation)
+  - [📑 Index](#-index)
+- [1 - Installation and use](#1---installation-and-use)
+      - [🪟 **Windows (with GUI)**](#-windows-with-gui)
+      - [🐧💻 **Linux/macOS with GUI**](#-linuxmacos-with-gui)
+      - [🐧🔧 **Linux/macOS (No GUI - Terminal, No Docker)**](#-linuxmacos-no-gui---terminal-no-docker)
+      - [🐳 **Linux/macOS  (No GUI - Terminal, with Docker)**](#-linuxmacos--no-gui---terminal-with-docker)
+    - [1.1 - 🎟️ `install.py`: Cross-platform graphical installer and launcher using Tkinter with multi-language support (EN/PT).](#11---️-installpy-cross-platform-graphical-installer-and-launcher-using-tkinter-with-multi-language-support-enpt)
+        - [1.1.1 - 🐁 `bioterio_forte.exe`: Windows Executable](#111----bioterio_forteexe-windows-executable)
+        - [1.1.2 - 🐁 `bioterio_forte.spec`: Assistant `bioterio_forte.exe`](#112----bioterio_fortespec-assistant-bioterio_forteexe)
+        - [1.2 - 🐁 `bioterio_tool_panel.py` : The project features two key interfaces](#12----bioterio_tool_panelpy--the-project-features-two-key-interfaces)
+- [2 - 🎥 Data Source  \& Generation](#2----data-source---generation)
+- [3 - 🗺️ Justification, Methods and materials](#3---️-justification-methods-and-materials)
+  - [3.1 - 🎥 Video Capture Setup](#31----video-capture-setup)
+        - [3.1.1 - **Frame Extraction Plan**](#311---frame-extraction-plan)
+        - [3.1.2 - ✅ Total Frame Count](#312----total-frame-count)
+- [📀 4 - Software construction: Understand, use, improve](#-4---software-construction-understand-use-improve)
+- [4.1 - 🎞️ opencv.py – Video Frame Extraction Pipeline](#41---️-opencvpy--video-frame-extraction-pipeline)
+- [4.2 - 🔧 pseudo-class.py – Thermal Image Segmentation Pipeline](#42----pseudo-classpy--thermal-image-segmentation-pipeline)
+    - [4.2.1 - **Background Removal**](#421---background-removal)
+    - [4.2.2 - **Noise Filtering**](#422---noise-filtering)
+    - [4.2.3 - **Anatomical Axis Detection (PCA)**](#423---anatomical-axis-detection-pca)
+    - [4.2.4 - **Region Classification**](#424---region-classification)
+    - [4.2.5 - **Mask Generation**](#425---mask-generation)
+    - [4.2.6 - **Segment Anything Model (SAM)**](#426---segment-anything-model-sam)
+- [4.3 - 🧪 `view_mask_debug.py` – **Mask Visualization and Debugging**](#43----view_mask_debugpy--mask-visualization-and-debugging)
+- [4.4 - 🧰 `edit_mask_app.py` – **Mask Editing GUI**](#44----edit_mask_apppy--mask-editing-gui)
+- [4.5 - `transforms_fake.py` – **Fake data for intensive training**](#45---transforms_fakepy--fake-data-for-intensive-training)
+- [4.6 - 🧠 `train_unet.py` – **U-Net Model Training**](#46----train_unetpy--u-net-model-training)
+- [4.7 - 🔌 `api_{}.py` – Inference API](#47----api_py--inference-api)
+- [4.8 - ➰ `loop_api_unet.py` → Script for generating and saving segmentation masks via API](#48----loop_api_unetpy--script-for-generating-and-saving-segmentation-masks-via-api)
+- [4.9 - 🧪 `transforms_fake_multiple.py` - Fake augmentation of semantic segmentation dataset to train instance segmentation](#49----transforms_fake_multiplepy---fake-augmentation-of-semantic-segmentation-dataset-to-train-instance-segmentation)
+- [5 - 🌐 **General Proposition: Why Segment *Rattus norvegicus*?**](#5----general-proposition-why-segment-rattus-norvegicus)
+  - [5.1 - 📍 **Tracking Movement: Why it also matters**](#51----tracking-movement-why-it-also-matters)
+  - [5.2 - 🎯 **How ​​the computer sees - Why is it important?**](#52----how-the-computer-sees---why-is-it-important)
+      - [5.2.1 - 🧩 What is a Kernel?](#521----what-is-a-kernel)
+      - [5.2.2 - 🧩 Kernel / CNN](#522----kernel--cnn)
+      - [5.2.3 - 📊 Comparison Table: Image AI Models](#523----comparison-table-image-ai-models)
+- [6 - ⚛️ **Results**](#6---️-results)
+- [7 - ⚛️ Partial Conclusion](#7---️-partial-conclusion)
+- [8 - ⚛️ Discussions](#8---️-discussions)
+  - [8.1 - **Synthetic data**](#81---synthetic-data)
+  - [8.2 - **Synthetic data frameworks**](#82---synthetic-data-frameworks)
+- [9 - 📚 References](#9----references)
+  - [9.1 - **Animal Care**](#91---animal-care)
+  - [9.2 - **Amount of rodent research**](#92---amount-of-rodent-research)
+  - [9.3 - **Sampling Methods**](#93---sampling-methods)
+  - [9.4 - **Thermal Imaging / Infrared**](#94---thermal-imaging--infrared)
+  - [9.5 - **Other similar databases**](#95---other-similar-databases)
+  - [9.6 - **Data Augmentation**](#96---data-augmentation)
+  - [9.7 - **Auxiliary tools**](#97---auxiliary-tools)
 
 ---
 
@@ -171,7 +196,7 @@ Peres RB. Thermal Images of Rattus norvegicus Wistar for Segmentation [dataset][
 - This installer works on **Windows, Linux, and macOS**, with a localized UI and clear feedback.
 Choose your installation method based on your operating system and environment:
 
-### 🪟 **Windows (with GUI)**
+#### 🪟 **Windows (with GUI)**
 
 ```text
 Just double-click the file:
@@ -179,7 +204,7 @@ bioterio_forte.exe
 ```
 
 
-### 🐧💻 **Linux/macOS with GUI**
+#### 🐧💻 **Linux/macOS with GUI**
 
 ```bash
 python3 install.py
@@ -198,10 +223,10 @@ python install.py
 
 
 **Image 2 -**   🖥️ Software GUI – Overview Graphical User Interface
-| Directory | Install Running |
-| --- | --- |
-| ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Fb47610ae06f1706529ef82dd88f8c598%2FCaptura%20de%20tela%202025-06-05%20154152.png?generation=1749152592594434&alt=media) | ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F6f0134c6bb935dc9d5172e51e0763531%2FCaptura%20de%20tela%202025-06-05%20153017.png?generation=1749152194031618&alt=media) ||
-|`bioterio_forte.exe`| First run|
+| Directory                                                                                                                                                                                                             | Install Running                                                                                                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Fb47610ae06f1706529ef82dd88f8c598%2FCaptura%20de%20tela%202025-06-05%20154152.png?generation=1749152592594434&alt=media) | ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F6f0134c6bb935dc9d5172e51e0763531%2FCaptura%20de%20tela%202025-06-05%20153017.png?generation=1749152194031618&alt=media) |  |
+| `bioterio_forte.exe`                                                                                                                                                                                                  | First run                                                                                                                                                                                                             |
 
 <br>
 
@@ -214,7 +239,7 @@ python install.py
 **Image 3 -**   🖥️ Software GUI – Operation
 ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F8b0113a46ce1e75f381d93a5d128c968%2FCaptura%20de%20tela%202025-06-10%20223055.png?generation=1749609077503300&alt=media)
 
-### 🐧🔧 **Linux/macOS (No GUI - Terminal, No Docker)**
+#### 🐧🔧 **Linux/macOS (No GUI - Terminal, No Docker)**
 
 ```bash
 cd src/install
@@ -222,7 +247,7 @@ chmod +x install_nodocker.sh
 ./install_nodocker.sh
 ```
 
-### 🐳 **Linux/macOS  (No GUI - Terminal, with Docker)**
+#### 🐳 **Linux/macOS  (No GUI - Terminal, with Docker)**
 
 ```bash
 cd src/install
@@ -232,7 +257,7 @@ chmod +x install_docker.sh
 
 ---
 
-## &emsp; 1.1 - 🎟️ `install.py`: Cross-platform graphical installer and launcher using Tkinter with multi-language support (EN/PT).
+###  1.1 - 🎟️ `install.py`: Cross-platform graphical installer and launcher using Tkinter with multi-language support (EN/PT).
 - It lets the user choose Docker or no-Docker install mode, executes shell/batch scripts, shows real-time logs, displays license info, and checks for prior installation.
 
 | Step                   | Description                                                          |
@@ -248,34 +273,34 @@ chmod +x install_docker.sh
 
 <br>
 
-### &emsp;&emsp; 1.1.1 - 🐁 `bioterio_forte.exe`: Windows Executable
+#####  1.1.1 - 🐁 `bioterio_forte.exe`: Windows Executable
 - File with several functions but the summary is that it starts the software and checks if it has already been installed if there are new versions
 - Created by compiling the parent file `install.py` any visual changes `install.py` must be recompiled with below command
 
 ```bash
 pyinstaller --onefile --noconsole --name bioterio_forte --icon=icon.ico install.py
 ```
-### &emsp;&emsp; 1.1.2 - 🐁 `bioterio_forte.spec`: Assistant `bioterio_forte.exe`
+#####  1.1.2 - 🐁 `bioterio_forte.spec`: Assistant `bioterio_forte.exe`
 - Created by compiling the parent file `install.py`
 
 > 📁 Control of files in the root in src/install
 
 ---
 
-## &emsp; 1.2 - 🐁 `bioterio_tool_panel.py` : The project features two key interfaces
+#####  1.2 - 🐁 `bioterio_tool_panel.py` : The project features two key interfaces
 
 This PyQt5-based interface serves as a modular control panel for running a thermal image segmentation pipeline. It organizes six processing scripts—ranging from frame extraction to U-Net inference—into individual tabs with interactive execution and output logs. Each module operates independently, allowing flexibility in debugging and testing. The GUI supports light/dark themes and adapts to Windows or Linux environments. This structure mirrors typical steps used in scientific pipelines, like those from Kaggle's synthetic rodent dataset, providing clarity and control across the entire workflow.
 
-### 📊 **Module Summary Table**
+**📊 **Module Summary Table****
 
 | **Icon** | **Module Name**     | **Function**                                     |
 | -------- | ------------------- | ------------------------------------------------ |
-| 🎞️      | Extract Frames      | Extracts frames from thermal video input.        |
-| 🧬       | Pseudo-Classes      | Generates synthetic labels (pseudo-classes).     |
-| 🕵️      | View Mask Debug     | Visualizes segmentation masks for QA.            |
-| 🎨       | Edit Masks (GUI)    | GUI tool to manually edit segmentation.          |
-| 🧠       | Inference API U-Net | Runs U-Net model inference on thermal data.      |
-| 🦊       | Combine Animals     | Merges segmented animals for dataset generation. |
+| 🎞️        | Extract Frames      | Extracts frames from thermal video input.        |
+| 🧬        | Pseudo-Classes      | Generates synthetic labels (pseudo-classes).     |
+| 🕵️        | View Mask Debug     | Visualizes segmentation masks for QA.            |
+| 🎨        | Edit Masks (GUI)    | GUI tool to manually edit segmentation.          |
+| 🧠        | Inference API U-Net | Runs U-Net model inference on thermal data.      |
+| 🦊        | Combine Animals     | Merges segmented animals for dataset generation. |
 
 > 📁 Control src/functions
 
@@ -302,21 +327,21 @@ We are involved in this technical benchmark because the potential of the product
 These figures underscore the significant potential of such technologies to enhance ethical standards and reduce animal usage in scientific research.
 
 **Image 2 -** Images of materials
-| Sensor | Background | Animal | Housing | Housing modified |
-| --- | --- | --- | --- | --- |
-| ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F1fcc63594ff7fa163c6a37c57916ee91%2Ftransferir%20(4).jpg?generation=1748208105746169&alt=media)<br> | ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Fd7b648cc7150c4ec4eb45297e13f0271%2Fimages.jpg?generation=1748208276983742&alt=media)<br> | ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Fe4712bc0a063dfee4167b8a9c2904dc4%2Ftransferir%20(5).jpg?generation=1748208345717146&alt=media)<br> |![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F5516c12b9593362714cda3389aaf1f0e%2FD_NQ_NP_2X_895055-MLB52281836968_112022-F-caixa-bioterio-para-ratos-e-camundongos-com-bebedouro-n3.webp?generation=1748736344606205&alt=media) | ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F3c481a3a6eb730668855d85feb13aaec%2FTAMPA%20MORADIA%20-%20THOT%20IA%20CORP.png?generation=1748737380887401&alt=media) |
-|Xinfrared  T2S+ 8mm Macro Thermal Imaging Camera| *Backside of a presentation panel* placed on the floor for a neutral thermal background| The Wistar lineage (albino rat) is one of the most widely used in scientific research worldwide [https://bioteriocentral.ufsc.br/rattus-norvergicus/](url)| Conventional housing: Bioterium Box for Rats and Mice with Drinker No. 3| Housing cover developed for remote thermographic monitoring of pets|
+| Sensor                                                                                                                                                                                           | Background                                                                                                                                                                             | Animal                                                                                                                                                                                           | Housing                                                                                                                                                                                                                                                                         | Housing modified                                                                                                                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F1fcc63594ff7fa163c6a37c57916ee91%2Ftransferir%20(4).jpg?generation=1748208105746169&alt=media)<br> | ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Fd7b648cc7150c4ec4eb45297e13f0271%2Fimages.jpg?generation=1748208276983742&alt=media)<br> | ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Fe4712bc0a063dfee4167b8a9c2904dc4%2Ftransferir%20(5).jpg?generation=1748208345717146&alt=media)<br> | ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F5516c12b9593362714cda3389aaf1f0e%2FD_NQ_NP_2X_895055-MLB52281836968_112022-F-caixa-bioterio-para-ratos-e-camundongos-com-bebedouro-n3.webp?generation=1748736344606205&alt=media) | ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F3c481a3a6eb730668855d85feb13aaec%2FTAMPA%20MORADIA%20-%20THOT%20IA%20CORP.png?generation=1748737380887401&alt=media) |
+| Xinfrared  T2S+ 8mm Macro Thermal Imaging Camera                                                                                                                                                 | *Backside of a presentation panel* placed on the floor for a neutral thermal background                                                                                                | The Wistar lineage (albino rat) is one of the most widely used in scientific research worldwide [https://bioteriocentral.ufsc.br/rattus-norvergicus/](url)                                       | Conventional housing: Bioterium Box for Rats and Mice with Drinker No. 3                                                                                                                                                                                                        | Housing cover developed for remote thermographic monitoring of pets                                                                                                                                                |
 
 <br>
 
 **Image 3 -** Animal care and housing
-| Meat | Drink | Forage|
-| --- | --- | --- |
+| Meat                                                                                                                                                                                                                                                                      | Drink                                                                                                                                                                                                                     | Forage                                                                                                                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Fd798fbe3cd9313d81d184ed4408efd19%2FD_NQ_NP_819956-MLB54967502488_042023-O-labina-raco-para-roedores-1kkg-presense-isca-de-pesca.webp?generation=1748782967667702&alt=media) | ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Fb6247e41c9dff94ed4fcf1f19fa29827%2Ftorneira-e-fluxo-de-agua-no-banheiro_51195-23.jpg?generation=1748783206597389&alt=media) | ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F7010cbc9fe535d5ece819c48f3dabbde%2FD_NQ_NP_852277-MLU74293215779_012024-O.webp?generation=1748783267445388&alt=media) |
-|Food at will|Water as desired|Fragrance changed once a week single animal |
+| Food at will                                                                                                                                                                                                                                                              | Water as desired                                                                                                                                                                                                          | Fragrance changed once a week single animal                                                                                                                                                                         |
 
 
-## &emsp; 3.1 - 🎥 Video Capture Setup
+##  3.1 - 🎥 Video Capture Setup
 
 Step 1:
 The video was recorded in a controlled environment set to a stable temperature of **25°C**. A **presentation panel** was placed **flat on the floor** to act as a neutral thermal background. The **Wistar rat (Rattus norvegicus)** was then positioned on top of the panel. To avoid external heat interference, **all lights were turned off** before recording began.
@@ -342,13 +367,13 @@ We divide the day into four 6-hour time blocks:
   * **4 hours of observation**
   * **Balanced representation** of behavioral variation across circadian phases
 
-#####  **Frame Extraction Plan**
+#####  3.1.1 - **Frame Extraction Plan**
 
 * **Frame rate**: 1 frame per second (fps)
 * **Each 30-minute segment** = 30 × 60 = **1,800 frames**
 * **8 segments** = 8 × 1,800 = **14,400 frames total**
 
-##### ✅ Total Frame Count
+##### 3.1.2 - ✅ Total Frame Count
 
 ```bash
 1 fps × 240 minutes × 60 seconds = 14,400 frames
@@ -387,14 +412,14 @@ A modular software architecture was implemented to support the segmentation of t
 
 ---
 
-# &emsp; 4.1 - 🎞️ opencv.py – Video Frame Extraction Pipeline
+#  4.1 - 🎞️ opencv.py – Video Frame Extraction Pipeline
 
 This Python script uses OpenCV to extract all frames from a video file and save them as individual `.jpg` images. It automatically creates an output folder (`thermal_images`), processes the video frame-by-frame, and saves each frame with a sequential filename. Ideal for preparing datasets for computer vision tasks such as object detection or behavioral analysis.
 
 **Image 4 -** Running module independently
-| Step 1  |  Step 2 |
-| --- | --- |
-|  ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Fd3b035db676428a728202496cda5446c%2FCaptura%20de%20tela%202025-06-05%20104755.png?generation=1749134893128358&alt=media)| ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F99ee4d0dddd7b16ea8967304bedd10ce%2FCaptura%20de%20tela%202025-06-05%20104923.png?generation=1749134994187220&alt=media)  |
+| Step 1                                                                                                                                                                                                                | Step 2                                                                                                                                                                                                                |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Fd3b035db676428a728202496cda5446c%2FCaptura%20de%20tela%202025-06-05%20104755.png?generation=1749134893128358&alt=media) | ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F99ee4d0dddd7b16ea8967304bedd10ce%2FCaptura%20de%20tela%202025-06-05%20104923.png?generation=1749134994187220&alt=media) |
 
 <br>
 
@@ -410,23 +435,23 @@ This Python script uses OpenCV to extract all frames from a video file and save 
   
 ---
 
-# &emsp; 4.2 - 🔧 pseudo-class.py – AI-free Thermal Image Segmentation Pipeline
+#  4.2 - 🔧 pseudo-class.py – Thermal Image Segmentation Pipeline
 
-The AI-less segmentation pipeline was designed to ensure anatomical accuracy while maintaining automation. We ran all videos through this script to generate initial masks, then checked for the easiest masks to correct, then trained each video set back and segmented them with the initial AI and retrained to create the final models. Below are the main steps involved:
+The segmentation pipeline was designed to ensure anatomical accuracy while maintaining automation. We ran all videos through this script to generate initial masks, then checked for the easiest masks to correct, then trained each video set back and segmented them with the initial AI and retrained to create the final models. Below are the main steps involved:
 
-### &emsp;&emsp; 4.2.1 - **Background Removal**
+###  4.2.1 - **Background Removal**
 
 Each frame is converted to HSV color space, and a binary mask is generated by thresholding out the thermal background (typically in blue hues). The rat is isolated using inverse masking.
 
-### &emsp;&emsp; 4.2.2 - **Noise Filtering**
+###  4.2.2 - **Noise Filtering**
 
 Using `cv2.connectedComponentsWithStats`, only the largest connected component is retained—assumed to be the animal—effectively removing thermal noise and small artifacts.
 
-### &emsp;&emsp; 4.2.3 - **Anatomical Axis Detection (PCA)**
+###  4.2.3 - **Anatomical Axis Detection (PCA)**
 
 Principal Component Analysis (PCA) is applied to the shape of the detected animal to determine its **longitudinal axis**. The two ends of this axis are used to infer the **tail** and **head** positions.
 
-### &emsp;&emsp; 4.2.4 - **Region Classification**
+###  4.2.4 - **Region Classification**
 
 Based on the pixel projections along the identified body axis, each rat is segmented into **three distinct regions**:
 
@@ -435,21 +460,23 @@ Based on the pixel projections along the identified body axis, each rat is segme
 * `3` → Tail
 * `0` → Background
 
-### &emsp;&emsp; 4.2.5 - **Mask Generation**
+###  4.2.5 - **Mask Generation**
 
 The output is a semantic mask for each image, stored in the `masks_skeleton_thermal_{N}/` directory with filenames matching the original frames.
 
 **Image 6 -** Running module independently
 ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F78dc1e3e8811d001ded9c860e6ec9c8f%2FCaptura%20de%20tela%202025-06-09%20154955.png?generation=1749498619645861&alt=media)
+
+###  4.2.6 - **Segment Anything Model (SAM)**
 > - We use SAM (Segment Anything Model) as an auxiliary tool for universal segmentation, allowing the rapid and accurate identification of objects for later manipulation and recomposition in the library. This way we can duplicate the datasets with different corrections by the same researcher. Note: The image bank will be duplicated with SAM before the image name and the masks corresponding to the image name.
 
 **Image 7 -** Running GUI
 ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F78509ab698973f2414206bcd3cd988b5%2FCaptura%20de%20tela%202025-06-09%20134748.png?generation=1749491286610868&alt=media)
 
 **Image 8 -** Transforming images into discrete masks
-| input | output |
-| --- | --- |
-| <img src="https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F0e822165581a64872e57b6e8abb4d739%2Fframe_00001.jpg?generation=1748194030779413&alt=media"> |<img src="https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F10ca94057ffb25bfc0660db27468b1da%2Fframe_00001.png?generation=1748194386327422&alt=media"> |
+| input                                                                                                                                                                                          | output                                                                                                                                                                                         |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <img src="https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F0e822165581a64872e57b6e8abb4d739%2Fframe_00001.jpg?generation=1748194030779413&alt=media"> | <img src="https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F10ca94057ffb25bfc0660db27468b1da%2Fframe_00001.png?generation=1748194386327422&alt=media"> |
 
 - Note on image visualization: Since masks are predominantly very dark (almost black), it can be difficult to visually inspect the details directly. To address this issue, we developed the `view_mask_debug.py` script — a mask visualization and debugging tool. This utility enhances the display of segmentation masks, making it easier to verify and debug the results during analysis.
 
@@ -465,7 +492,7 @@ The output is a semantic mask for each image, stored in the `masks_skeleton_ther
 
 ---
 
-# &emsp; 4.3 - 🧪 `view_mask_debug.py` – **Mask Visualization and Debugging**
+#  4.3 - 🧪 `view_mask_debug.py` – **Mask Visualization and Debugging**
 
 **Purpose:**
 Helper script to visualize segmentation masks for debugging.
@@ -479,9 +506,9 @@ Helper script to visualize segmentation masks for debugging.
 Use during development to visually evaluate the results of automatic segmentation and/or check the folder target
 
 **Image 9 -** Running module independently - Transforming discreet masks into visible ones
-| input | output |
-| --- | --- |
-| <img src="https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F10ca94057ffb25bfc0660db27468b1da%2Fframe_00001.png?generation=1748194386327422&alt=media">  |![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Ffb8e35ab05bedee99606fae98e4c16c1%2FCaptura%20de%20tela%202025-06-09%20161024.png?generation=1749499843341425&alt=media)|
+| input                                                                                                                                                                                          | output                                                                                                                                                                                                                |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <img src="https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F10ca94057ffb25bfc0660db27468b1da%2Fframe_00001.png?generation=1748194386327422&alt=media"> | ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Ffb8e35ab05bedee99606fae98e4c16c1%2FCaptura%20de%20tela%202025-06-09%20161024.png?generation=1749499843341425&alt=media) |
 
 **Image 10 -** Running GUI
 ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Fdf0ddf72661caddbfd42525d569bed26%2FCaptura%20de%20tela%202025-06-10%20100152.png?generation=1749564240367013&alt=media)
@@ -490,16 +517,16 @@ Use during development to visually evaluate the results of automatic segmentatio
 
 ---
 
-# &emsp; 4.4 - 🧰 `edit_mask_app.py` – **Mask Editing GUI**
+#  4.4 - 🧰 `edit_mask_app.py` – **Mask Editing GUI**
 
 Purpose:
 This script provides a graphical user interface (GUI) designed for the manual correction and refinement of segmentation masks generated by the automatic pipeline.
 
 **Image 11 -** Running module independently - Software edit masks
-| Software | Team Training |
-| --- | --- |
-| ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Fd4b52e5b959aa5132b88d2ad0802fffc%2FCaptura%20de%20tela%202025-05-27%20214221.png?generation=1748396563161100&alt=media) |![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F3f72a2e83546e4a0bfd8ca3e94bf1540%2Fsilhueta-de-rato.png?generation=1748543810392780&alt=media)  <br><br> ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Fbd8372ff7186cdc4a6b6c4ffa8c7ce98%2FHouse%20Mouse%20Anatomy.jpg?generation=1748549644579053&alt=media)|
-|The masks automatically generated by skeleton help but contain many errors. It is only a support paper for a single researcher to be able to work with a larger number of images | Working with the images, we realized that to create a field that is more faithful to the researchers and the AI, it is necessary to increase the brush field to the maximum, lock the background and leave the head and tail as if they were helmets. See above how to refine the shell and below the anatomical connotation of the animal |
+| Software                                                                                                                                                                                                              | Team Training                                                                                                                                                                                                                                                                                                                                                                                              |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Fd4b52e5b959aa5132b88d2ad0802fffc%2FCaptura%20de%20tela%202025-05-27%20214221.png?generation=1748396563161100&alt=media) | ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F3f72a2e83546e4a0bfd8ca3e94bf1540%2Fsilhueta-de-rato.png?generation=1748543810392780&alt=media)  <br><br> ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Fbd8372ff7186cdc4a6b6c4ffa8c7ce98%2FHouse%20Mouse%20Anatomy.jpg?generation=1748549644579053&alt=media) |
+| The masks automatically generated by skeleton help but contain many errors. It is only a support paper for a single researcher to be able to work with a larger number of images                                      | Working with the images, we realized that to create a field that is more faithful to the researchers and the AI, it is necessary to increase the brush field to the maximum, lock the background and leave the head and tail as if they were helmets. See above how to refine the shell and below the anatomical connotation of the animal                                                                 |
 
 
 **Image 12 -**  Running GUI - Software edit masks
@@ -531,7 +558,7 @@ Usage:
 
 ---
 
-# &emsp; 4.5 - `transforms_fake.py` – **Fake data for intensive training**
+#  4.5 - `transforms_fake.py` – **Fake data for intensive training**
 
 This Python tool generates new synthetic images of rats over background images using PyQt5 and OpenCV. It removes the original rat from thermal images, finds background patches to fill the gap, and pastes rotated rat crops into new positions. Each variation includes a new image and corresponding updated mask.
 <br>
@@ -541,7 +568,7 @@ This Python tool generates new synthetic images of rats over background images u
 
 
 
-### 📊 **Functionality Table**
+**📊 **Functionality Table****
 
 | Feature                 | Description                                                       |
 | ----------------------- | ----------------------------------------------------------------- |
@@ -560,7 +587,7 @@ This Python tool generates new synthetic images of rats over background images u
 ---
 
 
-# &emsp; 4.6 - 🧠 `train_unet.py` – **U-Net Model Training**
+#  4.6 - 🧠 `train_unet.py` – **U-Net Model Training**
 
 **Purpose:**
 Script to train a semantic segmentation model using the **U-Net architecture** to prepare data for instance segmentation
@@ -576,25 +603,25 @@ Script to train a semantic segmentation model using the **U-Net architecture** t
 Use this script for training, fine-tuning, or experimenting with the dataset.
 
 
-| Step | Level             | Description                                                                                                                                                                  | Kernels?                                                          |
-| ---- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| 1️⃣  | 🧱 Base           | **Import Modules**<br>Import libraries: `os`, `json`, `torch`, `PIL`, `sklearn`, etc.                                                                                        | ❌                                                                 |
-| 2️⃣  | 📁 Dataset        | **Prepare Dataset**<br>- List image (`.jpg`) and mask (`.png`) files<br>- Filter valid pairs                                                                                 | ❌                                                                 |
-| 2.1  | └──📦             | **Define `ThermalMouseDataset` Class**&lt;br&gt;- Load and resize images using `torchvision.transforms`&lt;br&gt;- Resize masks using `Image.NEAREST`<br>- Return image and mask tensors | ❌                                                                 |
-| 3️⃣  | 🧠 Model          | **Build UNet Model**                                                                                                                                                         | ✅                                                                 |
-| 3.1  | └──🧩             | **CBR Function**<br>Helper block: Conv2d → BatchNorm → ReLU                                                                                                                  | 🧠🧊 **YES**<br>`Conv2d` layers define the **kernels**            |
-| 3.2  | └──🏗️            | **UNet Architecture**<br>- 4x Downsampling blocks<br>- Bottleneck<br>- 4x Upsampling blocks<br>- Final Conv2d to 4 output channels                                           | 🧠🧊 **YES**<br>Each block uses many **Conv2d layers** (kernels!) |
-| 3.3  | └──✂️             | **Crop Center Function**<br>Crop feature maps to match sizes in decoder path                                                                                                 | ❌                                                                 |
-| 4️⃣  | 📐 Metrics        | **Evaluation Metrics**                                                                                                                                                       | ❌                                                                 |
-| 4.1  | └──📊             | **`evaluate_metrics` Function**<br>- Compute IoU, F1-score, accuracy per class<br>- Mean IoU, mean accuracy, global pixel accuracy                                           | ❌                                                                 |
-| 5️⃣  | 🔄 Train/Validate | **`train_or_validate` Function**<br>- Switch between training or evaluation<br>- Forward pass, loss, and metrics<br>- Backpropagation if training                            | ✅ (usa kernels do modelo)                                         |
-| 6️⃣  | 🚀 Main Pipeline  | **`main()` Function**                                                                                                                                                        | ✅                                                                 |
-| 6.1  | └──⚙️             | **Setup**<br>- Define device (CPU/GPU)<br>- Set paths and transforms                                                                                                         | ❌                                                                 |
-| 6.2  | └──📂             | **Create Dataset**<br>- Split into 80% train / 20% validation<br>- Wrap with `DataLoader`                                                                                    | ❌                                                                 |
-| 6.3  | └──🔧             | **Initialize Model**<br>- Instantiate UNet<br>- Define optimizer (`Adam`) and loss (`CrossEntropyLoss`)                                                                      | ✅ (modelo inicializa os kernels)                                  |
-| 6.4  | └──📈             | **Training Loop**<br>- For each epoch:<br>&nbsp;&nbsp;&nbsp;&nbsp;• Train<br>&nbsp;&nbsp;&nbsp;&nbsp;• Validate<br>&nbsp;&nbsp;&nbsp;&nbsp;• Save weights and metrics                                                                    | ✅ (usa e treina os kernels)                                       |
-| 6.5  | └──💾             | **Save Metrics**<br>- Save results to `metrics_multiclass.json`                                                                                                              | ❌                                                                 |
-| 7️⃣  | ▶️ Run            | **Execute Pipeline**<br>`if __name__ == "__main__": main()`                                                                                                                  | ✅                                                                 |
+| Step | Level            | Description                                                                                                                                                                              | Kernels?                                                        |
+| ---- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| 1️⃣    | 🧱 Base           | **Import Modules**<br>Import libraries: `os`, `json`, `torch`, `PIL`, `sklearn`, etc.                                                                                                    | ❌                                                               |
+| 2️⃣    | 📁 Dataset        | **Prepare Dataset**<br>- List image (`.jpg`) and mask (`.png`) files<br>- Filter valid pairs                                                                                             | ❌                                                               |
+| 2.1  | └──📦             | **Define `ThermalMouseDataset` Class**&lt;br&gt;- Load and resize images using `torchvision.transforms`&lt;br&gt;- Resize masks using `Image.NEAREST`<br>- Return image and mask tensors | ❌                                                               |
+| 3️⃣    | 🧠 Model          | **Build UNet Model**                                                                                                                                                                     | ✅                                                               |
+| 3.1  | └──🧩             | **CBR Function**<br>Helper block: Conv2d → BatchNorm → ReLU                                                                                                                              | 🧠🧊 **YES**<br>`Conv2d` layers define the **kernels**            |
+| 3.2  | └──🏗️             | **UNet Architecture**<br>- 4x Downsampling blocks<br>- Bottleneck<br>- 4x Upsampling blocks<br>- Final Conv2d to 4 output channels                                                       | 🧠🧊 **YES**<br>Each block uses many **Conv2d layers** (kernels!) |
+| 3.3  | └──✂️             | **Crop Center Function**<br>Crop feature maps to match sizes in decoder path                                                                                                             | ❌                                                               |
+| 4️⃣    | 📐 Metrics        | **Evaluation Metrics**                                                                                                                                                                   | ❌                                                               |
+| 4.1  | └──📊             | **`evaluate_metrics` Function**<br>- Compute IoU, F1-score, accuracy per class<br>- Mean IoU, mean accuracy, global pixel accuracy                                                       | ❌                                                               |
+| 5️⃣    | 🔄 Train/Validate | **`train_or_validate` Function**<br>- Switch between training or evaluation<br>- Forward pass, loss, and metrics<br>- Backpropagation if training                                        | ✅ (usa kernels do modelo)                                       |
+| 6️⃣    | 🚀 Main Pipeline  | **`main()` Function**                                                                                                                                                                    | ✅                                                               |
+| 6.1  | └──⚙️             | **Setup**<br>- Define device (CPU/GPU)<br>- Set paths and transforms                                                                                                                     | ❌                                                               |
+| 6.2  | └──📂             | **Create Dataset**<br>- Split into 80% train / 20% validation<br>- Wrap with `DataLoader`                                                                                                | ❌                                                               |
+| 6.3  | └──🔧             | **Initialize Model**<br>- Instantiate UNet<br>- Define optimizer (`Adam`) and loss (`CrossEntropyLoss`)                                                                                  | ✅ (modelo inicializa os kernels)                                |
+| 6.4  | └──📈             | **Training Loop**<br>- For each epoch:<br>&nbsp;&nbsp;&nbsp;&nbsp;• Train<br>&nbsp;&nbsp;&nbsp;&nbsp;• Validate<br>&nbsp;&nbsp;&nbsp;&nbsp;• Save weights and metrics                    | ✅ (usa e treina os kernels)                                     |
+| 6.5  | └──💾             | **Save Metrics**<br>- Save results to `metrics_multiclass.json`                                                                                                                          | ❌                                                               |
+| 7️⃣    | ▶️ Run            | **Execute Pipeline**<br>`if __name__ == "__main__": main()`                                                                                                                              | ✅                                                               |
 
 1. All initial models can be reviewed on the images with the model itself and rechecked to arrive at a highly reliable hit percentage
 <br>
@@ -612,18 +639,18 @@ model_freedon = unet_checkpoint_epoch_9.pth :
 
 <br><br>
 model_hounsing:
-| Métrica        | Época       | Época     |
-| -------------- | ------------ | ------------ |
+| Métrica        | Época    | Época    |
+| -------------- | -------- | -------- |
 | `val_iou_mean` | **0.** ✅ | 0.       |
 | `val_f1_mean`  | **0.** ✅ | 0.       |
-| `val_loss`     | 0.      | **0.** ✅ |
-| `val_accuracy` | 0.| 0.      |
+| `val_loss`     | 0.       | **0.** ✅ |
+| `val_accuracy` | 0.       | 0.       |
 
 >### ⚠️ **Attention: note images are converted to grayscale**
 >
 >While the database derives multiple color models from images with their respective masks, we convert the thermal images to grayscale to remove artificial color information, align with sensor outputs, reduce noise, and improve model accuracy and efficiency. Segmentation is one thing, thermal analysis is another; here, we segment thermal images regardless of the sensor or thermal sensor configuration.
 
-### 🔄 **Thermal Image Preprocessing: Grayscale Conversion**
+🔄 **Thermal Image Preprocessing: Grayscale Conversion**
 
 | **Aspect**                  | **Before (RGB Input)**                           | **After (Grayscale Input)**                          | **Reason**                                                      |
 | --------------------------- | ------------------------------------------------ | ---------------------------------------------------- | --------------------------------------------------------------- |
@@ -638,7 +665,7 @@ model_hounsing:
 
 ---
 
-# &emsp; 4.7 - 🔌 `api_{}.py` – Inference API
+#  4.7 - 🔌 `api_{}.py` – Inference API
 
 
 **Purpose:**
@@ -647,6 +674,12 @@ API interface to perform inference with the trained model.
 **Functionality:**
 * Loads the trained models;
 * Accepts input images and videos through API calls; 
+
+**Usage:**
+Integration into web or backend systems for automated analysis of new thermal images
+
+![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Fba2e8d4a9750229cca5d7de29a2253e9%2Foiii.png?generation=1749570558585264&alt=media)
+
 * Response:
 
 ```markdown
@@ -666,52 +699,60 @@ return JSONResponse(
 ```markdown
 input: video
 return {
-  "positions": positions_per_class,
-  "movimentos": displaces_totais,
-  "mapa_completo": map_img,
+  "movimentos": deslocamentos_totais,
+  "mapa_base": map_img,
+  "mapa_realista": mapa_realista,
   "head_path": head_path,
   "body_path": body_path,
   "tail_path": tail_path,
+  "video_info": {
+        "fps_original": video_fps,
+        "fps_processado": fps_process,
+        "frame_skip": frame_skip,
+        "resolution": (video_width, video_height),
+        "total_frames": total_frames
+    }
 }
 ```
 
-**Usage:**
-Integration into web or backend systems for automated analysis of new thermal images
+| input                                                                                                                                                                                   | output                                                                                                                                                                                                                                                                                                                                                                                                          |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F551859bfb9dcf84f5f616fa9f811c783%2Fframe_00001.jpg?generation=1750011740820708&alt=media) | ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F8133fd097c914781efbf1befbc5eb33b%2Frastro_mouse_realista.png?generation=1750011765537641&alt=media)<br> ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Fd99c98a346df169d2653fc0440e70550%2Frastro_mouse_com_deslocamento.png?generation=1750011786628640&alt=media) |
+| src\models\model_unet_freedom\data\video\20250524165426.mp4                                                                                                                             | Displacement Map = "mapa_base": map_img, "mapa_realista": mapa_realista                                                                                                                                                                                                                                                                                                                                         |
 
-![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Fba2e8d4a9750229cca5d7de29a2253e9%2Foiii.png?generation=1749570558585264&alt=media)
 > 📁 Control src/services
 
 ---
 
-# &emsp; 4.8 - ➰ `loop_api_unet.py` → Script for generating and saving segmentation masks via API
+#  4.8 - ➰ `loop_api_unet.py` → Script for generating and saving segmentation masks via API
 
 This script automates the process of sending a batch of thermal images to a U-Net model served through a REST API, receiving the predicted masks in base64 format, decoding them, and saving them locally. It ensures efficient batch processing without manual uploads.
 
-### 🧩 Key Features:
+**🧩 Key Features:**
 
 * **API Integration**: Sends each image file to an API endpoint (`/predict/`) using a POST request with `multipart/form-data`.
 * **Base64 Decoding**: The predicted mask is expected to be returned as a base64-encoded PNG image. The script decodes and saves it in the `masks_thermal_images_unet/` directory.
 * **Error Handling**: Skips files if the response is malformed or if the mask is not returned properly.
 * **File Type Filtering**: Only processes valid image formats such as `.png`, `.jpg`, `.jpeg`, `.bmp`, `.tiff`.
 
-#### 🧪 Usage:
+**🧪 Usage:**
 Semantic segmentation of all frames again `masks_thermal_images_unet`.
 Make sure your API is up and running locally at the given endpoint before running the script.
 
 ---
 
-# &emsp; 4.9 - 🧪 `transforms_fake_multiple.py` - Fake augmentation of semantic segmentation dataset to train instance segmentation
+#  4.9 - 🧪 `transforms_fake_multiple.py` - Fake augmentation of semantic segmentation dataset to train instance segmentation
 
-### 🎯 **Goal**:
+ 🎯 **Goal**:
 
 Create synthetic images that simulate multiple rats (2 to 4) per image using existing thermal images and segmentation masks of single rats.
 The final images and masks will preserve semantic segmentation labels (classes `1`, `2`, `3`, `4` for rats and `0` for background).
 
 
-|        Type        | Input | Output |
-| --- | --- | --- |
-| image | ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Fd5b246244ad1aeb072d7d71630b696f4%2FCaptura%20de%20tela%202025-05-24%20173325.png?generation=1748620992450426&alt=media) | ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Ff05cdad05ad0780aadb46b3ac89c2730%2FCaptura%20de%20tela%202025-05-30%20120354.png?generation=1748621065071118&alt=media) |
-| masks | ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F3923f2d058fd8132c4172d79ba8beb3f%2Fscreencapture-localhost-8501-2025-05-28-00_13_07.png?generation=1748621136753106&alt=media)| ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Ff2991a8fcc70ccb0d078b678abe8ddb0%2Fscreencapture-localhost-8501-2025-05-30-12_06_07.png?generation=1748621190190081&alt=media)|
+| Type  | Input                                                                                                                                                                                                                        | Output                                                                                                                                                                                                                       |
+| ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| image | ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Fd5b246244ad1aeb072d7d71630b696f4%2FCaptura%20de%20tela%202025-05-24%20173325.png?generation=1748620992450426&alt=media)        | ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Ff05cdad05ad0780aadb46b3ac89c2730%2FCaptura%20de%20tela%202025-05-30%20120354.png?generation=1748621065071118&alt=media)        |
+| masks | ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F3923f2d058fd8132c4172d79ba8beb3f%2Fscreencapture-localhost-8501-2025-05-28-00_13_07.png?generation=1748621136753106&alt=media) | ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Ff2991a8fcc70ccb0d078b678abe8ddb0%2Fscreencapture-localhost-8501-2025-05-30-12_06_07.png?generation=1748621190190081&alt=media) |
 
 <br><br>
 | Step | Description                                 | Details / Main Function                                                                                                                                                                                   |
@@ -746,13 +787,13 @@ By breaking down the rat into smaller, meaningful parts, we allow machine learni
 
 ---
 
-## &emsp; 5.1 - 📍 **Tracking Movement: Why it also matters**
+##  5.1 - 📍 **Tracking Movement: Why it also matters**
 
 Beyond identifying physiological changes, segmentation and frame extraction also make it possible to **track the rat’s position and displacement over time**. By observing how different body parts move across frames, researchers can analyze motor behavior, detect abnormal locomotion, or assess responses to stimuli.
 
 ---
 
-## &emsp; 5.2 - 🎯 **How ​​the computer sees - Why is it important?**
+##  5.2 - 🎯 **How ​​the computer sees - Why is it important?**
 
 A neural network doesn't "see" like a human. It learns through *kernels* — small filters that slide across an image to detect patterns like edges, textures, or temperature gradients.
 
@@ -762,7 +803,7 @@ This approach supports both **biomedical insights** and **behavioral tracking** 
 
 ---
 
-### &emsp;&emsp; 5.2.1 - 🧩 What is a Kernel?
+####  5.2.1 - 🧩 What is a Kernel?
 
 A **kernel** is a tiny matrix (like 3x3 or 5x5) that scans over the image to detect features such as:
 
@@ -774,12 +815,12 @@ Think of it like a **magnifying glass** moving over different zones of the rat �
 
 
 **Image 11 -** Representation of a kernel with and without limit
-| Without Segmentation                   | With Segmentation                            |
-| -------------------------------------- | -------------------------------------------- |
-|![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F2356eeffb2778516c5807e702414630c%2FChatGPT%20Image%2025%20de%20mai.%20de%202025%2016_50_13.png?generation=1748376056296440&alt=media)| ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F2e3e32e000612bed4eec40ee8c4880d9%2FChatGPT%20Image%2025%20de%20mai.%20de%202025%2016_350_13.png?generation=1748376021051645&alt=media)|
-| Entire rat is analyzed as one big blob | Head, body, and tail are analyzed separately |
-| Subtle patterns might be missed        | Local thermal anomalies become more visible  |
-| Kernel has to guess context            | Kernel knows where it's looking              |
+| Without Segmentation                                                                                                                                                                                                                | With Segmentation                                                                                                                                                                                                                    |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F2356eeffb2778516c5807e702414630c%2FChatGPT%20Image%2025%20de%20mai.%20de%202025%2016_50_13.png?generation=1748376056296440&alt=media) | ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F2e3e32e000612bed4eec40ee8c4880d9%2FChatGPT%20Image%2025%20de%20mai.%20de%202025%2016_350_13.png?generation=1748376021051645&alt=media) |
+| Entire rat is analyzed as one big blob                                                                                                                                                                                              | Head, body, and tail are analyzed separately                                                                                                                                                                                         |
+| Subtle patterns might be missed                                                                                                                                                                                                     | Local thermal anomalies become more visible                                                                                                                                                                                          |
+| Kernel has to guess context                                                                                                                                                                                                         | Kernel knows where it's looking                                                                                                                                                                                                      |
 
 <br><br>
 🔍 Visual Illustration - *(See the diagram above)*
@@ -788,7 +829,7 @@ Right: The rat is segmented into regions. Now the same kernel focuses **only on 
 
 ---
 
-### &emsp;&emsp; 5.2.2 - 🧩 Kernel / CNN
+####  5.2.2 - 🧩 Kernel / CNN
 
 A CNN is an encoder, as the name itself suggests: convolution. The etymology of "convolution" comes from the Latin "convolutus, -a, -um", which is the past participle of the verb "convolvo, -ere", which means "to envelop" or "to roll up".
 
@@ -799,7 +840,7 @@ A CNN is an encoder, as the name itself suggests: convolution. The etymology of 
 
 ---
 
-### &emsp;&emsp; 5.2.3 - 📊 Comparison Table: Image AI Models
+####  5.2.3 - 📊 Comparison Table: Image AI Models
 
 | Model Type                                 | Core Idea                                                               | Strengths                                                                            | Limitations                                                          | Typical Use Cases                                                            | Examples                            |
 | ------------------------------------------ | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | -------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ----------------------------------- |
@@ -819,19 +860,19 @@ A CNN is an encoder, as the name itself suggests: convolution. The etymology of 
 # 6 - ⚛️ **Results**
 In computer vision, models typically evolve from classification (what is in the image), to detection (where it is), and finally to segmentation (which pixels belong to each object), offering increasing spatial precision
 
-|Classification|Localization / Detection   | Semantic Segmentation| Instance Segmentation |
-| --- | --- | --- | --- |
-| ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Fa2e490f4756f2670213580e11976b043%2Fframe_01021.jpg?generation=1748390297681988&alt=media)| ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F142e37b3f7d886a90cb7a14e7c68de69%2Fframe_00024.jpg?generation=1748390491115766&alt=media)| ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F3a905df379c553b3bb03dbfad66979e8%2FCaptura%20de%20tela%202025-05-25%20152337.png?generation=1748391059905086&alt=media)| ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Fac4f48fb5a37e18774e0af637ec0e5aa%2F19e5d359f09fb80af69e5e3cc90b6d1195e10aef5ff64f2bc81dd740.jpg?generation=1748612481868126&alt=media)|
-|What is in the image?	The model identifies that the image contains a rat. No location or shape information.|Where is the rat?	The model draws a bounding box around the rat. You know its position, but not the exact body shape.|Which pixels belong to the rat (and to which part)? Each pixel is labeled as belonging to the rat's head, body, or tail — allowing for detailed thermal analysis of a single animal, even if there were two in the image it would treat rat as rat but not rat 1 and rat 2|Instance segmentation can label all the above information and tell you rat 1, rat 2, and so on|
+| Classification                                                                                                                                                                          | Localization / Detection                                                                                                                                                                | Semantic Segmentation                                                                                                                                                                                                                                                      | Instance Segmentation                                                                                                                                                                                                                |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Fa2e490f4756f2670213580e11976b043%2Fframe_01021.jpg?generation=1748390297681988&alt=media) | ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F142e37b3f7d886a90cb7a14e7c68de69%2Fframe_00024.jpg?generation=1748390491115766&alt=media) | ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2F3a905df379c553b3bb03dbfad66979e8%2FCaptura%20de%20tela%202025-05-25%20152337.png?generation=1748391059905086&alt=media)                                                      | ![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Fac4f48fb5a37e18774e0af637ec0e5aa%2F19e5d359f09fb80af69e5e3cc90b6d1195e10aef5ff64f2bc81dd740.jpg?generation=1748612481868126&alt=media) |
+| What is in the image?	The model identifies that the image contains a rat. No location or shape information.                                                                             | Where is the rat?	The model draws a bounding box around the rat. You know its position, but not the exact body shape.                                                                   | Which pixels belong to the rat (and to which part)? Each pixel is labeled as belonging to the rat's head, body, or tail — allowing for detailed thermal analysis of a single animal, even if there were two in the image it would treat rat as rat but not rat 1 and rat 2 | Instance segmentation can label all the above information and tell you rat 1, rat 2, and so on                                                                                                                                       |
 
 <br><br>
 
-| 📌 Type of Image AI       | 🧪 Main Validation Metrics                                                                 |
-|---------------------------|--------------------------------------------------------------------------------------------|
-| 🏷️ **Classification**         | *Accuracy* <br> *Precision / Recall / F1-score* <br> *Confusion Matrix* <br> *ROC-AUC* <br> *Cross-validation (k-Fold)* |
+| 📌 Type of Image AI          | 🧪 Main Validation Metrics                                                                                                      |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| 🏷️ **Classification**        | *Accuracy* <br> *Precision / Recall / F1-score* <br> *Confusion Matrix* <br> *ROC-AUC* <br> *Cross-validation (k-Fold)*        |
 | 📍 Localization / Detection  | `IoU (Intersection over Union)` &lt;br&gt; `mAP (mean Average Precision)` &lt;br&gt; `Recall@IoU` &lt;br&gt; `FPS (real-time)` |
-| 🎯 **Semantic Segmentation**  | *mIoU* <br> *Dice Coefficient* <br> *Pixel Accuracy* <br> *Boundary F1 Score* <br> *Visual overlay inspection* |
-| 👤 Instance Segmentation  | `mAP@[.5:.95]` &lt;br&gt; `Per-instance IoU / Dice` &lt;br&gt; `Object Count Accuracy`               |
+| 🎯 **Semantic Segmentation** | *mIoU* <br> *Dice Coefficient* <br> *Pixel Accuracy* <br> *Boundary F1 Score* <br> *Visual overlay inspection*                 |
+| 👤 Instance Segmentation     | `mAP@[.5:.95]` &lt;br&gt; `Per-instance IoU / Dice` &lt;br&gt; `Object Count Accuracy`                                         |
 
 <br><br>
 
@@ -854,7 +895,7 @@ Up to this point, the project has demonstrated a solid and coherent structure, e
 ---
 
 # 8 - ⚛️ Discussions
-## &emsp; **Synthetic data**
+##  8.1 - **Synthetic data**
 Synthetic (or fake) data has become an increasingly valuable asset in medical imaging and preclinical research, particularly when real data is scarce, expensive, or ethically challenging to obtain. The dataset of thermal images of rats and mice serves as a useful benchmark for evaluating segmentation algorithms, offering controlled, annotated samples that can simulate real-world conditions to a certain extent.
 
 Nevertheless, synthetic datasets often lack the full variability and unpredictability found in real clinical or experimental environments. This discrepancy can result in models that perform well during training but fail to generalize in real-world applications. As such, reliance solely on fake data may lead to biased results or inflated performance metrics.
@@ -863,26 +904,32 @@ To mitigate these issues, researchers should consider hybrid training strategies
 
 In summary, while synthetic data like the one used in this project provides a powerful foundation for model prototyping, it should not replace real data when aiming for deployment in practical or clinical settings. Its greatest value lies in complementing real data, especially during the early phases of research and development.
 
-## &emsp; **Synthetic data frameworks**
+##  8.2 - **Synthetic data frameworks**
+In the current landscape of AI development, it is increasingly common for models to be constructed, optimized, and retrained by automated AI-driven pipelines, often through simple prompts or automated commands where the human operator requests "better accuracy" or "improved performance" without fully understanding the internal processes. 
+
+This automation raises a critical risk: the pipeline may autonomously inject synthetic data, including data augmentation or artificially generated samples, not only in the training phase but inadvertently into the validation process as well. When this occurs, the operator, lacking visibility or technical awareness of the underlying data handling, might unknowingly validate the model on non-real distributions, leading to falsely inflated metrics that do not correspond to real-world performance. 
+
+This scenario results in models that appear highly accurate within the automated pipeline but fail catastrophically in deployment due to unseen biases, overfitting to synthetic artifacts, or the well-documented phenomenon of model collapse. Such risks are further exacerbated when iterative synthetic data generation is involved, where models are trained and evaluated on recursively generated data without grounding in authentic, natural data. Therefore, it is imperative that validation is always performed on real, untouched datasets, with strict controls ensuring that no form of synthetic augmentation contaminates the validation pipeline. Without this safeguard, AI systems risk becoming self-referential loops where neither the operator nor the model itself truly understands the limitations of its knowledge, leading to unreliable, non-generalizable AI outcomes.
+
 
 
 ---
 
 # 9 - 📚 References
-## &emsp; **Animal Care**
+## 9.1 - **Animal Care**
 - Andrade A, Pinto SC, Oliveira RS, editors. *Laboratory Animals: Breeding and Experimentation* \[Internet]. Rio de Janeiro: Editora FIOCRUZ; 2002 \[cited 2025 Jun 1]. 388 p. Available from: [https://books.scielo.org/id/xspz5](https://books.scielo.org/id/xspz5)
 
-## &emsp; **Amount of rodent research**
+## 9.2 - **Amount of rodent research**
 - Carbone L. Estimating mouse and rat use in American laboratories by extrapolation from Animal Welfare Act-regulated species. *Sci Rep*. 2021;11:493. doi:10.1038/s41598-020-79961-0. PMID: 33431864; PMCID: PMC7805762.
 - Science Magazine. How many mice and rats are used in U.S. labs? Controversial study says more than 100 million. *Science*. 2021 Jan 22. Available from: [https://www.science.org/content/article/how-many-mice-and-rats-are-used-us-labs-controversial-study-says-more-100-million](https://www.science.org/content/article/how-many-mice-and-rats-are-used-us-labs-controversial-study-says-more-100-million)
 - Pesquisa FAPESP. Regulation establishes guidelines on the use of animals in research and teaching in Brazil. 2022 May. Available from: [https://revistapesquisa.fapesp.br/en/regulation-establishes-guidelines-on-the-use-of-animals-in-research-and-teaching-in-brazil](https://revistapesquisa.fapesp.br/en/regulation-establishes-guidelines-on-the-use-of-animals-in-research-and-teaching-in-brazil)
 
-## &emsp; **Sampling Methods**
+##  9.3 - **Sampling Methods**
 - Altmann J. Observational study of behavior: Sampling methods. *Behaviour*. 1974;49(3–4):227–66. doi:10.1163/156853974X00534
 - Martin P, Bateson P. *Measuring behaviour: An introductory guide*. 3rd ed. Cambridge: Cambridge University Press; 2007. Available from: [https://www.cambridge.org/core/books/measuring-behaviour/889CBF92A1E5A4DC143BCC7D4DBA0D8C](https://www.cambridge.org/core/books/measuring-behaviour/889CBF92A1E5A4DC143BCC7D4DBA0D8C)
 - Mural RJ, Adams MD, Myers EW, Smith HO, Gabor‑Miklos GL, Wides R, et al. A comparison of whole‑genome shotgun‑derived mouse chromosome 16 and the human genome. Science. 2002 May 31;296(5573):1661–71.
 
-## &emsp; **Thermal Imaging / Infrared**
+##  9.4 - **Thermal Imaging / Infrared**
 - Pereira CB, Kunczik J, Zieglowski L, Tolba R, Abdelrahman A, Zechner D, et al. Remote welfare monitoring of rodents using thermal imaging. *Sensors (Basel)*. 2018;18(11):3653. doi:10.3390/s18113653. PMID: 30373282; PMCID: PMC6263688
 - Travain T, Valsecchi P. Infrared thermography in the study of animals' emotional responses: A critical review. *Animals (Basel)*. 2021;11(9):2510. doi:10.3390/ani11092510. PMID: 34573476; PMCID: PMC8464846.
 - Mazur‑Milecka M, Kocejko T, Rumiński J. Deep Instance Segmentation of Laboratory Animals in Thermal Images. Applied Sciences. 2020;10(17):5979.
@@ -891,7 +938,7 @@ In summary, while synthetic data like the one used in this project provides a po
 - Weimer SL, Wideman RF, Scanes CG, Mauromoustakos A, Christensen KD, Vizzier-Thaxton Y. Broiler stress responses to light intensity, flooring type, and leg weakness as assessed by heterophil-to-lymphocyte ratios, serum corticosterone, infrared thermography, and latency to lie. *Poultry Science*. 2020;99(7):3301–11. doi:10.1016/j.psj.2020.03.028. PMID: 32616223; PMCID: PMC7597826.
 - Tabh JKR, Burness G, Wearing OH, Tattersall GJ, Mastromonaco GF. Infrared thermography as a technique to measure physiological stress in birds: Body region and image angle matter. *Physiological Reports*. 2021;9(11)\:e14865. doi:10.14814/phy2.14865. PMID: 34057300; PMCID: PMC8165734.
 
-##  &emsp; **Other similar databases**
+##   9.5 - **Other similar databases**
 - RumpuDoggo. *mouse recog 2 Dataset* \[Internet]. Roboflow Universe: Roboflow; 2024 May \[cited 2025 Jun 7]. Available from: [https://universe.roboflow.com/rumpudoggo/mouse-recog-2](https://universe.roboflow.com/rumpudoggo/mouse-recog-2)
 - dcwno. *mouse\_detection Dataset* \[Internet]. Roboflow Universe: Roboflow; 2024 May \[cited 2025 Jun 7]. Available from: [https://universe.roboflow.com/dcwno/mouse\_detection-em87f](https://universe.roboflow.com/dcwno/mouse_detection-em87f)
 - MEL. *Mouse Dataset* \[Internet]. Roboflow Universe: Roboflow; 2024 May \[cited 2025 Jun 7]. Available from: [https://universe.roboflow.com/mel-mefb3/mouse-jmvzh](https://universe.roboflow.com/mel-mefb3/mouse-jmvzh)
@@ -900,10 +947,10 @@ In summary, while synthetic data like the one used in this project provides a po
 - rats. *rats Dataset* \[Internet]. Roboflow Universe: Roboflow; 2024 May \[cited 2025 Jun 7]. Available from: [https://universe.roboflow.com/rats-jjzwt/rats-naa55](https://universe.roboflow.com/rats-jjzwt/rats-naa55)
 
 
-## &emsp; **Data Augmentation**
+##  9.6 - **Data Augmentation**
 - Ghiasi G, Cui Y, Srinivas A, Qian R, Lin TY, Cubuk ED, et al. Simple Copy-Paste is a Strong Data Augmentation Method for Instance Segmentation. *arXiv \[Preprint]*. 2020 Dec 14 \[cited 2025 Jun 7]; arXiv:2012.07177. Available from: [https://arxiv.org/abs/2012.07177](https://arxiv.org/abs/2012.07177)
 
 
-## &emsp; **Auxiliary tools**
+##  9.7 - **Auxiliary tools**
 - Kirillov A, Mintun E, Ravi N, Mao H, Rolland A, Gustafson L, et al. Segment Anything. arXiv preprint arXiv:2304.02643 [Internet]. 2023 [cited 2025 Jun 7]. Available from: https://arxiv.org/abs/2304.02643
 

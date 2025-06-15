@@ -1,5 +1,5 @@
 from PIL import ImageDraw, ImageFont, Image
-from fastapi import FastAPI, File, UploadFile
+from fastapi import FastAPI, File, UploadFile, Query
 from fastapi.responses import JSONResponse
 import torch
 from torchvision import transforms
@@ -9,9 +9,9 @@ import torch.nn as nn
 import base64
 import cv2
 import tempfile
-import matplotlib.pyplot as plt
 import cv2
 import os
+import math
 app = FastAPI(title="Strong Vivarium: Thermal Mouse Analytics API")
 
 # UNet modelo (mantido igual) treinamento
@@ -102,109 +102,120 @@ transform = transforms.Compose([
     transforms.Normalize(mean=[0.485, 0.456, 0.406],
                          std=[0.229, 0.224, 0.225])
 ])
-import cv2
-import numpy as np
-from PIL import Image, ImageDraw, ImageFont
 
+def add_displacement_text(map_img_np, deslocamentos_totais, class_names, class_colors):
+    img = map_img_np.copy()
 
-def add_displacement_text(map_img_np, deslocamentos_totais, class_names, class_colors, font_path=None):
-    """
-    Desenha uma caixa branca com texto de deslocamento total das classes sobre map_img_np (BGR numpy),
-    incluindo um quadrado com a cor da classe antes do nome.
+    img_height, img_width = img.shape[:2]
 
-    Parâmetros:
-    - map_img_np: imagem base em BGR numpy.
-    - deslocamentos_totais: dicionário {classe: deslocamento total}.
-    - class_names: dicionário {classe: nome da classe}.
-    - class_colors: dicionário {classe: (B, G, R)}.
-    - font_path: caminho para uma fonte .ttf (opcional).
+    # 🔤 Configurações de fonte
+    font = cv2.FONT_HERSHEY_SIMPLEX
+    base_font_scale = (img_width / 1200 * 1.2) / 3  # 🔸 3x menor
+    base_thickness = max(int(img_width / 500 / 3), 1)  # 🔸 3x menor
 
-    Retorna:
-    - imagem numpy BGR com o texto desenhado.
-    """
+    # 🔖 Título
+    title_text = "Displacement Map"
+    (tw, th), _ = cv2.getTextSize(title_text, font, base_font_scale * 1.5, base_thickness + 1)
+    title_x = (img_width - tw) // 2
+    title_y = int(0.02 * img_width)  # 🔸 também ajustado para ficar mais próximo do topo
 
-    # Conversão OpenCV (BGR) -> PIL (RGB)
-    map_img_rgb = cv2.cvtColor(map_img_np, cv2.COLOR_BGR2RGB)
-    pil_img = Image.fromarray(map_img_rgb)
-    draw = ImageDraw.Draw(pil_img)
+    # 🗂️ Caixa branca atrás do título
+    padding = int(10 / 3)
+    cv2.rectangle(
+        img,
+        (title_x - padding, title_y - th - padding),
+        (title_x + tw + padding, title_y + padding),
+        (255, 255, 255),
+        -1
+    )
 
-    # Fonte
-    try:
-        font = ImageFont.truetype(font_path, 20) if font_path else ImageFont.load_default()
-    except Exception:
-        font = ImageFont.load_default()
+    # ✍️ Texto do título
+    cv2.putText(
+        img,
+        title_text,
+        (title_x, title_y),
+        font,
+        base_font_scale * 1.5,
+        (0, 0, 0),
+        base_thickness + 1,
+        cv2.LINE_AA
+    )
 
-    # Prepara textos
+    # 📦 Textos das classes
     textos = []
     for cls, desloc in deslocamentos_totais.items():
         nome = class_names.get(cls, str(cls))
-        texto = f"{nome}: deslocamento total = {desloc:.2f} px"
+        texto = f"{nome}: total displacement = {desloc:.2f} px"
         textos.append((cls, texto))
 
-    # Parâmetros visuais
-    x_text = 30
-    y_text = 120
-    spacing = 8
+    # 📐 Cálculo de caixa de fundo dos textos
+    x_text = int(0.02 * img_width)
+    y_text = title_y + padding * 4
 
-    quadrado_size = 15
-    padding_quadrado = 8
-    padding_x = 10
-    padding_y = 8
+    spacing = int(0.01 * img_width / 3)
+    quad_size = int(0.02 * img_width / 3)
+    pad_x = int(10 / 3)
+    pad_y = int(10 / 3)
 
-    # Cálculo de largura e altura total
     largura_max = 0
     altura_linha = 0
 
     for _, texto in textos:
-        bbox = draw.textbbox((0, 0), texto, font=font)
-        largura = bbox[2] - bbox[0]
-        altura = bbox[3] - bbox[1]
-        largura_max = max(largura_max, largura)
-        altura_linha = max(altura_linha, altura)
+        (w, h), _ = cv2.getTextSize(texto, font, base_font_scale, base_thickness)
+        largura_max = max(largura_max, w)
+        altura_linha = max(altura_linha, h)
 
-    altura_total = len(textos) * (altura_linha + spacing) - spacing  # remove o último spacing extra
+    altura_total = len(textos) * (altura_linha + spacing) - spacing
 
-    # Caixa de fundo
-    caixa_x0 = x_text - padding_x
-    caixa_y0 = y_text - padding_y
-    caixa_x1 = x_text + quadrado_size + padding_quadrado + largura_max + padding_x
-    caixa_y1 = y_text + altura_total + padding_y
+    caixa_x0 = x_text - pad_x
+    caixa_y0 = y_text - pad_y
+    caixa_x1 = x_text + quad_size + 10 + largura_max + pad_x
+    caixa_y1 = y_text + altura_total + pad_y
 
-    draw.rectangle([(caixa_x0, caixa_y0), (caixa_x1, caixa_y1)], fill=(255, 255, 255))
+    # 🗂️ Caixa de fundo
+    cv2.rectangle(
+        img,
+        (caixa_x0, caixa_y0),
+        (caixa_x1, caixa_y1),
+        (255, 255, 255),
+        -1
+    )
 
-    # Desenha quadradinhos + textos
+    # 🔳 Quadrados coloridos + textos
     yy = y_text
     for cls, texto in textos:
-        # Cor da classe (converte BGR -> RGB)
         color = class_colors.get(cls, (0, 0, 0))
-        color_rgb = (color[2], color[1], color[0])
 
-        # Quadrado colorido
+        # 🎨 Quadrado colorido
         quad_x0 = x_text
-        quad_y0 = yy + (altura_linha - quadrado_size) // 2
-        quad_x1 = quad_x0 + quadrado_size
-        quad_y1 = quad_y0 + quadrado_size
+        quad_y0 = yy
+        quad_x1 = quad_x0 + quad_size
+        quad_y1 = quad_y0 + quad_size
 
-        draw.rectangle([(quad_x0, quad_y0), (quad_x1, quad_y1)], fill=color_rgb)
+        cv2.rectangle(img, (quad_x0, quad_y0), (quad_x1, quad_y1), color, -1)
 
-        # Texto ao lado do quadrado
-        draw.text(
-            (quad_x1 + padding_quadrado, yy),
+        # ✍️ Texto
+        text_x = quad_x1 + 5  # 🔸 diminui o espaçamento lateral
+        text_y = yy + quad_size
+
+        cv2.putText(
+            img,
             texto,
-            font=font,
-            fill=(0, 0, 0)
+            (text_x, text_y - 2),  # 🔸 ajuste fino vertical
+            font,
+            base_font_scale,
+            (0, 0, 0),
+            base_thickness,
+            cv2.LINE_AA
         )
 
         yy += altura_linha + spacing
 
-    # Converte de volta PIL RGB -> OpenCV BGR
-    result_np = cv2.cvtColor(np.array(pil_img), cv2.COLOR_RGB2BGR)
-    return result_np
-
+    return img
 
 
 def track_mouse_movement_in_video(video_bytes, model, device, transform,
-                                  target_classes=[1, 2, 3], batch_size=10):
+                                  target_classes=[1, 2, 3], batch_size=10,  fps_process=5 ):
     """
     Processa vídeo (bytes) com modelo UNet que retorna mask logits em shape [batch, num_classes, Hm, Wm].
     Calcula centróides por classe, converte para coordenadas do frame original e gera mapas de rastros.
@@ -224,10 +235,18 @@ def track_mouse_movement_in_video(video_bytes, model, device, transform,
 
     video_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
     video_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
-    print(f"Vídeo resol: {video_width}x{video_height}")
+    video_fps = cap.get(cv2.CAP_PROP_FPS)
+    total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
+    print(f"🎞️ FPS do vídeo: {video_fps}, Total de frames: {total_frames}")
+    print(f"🖼️ Resolução: {video_width}x{video_height}")
+      # Calcula salto de frames
+    frame_skip = max(1, math.floor(video_fps / fps_process))
+    print(f"⏩ Processando 1 frame a cada {frame_skip} frames (FPS desejado: {fps_process})")
 
+  
     positions_per_class = {cls: [] for cls in target_classes}
     frame_count = 0
+    processed_frame_index = 0
 
     batch_frames = []
     batch_frame_indices = []
@@ -261,6 +280,9 @@ def track_mouse_movement_in_video(video_bytes, model, device, transform,
         if not ret:
             print("🏁 Fim do vídeo.")
             break
+        if frame_count % frame_skip != 0:
+            frame_count += 1
+            continue
 
         frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         pil_image = Image.fromarray(frame_rgb).convert("RGB")
@@ -365,14 +387,10 @@ def track_mouse_movement_in_video(video_bytes, model, device, transform,
     draw_endpoints(body_path, (0, 255, 0))
     draw_endpoints(tail_path, (0, 0, 255))
 
-    # Legenda
-    cv2.putText(map_img, "Cabeça", (30, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 0, 0), 2)
-    cv2.putText(map_img, "Corpo", (30, 60), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
-    cv2.putText(map_img, "Cauda", (30, 90), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
-
+   
     # Adiciona textos de deslocamento numa caixa branca
-    class_names = {1: "Cabeça", 2: "Corpo", 3: "Cauda"}
-    class_colors = {1: (255, 0, 0), 2: (0, 255, 0), 3: (0, 0, 255)}
+    class_names = {1: "Head", 2: "Body", 3: "Tail"}
+    class_colors = {1: (0, 0, 255), 2: (0, 255, 0), 3: (255, 0, 0)}
     map_img = add_displacement_text(map_img, deslocamentos_totais, class_names, class_colors)
 
     cv2.imwrite("rastro_mouse_com_deslocamento.png", map_img)
@@ -419,6 +437,13 @@ def track_mouse_movement_in_video(video_bytes, model, device, transform,
         "head_path": head_path,
         "body_path": body_path,
         "tail_path": tail_path,
+         "video_info": {
+            "fps_original": video_fps,
+            "fps_processado": fps_process,
+            "frame_skip": frame_skip,
+            "resolution": (video_width, video_height),
+            "total_frames": total_frames
+        }
     }
 
 
@@ -577,7 +602,7 @@ async def predict(image: UploadFile = File(...)):
 
 
 @app.post("/unet_freedom_track_video", summary="Track mouse in UNET video",  tags=["UNET"])
-async def track_video(video: UploadFile = File(...)):
+async def track_video(video: UploadFile = File(...),  fps: int = Query(5, ge=1, le=60, description="Frames per second to process (default 5, max 60)")):
     try:
         contents = await video.read()
         result = track_mouse_movement_in_video(
@@ -596,17 +621,23 @@ async def track_video(video: UploadFile = File(...)):
 
 
 @app.post("/unet_housing_track_image", summary="Track mouse in UNET image", tags=["UNET"])
-async def unet_track_image(image: UploadFile = File(..., description="Image file")):
+async def unet_track_image(
+    image: UploadFile = File(..., description="Video file")
+   
+):
+    """
+    Processa o vídeo enviado para rastrear o deslocamento dos animais.
+    Permite definir quantos FPS serão processados para reduzir custo computacional.
+    """
     try:
         contents = await image.read()
         result = track_mouse_movement_in_video(
-            contents, model, device, transform)
+            contents, model, device, transform, fps=fps
+        )
         serializable_result = convert_ndarrays_to_lists(result)
         return JSONResponse(status_code=200, content=serializable_result)
     except Exception as e:
         return JSONResponse(status_code=500, content={"error": str(e)})
-
-# UNET - vídeo
 
 
 @app.post("/unet_housing_track_video", summary="Track mouse in UNET video", tags=["UNET"])
