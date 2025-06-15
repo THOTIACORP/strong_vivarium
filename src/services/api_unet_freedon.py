@@ -1,7 +1,6 @@
-from PIL import ImageDraw, ImageFont
+from PIL import ImageDraw, ImageFont, Image
 from fastapi import FastAPI, File, UploadFile
 from fastapi.responses import JSONResponse
-from PIL import Image
 import torch
 from torchvision import transforms
 import numpy as np
@@ -11,6 +10,8 @@ import base64
 import cv2
 import tempfile
 import matplotlib.pyplot as plt
+import cv2
+import os
 app = FastAPI(title="Strong Vivarium: Thermal Mouse Analytics API")
 
 # UNet modelo (mantido igual) treinamento
@@ -101,27 +102,160 @@ transform = transforms.Compose([
     transforms.Normalize(mean=[0.485, 0.456, 0.406],
                          std=[0.229, 0.224, 0.225])
 ])
-def track_mouse_movement_in_video(video_bytes, model, device, transform, target_classes=[1, 2, 3], batch_size=10):
+import cv2
+import numpy as np
+from PIL import Image, ImageDraw, ImageFont
 
+
+def add_displacement_text(map_img_np, deslocamentos_totais, class_names, class_colors, font_path=None):
+    """
+    Desenha uma caixa branca com texto de deslocamento total das classes sobre map_img_np (BGR numpy),
+    incluindo um quadrado com a cor da classe antes do nome.
+
+    Parâmetros:
+    - map_img_np: imagem base em BGR numpy.
+    - deslocamentos_totais: dicionário {classe: deslocamento total}.
+    - class_names: dicionário {classe: nome da classe}.
+    - class_colors: dicionário {classe: (B, G, R)}.
+    - font_path: caminho para uma fonte .ttf (opcional).
+
+    Retorna:
+    - imagem numpy BGR com o texto desenhado.
+    """
+
+    # Conversão OpenCV (BGR) -> PIL (RGB)
+    map_img_rgb = cv2.cvtColor(map_img_np, cv2.COLOR_BGR2RGB)
+    pil_img = Image.fromarray(map_img_rgb)
+    draw = ImageDraw.Draw(pil_img)
+
+    # Fonte
+    try:
+        font = ImageFont.truetype(font_path, 20) if font_path else ImageFont.load_default()
+    except Exception:
+        font = ImageFont.load_default()
+
+    # Prepara textos
+    textos = []
+    for cls, desloc in deslocamentos_totais.items():
+        nome = class_names.get(cls, str(cls))
+        texto = f"{nome}: deslocamento total = {desloc:.2f} px"
+        textos.append((cls, texto))
+
+    # Parâmetros visuais
+    x_text = 30
+    y_text = 120
+    spacing = 8
+
+    quadrado_size = 15
+    padding_quadrado = 8
+    padding_x = 10
+    padding_y = 8
+
+    # Cálculo de largura e altura total
+    largura_max = 0
+    altura_linha = 0
+
+    for _, texto in textos:
+        bbox = draw.textbbox((0, 0), texto, font=font)
+        largura = bbox[2] - bbox[0]
+        altura = bbox[3] - bbox[1]
+        largura_max = max(largura_max, largura)
+        altura_linha = max(altura_linha, altura)
+
+    altura_total = len(textos) * (altura_linha + spacing) - spacing  # remove o último spacing extra
+
+    # Caixa de fundo
+    caixa_x0 = x_text - padding_x
+    caixa_y0 = y_text - padding_y
+    caixa_x1 = x_text + quadrado_size + padding_quadrado + largura_max + padding_x
+    caixa_y1 = y_text + altura_total + padding_y
+
+    draw.rectangle([(caixa_x0, caixa_y0), (caixa_x1, caixa_y1)], fill=(255, 255, 255))
+
+    # Desenha quadradinhos + textos
+    yy = y_text
+    for cls, texto in textos:
+        # Cor da classe (converte BGR -> RGB)
+        color = class_colors.get(cls, (0, 0, 0))
+        color_rgb = (color[2], color[1], color[0])
+
+        # Quadrado colorido
+        quad_x0 = x_text
+        quad_y0 = yy + (altura_linha - quadrado_size) // 2
+        quad_x1 = quad_x0 + quadrado_size
+        quad_y1 = quad_y0 + quadrado_size
+
+        draw.rectangle([(quad_x0, quad_y0), (quad_x1, quad_y1)], fill=color_rgb)
+
+        # Texto ao lado do quadrado
+        draw.text(
+            (quad_x1 + padding_quadrado, yy),
+            texto,
+            font=font,
+            fill=(0, 0, 0)
+        )
+
+        yy += altura_linha + spacing
+
+    # Converte de volta PIL RGB -> OpenCV BGR
+    result_np = cv2.cvtColor(np.array(pil_img), cv2.COLOR_RGB2BGR)
+    return result_np
+
+
+
+def track_mouse_movement_in_video(video_bytes, model, device, transform,
+                                  target_classes=[1, 2, 3], batch_size=10):
+    """
+    Processa vídeo (bytes) com modelo UNet que retorna mask logits em shape [batch, num_classes, Hm, Wm].
+    Calcula centróides por classe, converte para coordenadas do frame original e gera mapas de rastros.
+    Retorna um dict com deslocamentos, mapa_base e mapa_realista numpy arrays BGR, e caminhos por classe.
+    """
+    # 1. Grava temporário
     print("⏳ Criando arquivo temporário de vídeo...")
     with tempfile.NamedTemporaryFile(delete=False, suffix=".mp4") as temp_video:
         temp_video.write(video_bytes)
         temp_video_path = temp_video.name
 
+    # 2. Abre vídeo
     print("📹 Abrindo vídeo para leitura...")
     cap = cv2.VideoCapture(temp_video_path)
-
     if not cap.isOpened():
         raise ValueError("❌ Não foi possível abrir o vídeo.")
 
-    # Armazena posições para cada classe (lista de listas)
+    video_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+    video_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+    print(f"Vídeo resol: {video_width}x{video_height}")
+
     positions_per_class = {cls: [] for cls in target_classes}
     frame_count = 0
-    print("🚀 Iniciando processamento dos frames...")
 
     batch_frames = []
     batch_frame_indices = []
 
+    # Para saber dimensões de saída da IA (mask)
+    # Faz uma inferência de amostra no primeiro frame:
+    ret0, frame0 = cap.read()
+    if not ret0:
+        cap.release()
+        raise ValueError("Vídeo vazio ou não pôde ler primeiro frame.")
+    # Prepara tensor de amostra
+    frame0_rgb = cv2.cvtColor(frame0, cv2.COLOR_BGR2RGB)
+    pil0 = Image.fromarray(frame0_rgb).convert("RGB")
+    tensor0 = transform(pil0).unsqueeze(0).to(device)
+    with torch.no_grad():
+        out0 = model(tensor0)
+    # out0 shape: [1, num_classes, Hm, Wm]
+    _, num_classes, mask_h, mask_w = out0.shape
+    print(f"Saída do modelo (máscara): {out0.shape}")
+    # Calcula fatores de escala de máscara para frame original:
+    scale_x = video_width / mask_w
+    scale_y = video_height / mask_h
+    print(f"Scale mask->frame: scale_x={scale_x:.4f}, scale_y={scale_y:.4f}")
+
+    # Retorna ao início
+    cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
+
+    print("🚀 Iniciando processamento dos frames em batches...")
     while True:
         ret, frame = cap.read()
         if not ret:
@@ -130,29 +264,34 @@ def track_mouse_movement_in_video(video_bytes, model, device, transform, target_
 
         frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         pil_image = Image.fromarray(frame_rgb).convert("RGB")
-        input_tensor = transform(pil_image)
+        input_tensor = transform(pil_image)  # supõe resize interno para mask_w x mask_h
         batch_frames.append(input_tensor)
         batch_frame_indices.append(frame_count)
 
         if len(batch_frames) == batch_size:
+            # Pilha e inferência
             input_batch = torch.stack(batch_frames).to(device)
             with torch.no_grad():
-                output = model(input_batch)
-                # output shape: (batch_size, num_classes, H, W)
-                probs = torch.softmax(output, dim=1).cpu().numpy()  # numpy para facilidade
+                output = model(input_batch)  # shape [B, C, mask_h, mask_w]
+                probs = torch.softmax(output, dim=1).cpu().numpy()  # [B, C, Hm, Wm]
 
+            # Para cada frame no batch
             for i in range(len(batch_frames)):
                 for cls in target_classes:
+                    # Máscara booleana no espaço mask_h x mask_w
                     pred_mask = (np.argmax(probs[i], axis=0) == cls)
+                    # coords na máscara
                     coords = np.column_stack(np.where(pred_mask))
                     current_position = None
                     if len(coords) > 0:
                         y_mean, x_mean = coords.mean(axis=0)
-                        current_position = (int(x_mean), int(y_mean))
+                        # Converte para coordenada do frame original:
+                        x_orig = int(x_mean * scale_x)
+                        y_orig = int(y_mean * scale_y)
+                        current_position = (x_orig, y_orig)
                         print(f"Classe {cls} - Frame {batch_frame_indices[i]}: Detectado em {current_position}")
                     else:
                         print(f"Classe {cls} - Frame {batch_frame_indices[i]}: Não detectado.")
-
                     positions_per_class[cls].append(current_position)
 
             batch_frames = []
@@ -160,7 +299,7 @@ def track_mouse_movement_in_video(video_bytes, model, device, transform, target_
 
         frame_count += 1
 
-    # Processa sobras do batch
+    # Processa últimos frames restantes
     if batch_frames:
         input_batch = torch.stack(batch_frames).to(device)
         with torch.no_grad():
@@ -174,109 +313,115 @@ def track_mouse_movement_in_video(video_bytes, model, device, transform, target_
                 current_position = None
                 if len(coords) > 0:
                     y_mean, x_mean = coords.mean(axis=0)
-                    current_position = (int(x_mean), int(y_mean))
+                    x_orig = int(x_mean * scale_x)
+                    y_orig = int(y_mean * scale_y)
+                    current_position = (x_orig, y_orig)
                     print(f"Classe {cls} - Frame {batch_frame_indices[i]}: Detectado em {current_position}")
                 else:
                     print(f"Classe {cls} - Frame {batch_frame_indices[i]}: Não detectado.")
-
                 positions_per_class[cls].append(current_position)
 
     cap.release()
 
-    # Agora, calcular deslocamentos para cada parte separadamente
+    # Calcula deslocamentos totais
     deslocamentos_totais = {}
     for cls in target_classes:
-        total_move = 0
+        total_move = 0.0
         pos_list = positions_per_class[cls]
         for i in range(1, len(pos_list)):
-            if pos_list[i] and pos_list[i-1]:
-                total_move += np.linalg.norm(np.array(pos_list[i]) - np.array(pos_list[i-1]))
+            p0 = pos_list[i-1]
+            p1 = pos_list[i]
+            if p0 and p1:
+                total_move += np.linalg.norm(np.array(p1) - np.array(p0))
         deslocamentos_totais[cls] = total_move
         print(f"Deslocamento total classe {cls}: {total_move:.2f} px")
 
-    # Opcional: montar trajetórias de cabeça, corpo e cauda se as classes forem 0,1,2 respectivamente
     head_path = positions_per_class.get(1, [])
     body_path = positions_per_class.get(2, [])
     tail_path = positions_per_class.get(3, [])
 
-    # Gerar mapa de rastros
-    print("🗺️ Gerando mapa de rastros...")
-    map_img = np.ones((720, 1280, 3), dtype=np.uint8) * 255  # fundo branco
+    # Gera mapa de rastros com dimensões do vídeo
+    print("🗺️ Gerando mapa de rastros realista...")
+    map_img = np.ones((video_height, video_width, 3), dtype=np.uint8) * 255
 
-    def draw_path(path, color):
-        for i in range(1, len(path)):
-            if path[i - 1] and path[i]:
-                cv2.line(map_img, path[i - 1], path[i], color, 2)
+    def draw_path(path, color, thickness=2):
+        pts = [pt for pt in path if pt is not None]
+        if len(pts) >= 2:
+            arr = np.array(pts, dtype=np.int32).reshape((-1, 1, 2))
+            cv2.polylines(map_img, [arr], isClosed=False, color=color, thickness=thickness)
 
-    draw_path(tail_path, (0, 0, 255))    # cinza
-    draw_path(body_path, (0, 255, 0))        # verde
-    draw_path(head_path, (255, 0, 0))        # vermelho
 
-    class_names = {
-        0: "Fundo",
-        1: "Cauda",
-        2: "Corpo",
-        3: "Cabeça"
-    }
+    def draw_endpoints(path, color):
+        pts = [pt for pt in path if pt is not None]
+        if pts:
+            cv2.circle(map_img, pts[0], 5, color, -1)
+            cv2.circle(map_img, pts[-1], 5, (0, 0, 0), -1)
 
-    map_img_com_texto = add_displacement_text(map_img, deslocamentos_totais, class_names)
-    cv2.imwrite("rastro_mouse_com_deslocamento.png", map_img_com_texto)
-    print("✅ Processamento concluído.")
+    # Desenha em cores BGR: cabeça azul, corpo verde, cauda vermelho
+    draw_path(head_path, (255, 0, 0))
+    draw_path(body_path, (0, 255, 0))
+    draw_path(tail_path, (0, 0, 255))
+    draw_endpoints(head_path, (255, 0, 0))
+    draw_endpoints(body_path, (0, 255, 0))
+    draw_endpoints(tail_path, (0, 0, 255))
 
+    # Legenda
+    cv2.putText(map_img, "Cabeça", (30, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 0, 0), 2)
+    cv2.putText(map_img, "Corpo", (30, 60), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
+    cv2.putText(map_img, "Cauda", (30, 90), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
+
+    # Adiciona textos de deslocamento numa caixa branca
+    class_names = {1: "Cabeça", 2: "Corpo", 3: "Cauda"}
+    class_colors = {1: (255, 0, 0), 2: (0, 255, 0), 3: (0, 0, 255)}
+    map_img = add_displacement_text(map_img, deslocamentos_totais, class_names, class_colors)
+
+    cv2.imwrite("rastro_mouse_com_deslocamento.png", map_img)
+
+    # Sobrepõe ao último frame
+    print("📷 Sobrepondo rastro ao último frame real do vídeo...")
+    cap2 = cv2.VideoCapture(temp_video_path)
+    cap2.set(cv2.CAP_PROP_POS_FRAMES, frame_count - 1)
+    ret, last_frame = cap2.read()
+    cap2.release()
+
+    if ret:
+        overlay = last_frame.copy()
+        # Desenha trajetórias no overlay
+        def draw_on(img, path, color, thickness=2):
+            pts = [pt for pt in path if pt is not None]
+            if len(pts) >= 2:
+                arr = np.array(pts, dtype=np.int32).reshape((-1, 1, 2))
+                cv2.polylines(img, [arr], isClosed=False, color=color, thickness=thickness, lineType=cv2.LINE_AA)
+        def draw_ep(img, path, color):
+            pts = [pt for pt in path if pt is not None]
+            if pts:
+                cv2.circle(img, pts[0], 5, color, -1)
+                cv2.circle(img, pts[-1], 5, (0, 0, 0), -1)
+
+        draw_on(overlay, head_path, (255, 0, 0))
+        draw_on(overlay, body_path, (0, 255, 0))
+        draw_on(overlay, tail_path, (0, 0, 255))
+        draw_ep(overlay, head_path, (255, 0, 0))
+        draw_ep(overlay, body_path, (0, 255, 0))
+        draw_ep(overlay, tail_path, (0, 0, 255))
+
+        # Usa transparência entre overlay e map_img, ambos mesmo tamanho
+        mapa_realista = cv2.addWeighted(overlay, 0.5, map_img, 0.5, 0)
+        cv2.imwrite("rastro_mouse_realista.png", mapa_realista)
+    else:
+        mapa_realista = map_img
+    os.remove(temp_video_path)
+    print("✅ Processamento concluído com sucesso!")
     return {
         "movimentos": deslocamentos_totais,
-        "mapa_completo": map_img,
+        "mapa_base": map_img,
+        "mapa_realista": mapa_realista,
         "head_path": head_path,
         "body_path": body_path,
         "tail_path": tail_path,
     }
-def add_displacement_text(map_img_np, deslocamentos_totais, class_names, font_path=None):
-    # Converte numpy array (OpenCV BGR) para PIL Image (RGB)
-    map_img_rgb = cv2.cvtColor(map_img_np, cv2.COLOR_BGR2RGB)
-    map_img_pil = Image.fromarray(map_img_rgb)
 
-    # Usar modo RGBA para poder desenhar retângulo semi-transparente
-    draw = ImageDraw.Draw(map_img_pil, "RGBA")
 
-    # Fonte (tente carregar uma fonte TTF, ou use default)
-    if font_path:
-        font = ImageFont.truetype(font_path, size=24)
-    else:
-        font = ImageFont.load_default()
-
-    # Preparar texto com deslocamentos formatados
-    text_lines = []
-    for cls, desloc in deslocamentos_totais.items():
-        nome = class_names.get(cls, f"Classe {cls}")
-        text_lines.append(f"{nome}: {desloc:.2f} px")
-
-    text = "\n".join(text_lines)
-
-    # Define a posição para o painel no canto superior direito
-    margin = 10
-
-    # Medir tamanho do texto usando multiline_textbbox
-    bbox = draw.multiline_textbbox((0, 0), text, font=font)
-    text_width = bbox[2] - bbox[0]
-    text_height = bbox[3] - bbox[1]
-
-    x = map_img_pil.width - text_width - margin
-    y = margin
-
-    # Desenhar um retângulo semitransparente atrás do texto para melhor legibilidade
-    rect_x0 = x - 10
-    rect_y0 = y - 5
-    rect_x1 = x + text_width + 10
-    rect_y1 = y + text_height + 5
-    draw.rectangle([rect_x0, rect_y0, rect_x1, rect_y1], fill=(255, 255, 255, 180))
-
-    # Escrever o texto
-    draw.multiline_text((x, y), text, fill="black", font=font)
-
-    # Converte de volta para numpy array BGR para salvar ou retornar
-    result_img = cv2.cvtColor(np.array(map_img_pil), cv2.COLOR_RGB2BGR)
-
-    return result_img
 
 def convert_ndarrays_to_lists(data):
     if isinstance(data, np.ndarray):
@@ -287,6 +432,7 @@ def convert_ndarrays_to_lists(data):
         return [convert_ndarrays_to_lists(item) for item in data]
     else:
         return data
+
 
 @app.post("/unet_freedom_track_image", summary="Track mouse in UNET image",  tags=["UNET"])
 async def predict(image: UploadFile = File(...)):
@@ -440,51 +586,63 @@ async def track_video(video: UploadFile = File(...)):
 
         # Converte todos os np.ndarray para listas
         serializable_result = convert_ndarrays_to_lists(result)
-     
+
         return JSONResponse(status_code=200, content=serializable_result)
 
     except Exception as e:
         return JSONResponse(status_code=500, content={"error": str(e)})
 
 # UNET - imagem
+
+
 @app.post("/unet_housing_track_image", summary="Track mouse in UNET image", tags=["UNET"])
 async def unet_track_image(image: UploadFile = File(..., description="Image file")):
     try:
         contents = await image.read()
-        result = track_mouse_movement_in_video(contents, model, device, transform)
+        result = track_mouse_movement_in_video(
+            contents, model, device, transform)
         serializable_result = convert_ndarrays_to_lists(result)
         return JSONResponse(status_code=200, content=serializable_result)
     except Exception as e:
         return JSONResponse(status_code=500, content={"error": str(e)})
 
 # UNET - vídeo
+
+
 @app.post("/unet_housing_track_video", summary="Track mouse in UNET video", tags=["UNET"])
 async def unet_track_video(video: UploadFile = File(..., description="Video file")):
     try:
         contents = await video.read()
-        result = track_mouse_movement_in_video(contents, model, device, transform)
+        result = track_mouse_movement_in_video(
+            contents, model, device, transform)
         serializable_result = convert_ndarrays_to_lists(result)
         return JSONResponse(status_code=200, content=serializable_result)
     except Exception as e:
         return JSONResponse(status_code=500, content={"error": str(e)})
 
 # DETECTRON - imagem
+
+
 @app.post("/detectron_track_image", summary="Track mouse in Detectron image", tags=["DETECTRON"])
 async def detectron_track_image(image: UploadFile = File(..., description="Image file")):
     try:
         contents = await image.read()
-        result = track_mouse_movement_in_video(contents, model, device, transform)
+        result = track_mouse_movement_in_video(
+            contents, model, device, transform)
         serializable_result = convert_ndarrays_to_lists(result)
         return JSONResponse(status_code=200, content=serializable_result)
     except Exception as e:
         return JSONResponse(status_code=500, content={"error": str(e)})
 
 # DETECTRON - vídeo
+
+
 @app.post("/detectron_track_video", summary="Track mouse in Detectron video", tags=["DETECTRON"])
 async def detectron_track_video(video: UploadFile = File(..., description="Video file")):
     try:
         contents = await video.read()
-        result = track_mouse_movement_in_video(contents, model, device, transform)
+        result = track_mouse_movement_in_video(
+            contents, model, device, transform)
         serializable_result = convert_ndarrays_to_lists(result)
         return JSONResponse(status_code=200, content=serializable_result)
     except Exception as e:
