@@ -1,0 +1,2559 @@
+[
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "platform",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "platform",
+        "description": "platform",
+        "detail": "platform",
+        "documentation": {}
+    },
+    {
+        "label": "QApplication",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QMainWindow",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QWidget",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QVBoxLayout",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QPushButton",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLabel",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QTextEdit",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QHBoxLayout",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QComboBox",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QListWidget",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QListWidgetItem",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QStackedWidget",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QApplication",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QWidget",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLabel",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QVBoxLayout",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QHBoxLayout",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QPushButton",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QSlider",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QComboBox",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QFileDialog",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLineEdit",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QShortcut",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QApplication",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QWidget",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QVBoxLayout",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLabel",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QPushButton",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QFileDialog",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QMessageBox",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLineEdit",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QTextEdit",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QHBoxLayout",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QApplication",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QWidget",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLabel",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QPushButton",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QVBoxLayout",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QFileDialog",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QSpinBox",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QHBoxLayout",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLineEdit",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QComboBox",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QApplication",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QWidget",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLabel",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QPushButton",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QSpinBox",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QVBoxLayout",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QHBoxLayout",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QTextEdit",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QFileDialog",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLineEdit",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QApplication",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QWidget",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLabel",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QPushButton",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QVBoxLayout",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QHBoxLayout",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QGridLayout",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QScrollArea",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QFileDialog",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QMessageBox",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QFont",
+        "importPath": "PyQt5.QtGui",
+        "description": "PyQt5.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QIcon",
+        "importPath": "PyQt5.QtGui",
+        "description": "PyQt5.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QPixmap",
+        "importPath": "PyQt5.QtGui",
+        "description": "PyQt5.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QImage",
+        "importPath": "PyQt5.QtGui",
+        "description": "PyQt5.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QCursor",
+        "importPath": "PyQt5.QtGui",
+        "description": "PyQt5.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QPainter",
+        "importPath": "PyQt5.QtGui",
+        "description": "PyQt5.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QPen",
+        "importPath": "PyQt5.QtGui",
+        "description": "PyQt5.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QKeySequence",
+        "importPath": "PyQt5.QtGui",
+        "description": "PyQt5.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QPixmap",
+        "importPath": "PyQt5.QtGui",
+        "description": "PyQt5.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QImage",
+        "importPath": "PyQt5.QtGui",
+        "description": "PyQt5.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QImage",
+        "importPath": "PyQt5.QtGui",
+        "description": "PyQt5.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QPixmap",
+        "importPath": "PyQt5.QtGui",
+        "description": "PyQt5.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QPixmap",
+        "importPath": "PyQt5.QtGui",
+        "description": "PyQt5.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QImage",
+        "importPath": "PyQt5.QtGui",
+        "description": "PyQt5.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QIcon",
+        "importPath": "PyQt5.QtGui",
+        "description": "PyQt5.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "Qt",
+        "importPath": "PyQt5.QtCore",
+        "description": "PyQt5.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "Qt",
+        "importPath": "PyQt5.QtCore",
+        "description": "PyQt5.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "Qt",
+        "importPath": "PyQt5.QtCore",
+        "description": "PyQt5.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "QThread",
+        "importPath": "PyQt5.QtCore",
+        "description": "PyQt5.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "pyqtSignal",
+        "importPath": "PyQt5.QtCore",
+        "description": "PyQt5.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "QTimer",
+        "importPath": "PyQt5.QtCore",
+        "description": "PyQt5.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "Qt",
+        "importPath": "PyQt5.QtCore",
+        "description": "PyQt5.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "Qt",
+        "importPath": "PyQt5.QtCore",
+        "description": "PyQt5.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "cv2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cv2",
+        "description": "cv2",
+        "detail": "cv2",
+        "documentation": {}
+    },
+    {
+        "label": "base64",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "base64",
+        "description": "base64",
+        "detail": "base64",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "glob",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "glob",
+        "description": "glob",
+        "detail": "glob",
+        "documentation": {}
+    },
+    {
+        "label": "glob",
+        "importPath": "glob",
+        "description": "glob",
+        "isExtraImport": true,
+        "detail": "glob",
+        "documentation": {}
+    },
+    {
+        "label": "QtWidgets",
+        "importPath": "PyQt5",
+        "description": "PyQt5",
+        "isExtraImport": true,
+        "detail": "PyQt5",
+        "documentation": {}
+    },
+    {
+        "label": "QtGui",
+        "importPath": "PyQt5",
+        "description": "PyQt5",
+        "isExtraImport": true,
+        "detail": "PyQt5",
+        "documentation": {}
+    },
+    {
+        "label": "QtCore",
+        "importPath": "PyQt5",
+        "description": "PyQt5",
+        "isExtraImport": true,
+        "detail": "PyQt5",
+        "documentation": {}
+    },
+    {
+        "label": "PCA",
+        "importPath": "sklearn.decomposition",
+        "description": "sklearn.decomposition",
+        "isExtraImport": true,
+        "detail": "sklearn.decomposition",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "tifffile",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tifffile",
+        "description": "tifffile",
+        "detail": "tifffile",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ImageDraw",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ImageFont",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ImageDraw",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ImageFont",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "File",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "UploadFile",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Query",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "File",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "UploadFile",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "JSONResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "JSONResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "torch",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch",
+        "description": "torch",
+        "detail": "torch",
+        "documentation": {}
+    },
+    {
+        "label": "transforms",
+        "importPath": "torchvision",
+        "description": "torchvision",
+        "isExtraImport": true,
+        "detail": "torchvision",
+        "documentation": {}
+    },
+    {
+        "label": "transforms",
+        "importPath": "torchvision",
+        "description": "torchvision",
+        "isExtraImport": true,
+        "detail": "torchvision",
+        "documentation": {}
+    },
+    {
+        "label": "transforms",
+        "importPath": "torchvision",
+        "description": "torchvision",
+        "isExtraImport": true,
+        "detail": "torchvision",
+        "documentation": {}
+    },
+    {
+        "label": "io",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "io",
+        "description": "io",
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "torch.nn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch.nn",
+        "description": "torch.nn",
+        "detail": "torch.nn",
+        "documentation": {}
+    },
+    {
+        "label": "tempfile",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tempfile",
+        "description": "tempfile",
+        "detail": "tempfile",
+        "documentation": {}
+    },
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "DefaultTrainer",
+        "importPath": "detectron2.engine",
+        "description": "detectron2.engine",
+        "isExtraImport": true,
+        "detail": "detectron2.engine",
+        "documentation": {}
+    },
+    {
+        "label": "HookBase",
+        "importPath": "detectron2.engine.hooks",
+        "description": "detectron2.engine.hooks",
+        "isExtraImport": true,
+        "detail": "detectron2.engine.hooks",
+        "documentation": {}
+    },
+    {
+        "label": "get_cfg",
+        "importPath": "detectron2.config",
+        "description": "detectron2.config",
+        "isExtraImport": true,
+        "detail": "detectron2.config",
+        "documentation": {}
+    },
+    {
+        "label": "DatasetCatalog",
+        "importPath": "detectron2.data",
+        "description": "detectron2.data",
+        "isExtraImport": true,
+        "detail": "detectron2.data",
+        "documentation": {}
+    },
+    {
+        "label": "MetadataCatalog",
+        "importPath": "detectron2.data",
+        "description": "detectron2.data",
+        "isExtraImport": true,
+        "detail": "detectron2.data",
+        "documentation": {}
+    },
+    {
+        "label": "register_coco_panoptic",
+        "importPath": "detectron2.data.datasets",
+        "description": "detectron2.data.datasets",
+        "isExtraImport": true,
+        "detail": "detectron2.data.datasets",
+        "documentation": {}
+    },
+    {
+        "label": "COCOEvaluator",
+        "importPath": "detectron2.evaluation",
+        "description": "detectron2.evaluation",
+        "isExtraImport": true,
+        "detail": "detectron2.evaluation",
+        "documentation": {}
+    },
+    {
+        "label": "SemSegEvaluator",
+        "importPath": "detectron2.evaluation",
+        "description": "detectron2.evaluation",
+        "isExtraImport": true,
+        "detail": "detectron2.evaluation",
+        "documentation": {}
+    },
+    {
+        "label": "DatasetEvaluators",
+        "importPath": "detectron2.evaluation",
+        "description": "detectron2.evaluation",
+        "isExtraImport": true,
+        "detail": "detectron2.evaluation",
+        "documentation": {}
+    },
+    {
+        "label": "PanopticEvaluator",
+        "importPath": "detectron2.evaluation",
+        "description": "detectron2.evaluation",
+        "isExtraImport": true,
+        "detail": "detectron2.evaluation",
+        "documentation": {}
+    },
+    {
+        "label": "torch.optim",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch.optim",
+        "description": "torch.optim",
+        "detail": "torch.optim",
+        "documentation": {}
+    },
+    {
+        "label": "Dataset",
+        "importPath": "torch.utils.data",
+        "description": "torch.utils.data",
+        "isExtraImport": true,
+        "detail": "torch.utils.data",
+        "documentation": {}
+    },
+    {
+        "label": "DataLoader",
+        "importPath": "torch.utils.data",
+        "description": "torch.utils.data",
+        "isExtraImport": true,
+        "detail": "torch.utils.data",
+        "documentation": {}
+    },
+    {
+        "label": "random_split",
+        "importPath": "torch.utils.data",
+        "description": "torch.utils.data",
+        "isExtraImport": true,
+        "detail": "torch.utils.data",
+        "documentation": {}
+    },
+    {
+        "label": "summary",
+        "importPath": "torchinfo",
+        "description": "torchinfo",
+        "isExtraImport": true,
+        "detail": "torchinfo",
+        "documentation": {}
+    },
+    {
+        "label": "f1_score",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "accuracy_score",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "confusion_matrix",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "ConfusionMatrixDisplay",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "roc_curve",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "auc",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "plotly.graph_objects",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "plotly.graph_objects",
+        "description": "plotly.graph_objects",
+        "detail": "plotly.graph_objects",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm",
+        "description": "tqdm",
+        "isExtraImport": true,
+        "detail": "tqdm",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "tkinter",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "messagebox",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "scrolledtext",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "locale",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "locale",
+        "description": "locale",
+        "detail": "locale",
+        "documentation": {}
+    },
+    {
+        "label": "webbrowser",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "webbrowser",
+        "description": "webbrowser",
+        "detail": "webbrowser",
+        "documentation": {}
+    },
+    {
+        "label": "threading",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "threading",
+        "description": "threading",
+        "detail": "threading",
+        "documentation": {}
+    },
+    {
+        "label": "ScriptTab",
+        "kind": 6,
+        "importPath": "src.functions.bioterio_tool_panel",
+        "description": "src.functions.bioterio_tool_panel",
+        "peekOfCode": "class ScriptTab(QWidget):\n    def __init__(self, title, script_name):\n        super().__init__()\n        self.script_name = script_name\n        self.process = None\n        self.layout = QVBoxLayout()\n        self.layout.setSpacing(10)\n        self.layout.setAlignment(Qt.AlignTop)\n        self.title_label = QLabel(f\"{title}\")\n        self.title_label.setFont(QFont(\"Segoe UI\", 12, QFont.Bold))",
+        "detail": "src.functions.bioterio_tool_panel",
+        "documentation": {}
+    },
+    {
+        "label": "SettingsTab",
+        "kind": 6,
+        "importPath": "src.functions.bioterio_tool_panel",
+        "description": "src.functions.bioterio_tool_panel",
+        "peekOfCode": "class SettingsTab(QWidget):\n    def __init__(self, apply_theme_callback):\n        super().__init__()\n        layout = QVBoxLayout()\n        layout.addStretch()\n        self.theme_selector = QComboBox()\n        self.theme_selector.addItems([\"🌞 Tema Claro\", \"🌙 Tema Escuro\"])\n        self.theme_selector.currentIndexChanged.connect(apply_theme_callback)\n        layout.addWidget(QLabel(\"Tema:\"))\n        layout.addWidget(self.theme_selector)",
+        "detail": "src.functions.bioterio_tool_panel",
+        "documentation": {}
+    },
+    {
+        "label": "MainWindow",
+        "kind": 6,
+        "importPath": "src.functions.bioterio_tool_panel",
+        "description": "src.functions.bioterio_tool_panel",
+        "peekOfCode": "class MainWindow(QMainWindow):\n    def __init__(self):\n        super().__init__()\n        self.setWindowTitle(\"Biotério Forte - Painel de Ferramentas\")\n        self.setWindowIcon(QIcon(\"../../icon.ico\"))\n        self.setGeometry(100, 100, 900, 600)\n        # Layout principal\n        main_layout = QHBoxLayout()\n        # Menu lateral\n        self.menu = QListWidget()",
+        "detail": "src.functions.bioterio_tool_panel",
+        "documentation": {}
+    },
+    {
+        "label": "IS_WINDOWS",
+        "kind": 5,
+        "importPath": "src.functions.bioterio_tool_panel",
+        "description": "src.functions.bioterio_tool_panel",
+        "peekOfCode": "IS_WINDOWS = platform.system() == \"Windows\"\nSCRIPTS = {\n    \"🎞️ Extract Frames\": \"opencv.py\",\n    \"🧬 Pseudo-Classes\": \"pseud-class.py\",\n    \"🕵️ View Mask Debug\": \"view_mask_debug.py\",\n    \"🎨 Edit Masks (GUI)\": \"edit_mask_app.py\",\n    \"🦊 Transforms Fake\": \"transforms_fake.py\",\n    \"🦊 Transforms Fake Multiple\": \"transforms_fake_multiple.py\",\n    \"🧠 Train Unet\": \"train_unet.py\",\n    \"🧠 Train Detectron\": \"train_detectron.py\",",
+        "detail": "src.functions.bioterio_tool_panel",
+        "documentation": {}
+    },
+    {
+        "label": "SCRIPTS",
+        "kind": 5,
+        "importPath": "src.functions.bioterio_tool_panel",
+        "description": "src.functions.bioterio_tool_panel",
+        "peekOfCode": "SCRIPTS = {\n    \"🎞️ Extract Frames\": \"opencv.py\",\n    \"🧬 Pseudo-Classes\": \"pseud-class.py\",\n    \"🕵️ View Mask Debug\": \"view_mask_debug.py\",\n    \"🎨 Edit Masks (GUI)\": \"edit_mask_app.py\",\n    \"🦊 Transforms Fake\": \"transforms_fake.py\",\n    \"🦊 Transforms Fake Multiple\": \"transforms_fake_multiple.py\",\n    \"🧠 Train Unet\": \"train_unet.py\",\n    \"🧠 Train Detectron\": \"train_detectron.py\",\n    \"🧠 Inferences\": \"loop_api_unet.py\"",
+        "detail": "src.functions.bioterio_tool_panel",
+        "documentation": {}
+    },
+    {
+        "label": "MaskEditor",
+        "kind": 6,
+        "importPath": "src.functions.edit_mask_app",
+        "description": "src.functions.edit_mask_app",
+        "peekOfCode": "class MaskEditor(QWidget):\n    def __init__(self):\n        super().__init__()\n        self.setWindowTitle(\"Mask Editor PyQt5\")\n        self.setGeometry(100, 100, 700, 800)\n        self.brush_size = 10\n        self.current_class = 1\n        self.drawing = False\n        self.mask_history = []\n        self.lock_background = False",
+        "detail": "src.functions.edit_mask_app",
+        "documentation": {}
+    },
+    {
+        "label": "create_brush_cursor",
+        "kind": 2,
+        "importPath": "src.functions.edit_mask_app",
+        "description": "src.functions.edit_mask_app",
+        "peekOfCode": "def create_brush_cursor(size):\n    diameter = size * 2\n    pix = QPixmap(diameter+1, diameter+1)\n    pix.fill(Qt.transparent)\n    p = QPainter(pix)\n    pen = QPen(Qt.black)\n    pen.setWidth(2)\n    p.setPen(pen)\n    p.drawEllipse(0, 0, diameter, diameter)\n    p.end()",
+        "detail": "src.functions.edit_mask_app",
+        "documentation": {}
+    },
+    {
+        "label": "get_widget",
+        "kind": 2,
+        "importPath": "src.functions.edit_mask_app",
+        "description": "src.functions.edit_mask_app",
+        "peekOfCode": "def get_widget():\n    return MaskEditor()\nif __name__ == \"__main__\":\n    import sys\n    from PyQt5.QtWidgets import QApplication\n    app = QApplication(sys.argv)\n    window = MaskEditor()\n    window.show()\n    sys.exit(app.exec_())",
+        "detail": "src.functions.edit_mask_app",
+        "documentation": {}
+    },
+    {
+        "label": "NUM_CLASSES",
+        "kind": 5,
+        "importPath": "src.functions.edit_mask_app",
+        "description": "src.functions.edit_mask_app",
+        "peekOfCode": "NUM_CLASSES = 3\nCLASS_COLORS = [\n    (0,   0,   0),    # 0: fundo\n    (255, 0,   0),    # 1: cabeça\n    (0,   255, 0),    # 2: corpo\n    (0,   0,   255),  # 3: cauda\n]\ndef create_brush_cursor(size):\n    diameter = size * 2\n    pix = QPixmap(diameter+1, diameter+1)",
+        "detail": "src.functions.edit_mask_app",
+        "documentation": {}
+    },
+    {
+        "label": "CLASS_COLORS",
+        "kind": 5,
+        "importPath": "src.functions.edit_mask_app",
+        "description": "src.functions.edit_mask_app",
+        "peekOfCode": "CLASS_COLORS = [\n    (0,   0,   0),    # 0: fundo\n    (255, 0,   0),    # 1: cabeça\n    (0,   255, 0),    # 2: corpo\n    (0,   0,   255),  # 3: cauda\n]\ndef create_brush_cursor(size):\n    diameter = size * 2\n    pix = QPixmap(diameter+1, diameter+1)\n    pix.fill(Qt.transparent)",
+        "detail": "src.functions.edit_mask_app",
+        "documentation": {}
+    },
+    {
+        "label": "ImageProcessor",
+        "kind": 6,
+        "importPath": "src.functions.loop_api_unet",
+        "description": "src.functions.loop_api_unet",
+        "peekOfCode": "class ImageProcessor(QThread):\n    update_preview = pyqtSignal(str, dict)  # (image_path, response_json)\n    update_status = pyqtSignal(str)\n    def __init__(self, api_url, input_folder, output_folder):\n        super().__init__()\n        self.api_url = api_url\n        self.input_folder = input_folder\n        self.output_folder = output_folder\n    def run(self):\n        extensoes = {\".png\", \".jpg\", \".jpeg\", \".bmp\", \".tiff\"}",
+        "detail": "src.functions.loop_api_unet",
+        "documentation": {}
+    },
+    {
+        "label": "MaskSaverApp",
+        "kind": 6,
+        "importPath": "src.functions.loop_api_unet",
+        "description": "src.functions.loop_api_unet",
+        "peekOfCode": "class MaskSaverApp(QWidget):\n    def __init__(self):\n        super().__init__()\n        self.setWindowTitle(\"UNet Preview - Thumbnail Viewer\")\n        self.resize(1200, 720)\n        self.api_url = \"\"\n        self.input_folder = \"\"\n        self.output_folder = \"\"\n        layout = QVBoxLayout()\n        # Campos de entrada",
+        "detail": "src.functions.loop_api_unet",
+        "documentation": {}
+    },
+    {
+        "label": "VideoToImagesApp",
+        "kind": 6,
+        "importPath": "src.functions.opencv",
+        "description": "src.functions.opencv",
+        "peekOfCode": "class VideoToImagesApp(QWidget):\n    def __init__(self):\n        super().__init__()\n        self.setWindowTitle(\"Extrator de Frames\")\n        self.setGeometry(100, 100, 600, 600)\n        self.cap = None\n        self.timer = QTimer()\n        self.timer.timeout.connect(self.update_frame)\n        self.frame_index = 0\n        self.is_playing = False",
+        "detail": "src.functions.opencv",
+        "documentation": {}
+    },
+    {
+        "label": "get_widget",
+        "kind": 2,
+        "importPath": "src.functions.opencv",
+        "description": "src.functions.opencv",
+        "peekOfCode": "def get_widget():\n    return VideoToImagesApp()\nif __name__ == \"__main__\":\n    import sys\n    from PyQt5.QtWidgets import QApplication\n    app = QApplication(sys.argv)\n    window = VideoToImagesApp()\n    window.show()\n    sys.exit(app.exec_())",
+        "detail": "src.functions.opencv",
+        "documentation": {}
+    },
+    {
+        "label": "video_folder",
+        "kind": 5,
+        "importPath": "src.functions.opencv_video",
+        "description": "src.functions.opencv_video",
+        "peekOfCode": "video_folder = \"videos\"  # Ex: \"videos/\"\noutput_video = \"video_end.mp4\"\n# Pegando todos os vídeos suportados pela extensão\nvideo_files = sorted(glob.glob(os.path.join(video_folder, \"*.mp4\")))\nif not video_files:\n    print(\"Nenhum vídeo encontrado na pasta.\")\n    exit()\n# Ler propriedades do primeiro vídeo\nfirst_cap = cv2.VideoCapture(video_files[0])\nfps = first_cap.get(cv2.CAP_PROP_FPS)",
+        "detail": "src.functions.opencv_video",
+        "documentation": {}
+    },
+    {
+        "label": "output_video",
+        "kind": 5,
+        "importPath": "src.functions.opencv_video",
+        "description": "src.functions.opencv_video",
+        "peekOfCode": "output_video = \"video_end.mp4\"\n# Pegando todos os vídeos suportados pela extensão\nvideo_files = sorted(glob.glob(os.path.join(video_folder, \"*.mp4\")))\nif not video_files:\n    print(\"Nenhum vídeo encontrado na pasta.\")\n    exit()\n# Ler propriedades do primeiro vídeo\nfirst_cap = cv2.VideoCapture(video_files[0])\nfps = first_cap.get(cv2.CAP_PROP_FPS)\nwidth = int(first_cap.get(cv2.CAP_PROP_FRAME_WIDTH))",
+        "detail": "src.functions.opencv_video",
+        "documentation": {}
+    },
+    {
+        "label": "video_files",
+        "kind": 5,
+        "importPath": "src.functions.opencv_video",
+        "description": "src.functions.opencv_video",
+        "peekOfCode": "video_files = sorted(glob.glob(os.path.join(video_folder, \"*.mp4\")))\nif not video_files:\n    print(\"Nenhum vídeo encontrado na pasta.\")\n    exit()\n# Ler propriedades do primeiro vídeo\nfirst_cap = cv2.VideoCapture(video_files[0])\nfps = first_cap.get(cv2.CAP_PROP_FPS)\nwidth = int(first_cap.get(cv2.CAP_PROP_FRAME_WIDTH))\nheight = int(first_cap.get(cv2.CAP_PROP_FRAME_HEIGHT))\nfirst_cap.release()",
+        "detail": "src.functions.opencv_video",
+        "documentation": {}
+    },
+    {
+        "label": "first_cap",
+        "kind": 5,
+        "importPath": "src.functions.opencv_video",
+        "description": "src.functions.opencv_video",
+        "peekOfCode": "first_cap = cv2.VideoCapture(video_files[0])\nfps = first_cap.get(cv2.CAP_PROP_FPS)\nwidth = int(first_cap.get(cv2.CAP_PROP_FRAME_WIDTH))\nheight = int(first_cap.get(cv2.CAP_PROP_FRAME_HEIGHT))\nfirst_cap.release()\n# Criar o objeto de gravação\nfourcc = cv2.VideoWriter_fourcc(*'mp4v')\nout = cv2.VideoWriter(output_video, fourcc, fps, (width, height))\n# Loop para processar todos os vídeos\nfor video_path in video_files:",
+        "detail": "src.functions.opencv_video",
+        "documentation": {}
+    },
+    {
+        "label": "fps",
+        "kind": 5,
+        "importPath": "src.functions.opencv_video",
+        "description": "src.functions.opencv_video",
+        "peekOfCode": "fps = first_cap.get(cv2.CAP_PROP_FPS)\nwidth = int(first_cap.get(cv2.CAP_PROP_FRAME_WIDTH))\nheight = int(first_cap.get(cv2.CAP_PROP_FRAME_HEIGHT))\nfirst_cap.release()\n# Criar o objeto de gravação\nfourcc = cv2.VideoWriter_fourcc(*'mp4v')\nout = cv2.VideoWriter(output_video, fourcc, fps, (width, height))\n# Loop para processar todos os vídeos\nfor video_path in video_files:\n    print(f\"Processando: {os.path.basename(video_path)}\")",
+        "detail": "src.functions.opencv_video",
+        "documentation": {}
+    },
+    {
+        "label": "width",
+        "kind": 5,
+        "importPath": "src.functions.opencv_video",
+        "description": "src.functions.opencv_video",
+        "peekOfCode": "width = int(first_cap.get(cv2.CAP_PROP_FRAME_WIDTH))\nheight = int(first_cap.get(cv2.CAP_PROP_FRAME_HEIGHT))\nfirst_cap.release()\n# Criar o objeto de gravação\nfourcc = cv2.VideoWriter_fourcc(*'mp4v')\nout = cv2.VideoWriter(output_video, fourcc, fps, (width, height))\n# Loop para processar todos os vídeos\nfor video_path in video_files:\n    print(f\"Processando: {os.path.basename(video_path)}\")\n    cap = cv2.VideoCapture(video_path)",
+        "detail": "src.functions.opencv_video",
+        "documentation": {}
+    },
+    {
+        "label": "height",
+        "kind": 5,
+        "importPath": "src.functions.opencv_video",
+        "description": "src.functions.opencv_video",
+        "peekOfCode": "height = int(first_cap.get(cv2.CAP_PROP_FRAME_HEIGHT))\nfirst_cap.release()\n# Criar o objeto de gravação\nfourcc = cv2.VideoWriter_fourcc(*'mp4v')\nout = cv2.VideoWriter(output_video, fourcc, fps, (width, height))\n# Loop para processar todos os vídeos\nfor video_path in video_files:\n    print(f\"Processando: {os.path.basename(video_path)}\")\n    cap = cv2.VideoCapture(video_path)\n    while True:",
+        "detail": "src.functions.opencv_video",
+        "documentation": {}
+    },
+    {
+        "label": "fourcc",
+        "kind": 5,
+        "importPath": "src.functions.opencv_video",
+        "description": "src.functions.opencv_video",
+        "peekOfCode": "fourcc = cv2.VideoWriter_fourcc(*'mp4v')\nout = cv2.VideoWriter(output_video, fourcc, fps, (width, height))\n# Loop para processar todos os vídeos\nfor video_path in video_files:\n    print(f\"Processando: {os.path.basename(video_path)}\")\n    cap = cv2.VideoCapture(video_path)\n    while True:\n        ret, frame = cap.read()\n        if not ret:\n            break",
+        "detail": "src.functions.opencv_video",
+        "documentation": {}
+    },
+    {
+        "label": "out",
+        "kind": 5,
+        "importPath": "src.functions.opencv_video",
+        "description": "src.functions.opencv_video",
+        "peekOfCode": "out = cv2.VideoWriter(output_video, fourcc, fps, (width, height))\n# Loop para processar todos os vídeos\nfor video_path in video_files:\n    print(f\"Processando: {os.path.basename(video_path)}\")\n    cap = cv2.VideoCapture(video_path)\n    while True:\n        ret, frame = cap.read()\n        if not ret:\n            break\n        out.write(frame)",
+        "detail": "src.functions.opencv_video",
+        "documentation": {}
+    },
+    {
+        "label": "ThermalImageProcessor",
+        "kind": 6,
+        "importPath": "src.functions.pseud-class",
+        "description": "src.functions.pseud-class",
+        "peekOfCode": "class ThermalImageProcessor(QtWidgets.QWidget):\n    def __init__(self):\n        super().__init__()\n        self.setWindowTitle(\"Processador de Imagens Térmicas\")\n        self.setGeometry(100, 100, 1000, 600)\n        self.use_sam = False  # flag para fluxo SAM\n        self.prev_endpoints = {}\n        self.input_dir = \"\"\n        self.output_dir = \"\"\n        self.setup_ui()",
+        "detail": "src.functions.pseud-class",
+        "documentation": {}
+    },
+    {
+        "label": "process_with_sam",
+        "kind": 2,
+        "importPath": "src.functions.pseud-class",
+        "description": "src.functions.pseud-class",
+        "peekOfCode": "def process_with_sam(self, img):\n    # Aqui você coloca seu código ou chamada para o Segment Anything Model\n    # Exemplo dummy só para ilustrar:\n    print(\"Processando com SAM ativado!\")\n    # processa a imagem com SAM e retorna imagem processada (color_mask, por ex)\n    return img  # Retorna imagem ou máscara processada conforme necessário\ndef get_widget():\n    return ThermalImageProcessor()\nif __name__ == \"__main__\":\n    import sys",
+        "detail": "src.functions.pseud-class",
+        "documentation": {}
+    },
+    {
+        "label": "get_widget",
+        "kind": 2,
+        "importPath": "src.functions.pseud-class",
+        "description": "src.functions.pseud-class",
+        "peekOfCode": "def get_widget():\n    return ThermalImageProcessor()\nif __name__ == \"__main__\":\n    import sys\n    from PyQt5.QtWidgets import QApplication\n    app = QApplication(sys.argv)\n    window = ThermalImageProcessor()\n    window.show()\n    sys.exit(app.exec_())",
+        "detail": "src.functions.pseud-class",
+        "documentation": {}
+    },
+    {
+        "label": "MainWindow",
+        "kind": 6,
+        "importPath": "src.functions.transforms_fake",
+        "description": "src.functions.transforms_fake",
+        "peekOfCode": "class MainWindow(QWidget):\n    def __init__(self):\n        super().__init__()\n        self.setWindowTitle(\"transforms_fake - Gerador de Dados Sintéticos\")\n        self.setGeometry(100, 100, 700, 500)\n        # Variáveis para armazenar os caminhos\n        self.image_dir = \"\"\n        self.mask_dir = \"\"\n        self.output_dir = \"\"\n        layout = QVBoxLayout()",
+        "detail": "src.functions.transforms_fake",
+        "documentation": {}
+    },
+    {
+        "label": "rotate_image_and_mask",
+        "kind": 2,
+        "importPath": "src.functions.transforms_fake",
+        "description": "src.functions.transforms_fake",
+        "peekOfCode": "def rotate_image_and_mask(image, mask, angle):\n    \"\"\"Rotaciona a imagem e a máscara mantendo o mesmo tamanho.\"\"\"\n    (h, w) = image.shape[:2]\n    center = (w // 2, h // 2)\n    M = cv2.getRotationMatrix2D(center, angle, 1.0)\n    rotated_img = cv2.warpAffine(image, M, (w, h), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_CONSTANT, borderValue=(0,0,0))\n    rotated_mask = cv2.warpAffine(mask, M, (w, h), flags=cv2.INTER_NEAREST, borderMode=cv2.BORDER_CONSTANT, borderValue=0)\n    return rotated_img, rotated_mask\ndef process_images(image_dir, mask_dir, output_dir, num_fundos, num_ratos_por_fundo, log_widget):\n    \"\"\"",
+        "detail": "src.functions.transforms_fake",
+        "documentation": {}
+    },
+    {
+        "label": "process_images",
+        "kind": 2,
+        "importPath": "src.functions.transforms_fake",
+        "description": "src.functions.transforms_fake",
+        "peekOfCode": "def process_images(image_dir, mask_dir, output_dir, num_fundos, num_ratos_por_fundo, log_widget):\n    \"\"\"\n    Processa as imagens com as pastas especificadas pelo usuário.\n    Args:\n        image_dir: Pasta com as imagens originais\n        mask_dir: Pasta com as máscaras correspondentes\n        output_dir: Pasta de saída para os resultados\n        num_fundos: Número de fundos a processar\n        num_ratos_por_fundo: Número de variações por fundo\n        log_widget: Widget para exibir logs",
+        "detail": "src.functions.transforms_fake",
+        "documentation": {}
+    },
+    {
+        "label": "get_widget",
+        "kind": 2,
+        "importPath": "src.functions.transforms_fake",
+        "description": "src.functions.transforms_fake",
+        "peekOfCode": "def get_widget():\n    return MainWindow()\nif __name__ == \"__main__\":\n    app = QApplication(sys.argv)\n    window = MainWindow()\n    window.show()\n    sys.exit(app.exec_())",
+        "detail": "src.functions.transforms_fake",
+        "documentation": {}
+    },
+    {
+        "label": "random_transform",
+        "kind": 2,
+        "importPath": "src.functions.transforms_fake_multiple",
+        "description": "src.functions.transforms_fake_multiple",
+        "peekOfCode": "def random_transform(image, mask, size):\n    h, w = size\n    angle = random.uniform(-30, 30)\n    scale = random.uniform(0.8, 1.2)\n    center = (w // 2, h // 2)\n    M = cv2.getRotationMatrix2D(center, angle, scale)\n    transformed_image = cv2.warpAffine(image, M, (w, h), borderValue=0)\n    transformed_mask = cv2.warpAffine(mask, M, (w, h), borderValue=0)\n    dx = random.randint(-w // 4, w // 4)\n    dy = random.randint(-h // 4, h // 4)",
+        "detail": "src.functions.transforms_fake_multiple",
+        "documentation": {}
+    },
+    {
+        "label": "combine_multiple",
+        "kind": 2,
+        "importPath": "src.functions.transforms_fake_multiple",
+        "description": "src.functions.transforms_fake_multiple",
+        "peekOfCode": "def combine_multiple(data, idx, num_animals=4):\n    selected = random.sample(data, num_animals)\n    base_img, base_mask = selected[0]\n    h, w = base_img.shape[:2]\n    combined_img = base_img.copy()\n    combined_mask = np.zeros((h, w), dtype=np.uint8)  # máscara multiclasses combinada\n    for img, mask in selected:\n        img, mask = random_transform(img, mask, (h, w))\n        if combined_mask.shape != mask.shape:\n            mask = cv2.resize(mask, (w, h), interpolation=cv2.INTER_NEAREST)",
+        "detail": "src.functions.transforms_fake_multiple",
+        "documentation": {}
+    },
+    {
+        "label": "create_panoptic_mask",
+        "kind": 2,
+        "importPath": "src.functions.transforms_fake_multiple",
+        "description": "src.functions.transforms_fake_multiple",
+        "peekOfCode": "def create_panoptic_mask(mask_multiclass):\n    \"\"\"\n    Recebe a máscara multiclasses (partes) e gera:\n    - máscara panoptic 2D (uint32): pixel = category_id << 16 + instance_id\n    - lista de segmentos (segments_info)\n    \"\"\"\n    h, w = mask_multiclass.shape\n    panoptic_mask = np.zeros((h, w), dtype=np.uint32)\n    segments_info = []\n    # Detectar ratos (instâncias) usando connectedComponents na máscara binarizada (mask > 0)",
+        "detail": "src.functions.transforms_fake_multiple",
+        "documentation": {}
+    },
+    {
+        "label": "image_dir",
+        "kind": 5,
+        "importPath": "src.functions.transforms_fake_multiple",
+        "description": "src.functions.transforms_fake_multiple",
+        "peekOfCode": "image_dir = 'thermal_images'\nmask_dir = 'masks_thermal_images_unet'  # máscaras multiclasses (cada parte um valor)\noutput_image_dir = 'output_images_panoptic'\noutput_mask_dir = 'output_masks_panoptic'  # máscaras panoptic (png 16-bit)\nos.makedirs(output_image_dir, exist_ok=True)\nos.makedirs(output_mask_dir, exist_ok=True)\n# Leitura das imagens e máscaras\nimage_extensions = ['*.jpg', '*.jpeg', '*.png', '*.tif', '*.tiff']\nimage_files = []\nfor ext in image_extensions:",
+        "detail": "src.functions.transforms_fake_multiple",
+        "documentation": {}
+    },
+    {
+        "label": "mask_dir",
+        "kind": 5,
+        "importPath": "src.functions.transforms_fake_multiple",
+        "description": "src.functions.transforms_fake_multiple",
+        "peekOfCode": "mask_dir = 'masks_thermal_images_unet'  # máscaras multiclasses (cada parte um valor)\noutput_image_dir = 'output_images_panoptic'\noutput_mask_dir = 'output_masks_panoptic'  # máscaras panoptic (png 16-bit)\nos.makedirs(output_image_dir, exist_ok=True)\nos.makedirs(output_mask_dir, exist_ok=True)\n# Leitura das imagens e máscaras\nimage_extensions = ['*.jpg', '*.jpeg', '*.png', '*.tif', '*.tiff']\nimage_files = []\nfor ext in image_extensions:\n    image_files.extend(glob(os.path.join(image_dir, ext)))",
+        "detail": "src.functions.transforms_fake_multiple",
+        "documentation": {}
+    },
+    {
+        "label": "output_image_dir",
+        "kind": 5,
+        "importPath": "src.functions.transforms_fake_multiple",
+        "description": "src.functions.transforms_fake_multiple",
+        "peekOfCode": "output_image_dir = 'output_images_panoptic'\noutput_mask_dir = 'output_masks_panoptic'  # máscaras panoptic (png 16-bit)\nos.makedirs(output_image_dir, exist_ok=True)\nos.makedirs(output_mask_dir, exist_ok=True)\n# Leitura das imagens e máscaras\nimage_extensions = ['*.jpg', '*.jpeg', '*.png', '*.tif', '*.tiff']\nimage_files = []\nfor ext in image_extensions:\n    image_files.extend(glob(os.path.join(image_dir, ext)))\nimages_dict = {os.path.splitext(os.path.basename(p))[0]: p for p in image_files}",
+        "detail": "src.functions.transforms_fake_multiple",
+        "documentation": {}
+    },
+    {
+        "label": "output_mask_dir",
+        "kind": 5,
+        "importPath": "src.functions.transforms_fake_multiple",
+        "description": "src.functions.transforms_fake_multiple",
+        "peekOfCode": "output_mask_dir = 'output_masks_panoptic'  # máscaras panoptic (png 16-bit)\nos.makedirs(output_image_dir, exist_ok=True)\nos.makedirs(output_mask_dir, exist_ok=True)\n# Leitura das imagens e máscaras\nimage_extensions = ['*.jpg', '*.jpeg', '*.png', '*.tif', '*.tiff']\nimage_files = []\nfor ext in image_extensions:\n    image_files.extend(glob(os.path.join(image_dir, ext)))\nimages_dict = {os.path.splitext(os.path.basename(p))[0]: p for p in image_files}\nmasks_dict = {os.path.splitext(os.path.basename(p))[0]: p for p in glob(os.path.join(mask_dir, '*.png'))}",
+        "detail": "src.functions.transforms_fake_multiple",
+        "documentation": {}
+    },
+    {
+        "label": "image_extensions",
+        "kind": 5,
+        "importPath": "src.functions.transforms_fake_multiple",
+        "description": "src.functions.transforms_fake_multiple",
+        "peekOfCode": "image_extensions = ['*.jpg', '*.jpeg', '*.png', '*.tif', '*.tiff']\nimage_files = []\nfor ext in image_extensions:\n    image_files.extend(glob(os.path.join(image_dir, ext)))\nimages_dict = {os.path.splitext(os.path.basename(p))[0]: p for p in image_files}\nmasks_dict = {os.path.splitext(os.path.basename(p))[0]: p for p in glob(os.path.join(mask_dir, '*.png'))}\ncommon_keys = sorted(set(images_dict.keys()) & set(masks_dict.keys()))\nassert len(common_keys) > 0, \"Nenhum par imagem/máscara correspondente encontrado\"\ndata = [(images_dict[k], masks_dict[k]) for k in common_keys]\nstandard_size = (512, 512)  # largura, altura",
+        "detail": "src.functions.transforms_fake_multiple",
+        "documentation": {}
+    },
+    {
+        "label": "image_files",
+        "kind": 5,
+        "importPath": "src.functions.transforms_fake_multiple",
+        "description": "src.functions.transforms_fake_multiple",
+        "peekOfCode": "image_files = []\nfor ext in image_extensions:\n    image_files.extend(glob(os.path.join(image_dir, ext)))\nimages_dict = {os.path.splitext(os.path.basename(p))[0]: p for p in image_files}\nmasks_dict = {os.path.splitext(os.path.basename(p))[0]: p for p in glob(os.path.join(mask_dir, '*.png'))}\ncommon_keys = sorted(set(images_dict.keys()) & set(masks_dict.keys()))\nassert len(common_keys) > 0, \"Nenhum par imagem/máscara correspondente encontrado\"\ndata = [(images_dict[k], masks_dict[k]) for k in common_keys]\nstandard_size = (512, 512)  # largura, altura\nresized_data = []",
+        "detail": "src.functions.transforms_fake_multiple",
+        "documentation": {}
+    },
+    {
+        "label": "images_dict",
+        "kind": 5,
+        "importPath": "src.functions.transforms_fake_multiple",
+        "description": "src.functions.transforms_fake_multiple",
+        "peekOfCode": "images_dict = {os.path.splitext(os.path.basename(p))[0]: p for p in image_files}\nmasks_dict = {os.path.splitext(os.path.basename(p))[0]: p for p in glob(os.path.join(mask_dir, '*.png'))}\ncommon_keys = sorted(set(images_dict.keys()) & set(masks_dict.keys()))\nassert len(common_keys) > 0, \"Nenhum par imagem/máscara correspondente encontrado\"\ndata = [(images_dict[k], masks_dict[k]) for k in common_keys]\nstandard_size = (512, 512)  # largura, altura\nresized_data = []\nfor img_path, mask_path in data:\n    img = cv2.imread(img_path)\n    mask = cv2.imread(mask_path, cv2.IMREAD_UNCHANGED)",
+        "detail": "src.functions.transforms_fake_multiple",
+        "documentation": {}
+    },
+    {
+        "label": "masks_dict",
+        "kind": 5,
+        "importPath": "src.functions.transforms_fake_multiple",
+        "description": "src.functions.transforms_fake_multiple",
+        "peekOfCode": "masks_dict = {os.path.splitext(os.path.basename(p))[0]: p for p in glob(os.path.join(mask_dir, '*.png'))}\ncommon_keys = sorted(set(images_dict.keys()) & set(masks_dict.keys()))\nassert len(common_keys) > 0, \"Nenhum par imagem/máscara correspondente encontrado\"\ndata = [(images_dict[k], masks_dict[k]) for k in common_keys]\nstandard_size = (512, 512)  # largura, altura\nresized_data = []\nfor img_path, mask_path in data:\n    img = cv2.imread(img_path)\n    mask = cv2.imread(mask_path, cv2.IMREAD_UNCHANGED)\n    img_resized = cv2.resize(img, standard_size)",
+        "detail": "src.functions.transforms_fake_multiple",
+        "documentation": {}
+    },
+    {
+        "label": "common_keys",
+        "kind": 5,
+        "importPath": "src.functions.transforms_fake_multiple",
+        "description": "src.functions.transforms_fake_multiple",
+        "peekOfCode": "common_keys = sorted(set(images_dict.keys()) & set(masks_dict.keys()))\nassert len(common_keys) > 0, \"Nenhum par imagem/máscara correspondente encontrado\"\ndata = [(images_dict[k], masks_dict[k]) for k in common_keys]\nstandard_size = (512, 512)  # largura, altura\nresized_data = []\nfor img_path, mask_path in data:\n    img = cv2.imread(img_path)\n    mask = cv2.imread(mask_path, cv2.IMREAD_UNCHANGED)\n    img_resized = cv2.resize(img, standard_size)\n    mask_resized = cv2.resize(mask, standard_size, interpolation=cv2.INTER_NEAREST)",
+        "detail": "src.functions.transforms_fake_multiple",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "src.functions.transforms_fake_multiple",
+        "description": "src.functions.transforms_fake_multiple",
+        "peekOfCode": "data = [(images_dict[k], masks_dict[k]) for k in common_keys]\nstandard_size = (512, 512)  # largura, altura\nresized_data = []\nfor img_path, mask_path in data:\n    img = cv2.imread(img_path)\n    mask = cv2.imread(mask_path, cv2.IMREAD_UNCHANGED)\n    img_resized = cv2.resize(img, standard_size)\n    mask_resized = cv2.resize(mask, standard_size, interpolation=cv2.INTER_NEAREST)\n    resized_data.append((img_resized, mask_resized))\ndef random_transform(image, mask, size):",
+        "detail": "src.functions.transforms_fake_multiple",
+        "documentation": {}
+    },
+    {
+        "label": "standard_size",
+        "kind": 5,
+        "importPath": "src.functions.transforms_fake_multiple",
+        "description": "src.functions.transforms_fake_multiple",
+        "peekOfCode": "standard_size = (512, 512)  # largura, altura\nresized_data = []\nfor img_path, mask_path in data:\n    img = cv2.imread(img_path)\n    mask = cv2.imread(mask_path, cv2.IMREAD_UNCHANGED)\n    img_resized = cv2.resize(img, standard_size)\n    mask_resized = cv2.resize(mask, standard_size, interpolation=cv2.INTER_NEAREST)\n    resized_data.append((img_resized, mask_resized))\ndef random_transform(image, mask, size):\n    h, w = size",
+        "detail": "src.functions.transforms_fake_multiple",
+        "documentation": {}
+    },
+    {
+        "label": "resized_data",
+        "kind": 5,
+        "importPath": "src.functions.transforms_fake_multiple",
+        "description": "src.functions.transforms_fake_multiple",
+        "peekOfCode": "resized_data = []\nfor img_path, mask_path in data:\n    img = cv2.imread(img_path)\n    mask = cv2.imread(mask_path, cv2.IMREAD_UNCHANGED)\n    img_resized = cv2.resize(img, standard_size)\n    mask_resized = cv2.resize(mask, standard_size, interpolation=cv2.INTER_NEAREST)\n    resized_data.append((img_resized, mask_resized))\ndef random_transform(image, mask, size):\n    h, w = size\n    angle = random.uniform(-30, 30)",
+        "detail": "src.functions.transforms_fake_multiple",
+        "documentation": {}
+    },
+    {
+        "label": "categories",
+        "kind": 5,
+        "importPath": "src.functions.transforms_fake_multiple",
+        "description": "src.functions.transforms_fake_multiple",
+        "peekOfCode": "categories = [\n    # categories para partes (stuff)\n    {\"id\": 1, \"name\": \"corpo\", \"supercategory\": \"parte\", \"isthing\": 0},\n    {\"id\": 2, \"name\": \"cabeca\", \"supercategory\": \"parte\", \"isthing\": 0},\n    {\"id\": 3, \"name\": \"cauda\", \"supercategory\": \"parte\", \"isthing\": 0},\n    # categoria para rato como instância (thing)\n    {\"id\": 4, \"name\": \"rato\", \"supercategory\": \"animal\", \"isthing\": 1},\n]\n# Mapear id das partes para isthing=0, rato para isthing=1\nstuff_ids = [c[\"id\"] for c in categories if c[\"isthing\"] == 0]",
+        "detail": "src.functions.transforms_fake_multiple",
+        "documentation": {}
+    },
+    {
+        "label": "stuff_ids",
+        "kind": 5,
+        "importPath": "src.functions.transforms_fake_multiple",
+        "description": "src.functions.transforms_fake_multiple",
+        "peekOfCode": "stuff_ids = [c[\"id\"] for c in categories if c[\"isthing\"] == 0]\nthing_id = 4  # id para rato\ndef create_panoptic_mask(mask_multiclass):\n    \"\"\"\n    Recebe a máscara multiclasses (partes) e gera:\n    - máscara panoptic 2D (uint32): pixel = category_id << 16 + instance_id\n    - lista de segmentos (segments_info)\n    \"\"\"\n    h, w = mask_multiclass.shape\n    panoptic_mask = np.zeros((h, w), dtype=np.uint32)",
+        "detail": "src.functions.transforms_fake_multiple",
+        "documentation": {}
+    },
+    {
+        "label": "thing_id",
+        "kind": 5,
+        "importPath": "src.functions.transforms_fake_multiple",
+        "description": "src.functions.transforms_fake_multiple",
+        "peekOfCode": "thing_id = 4  # id para rato\ndef create_panoptic_mask(mask_multiclass):\n    \"\"\"\n    Recebe a máscara multiclasses (partes) e gera:\n    - máscara panoptic 2D (uint32): pixel = category_id << 16 + instance_id\n    - lista de segmentos (segments_info)\n    \"\"\"\n    h, w = mask_multiclass.shape\n    panoptic_mask = np.zeros((h, w), dtype=np.uint32)\n    segments_info = []",
+        "detail": "src.functions.transforms_fake_multiple",
+        "documentation": {}
+    },
+    {
+        "label": "panoptic_json",
+        "kind": 5,
+        "importPath": "src.functions.transforms_fake_multiple",
+        "description": "src.functions.transforms_fake_multiple",
+        "peekOfCode": "panoptic_json = {\n    \"info\": {\n        \"description\": \"Dataset Panoptic Ratos\",\n        \"version\": \"1.0\",\n        \"year\": 2025,\n    },\n    \"licenses\": [],\n    \"categories\": categories,\n    \"images\": [],\n    \"annotations\": [],",
+        "detail": "src.functions.transforms_fake_multiple",
+        "documentation": {}
+    },
+    {
+        "label": "MaskViewer",
+        "kind": 6,
+        "importPath": "src.functions.view_mask_debug",
+        "description": "src.functions.view_mask_debug",
+        "peekOfCode": "class MaskViewer(QWidget):\n    def __init__(self):\n        super().__init__()\n        self.setWindowTitle(\"Visualização de Máscaras Discretas\")\n        self.setWindowIcon(QIcon(\"../../icon.ico\"))\n        self.setGeometry(100, 100, 900, 600)\n        # Solicita ao usuário o diretório\n        self.mask_dir = QFileDialog.getExistingDirectory(self, \"Selecione a pasta com as máscaras\")\n        if not self.mask_dir:\n            QMessageBox.warning(self, \"Aviso\", \"Nenhuma pasta foi selecionada. O programa será encerrado.\")",
+        "detail": "src.functions.view_mask_debug",
+        "documentation": {}
+    },
+    {
+        "label": "load_mask_cv",
+        "kind": 2,
+        "importPath": "src.functions.view_mask_debug",
+        "description": "src.functions.view_mask_debug",
+        "peekOfCode": "def load_mask_cv(path):\n    mask = cv2.imread(path, cv2.IMREAD_GRAYSCALE)\n    color_mask = np.zeros((mask.shape[0], mask.shape[1], 3), dtype=np.uint8)\n    for class_id, color in colors.items():\n        color_mask[mask == class_id] = color\n    # Convert BGR to RGB for Qt\n    color_mask = cv2.cvtColor(color_mask, cv2.COLOR_BGR2RGB)\n    return color_mask\ndef np_to_qpixmap(np_img):\n    height, width, channel = np_img.shape",
+        "detail": "src.functions.view_mask_debug",
+        "documentation": {}
+    },
+    {
+        "label": "np_to_qpixmap",
+        "kind": 2,
+        "importPath": "src.functions.view_mask_debug",
+        "description": "src.functions.view_mask_debug",
+        "peekOfCode": "def np_to_qpixmap(np_img):\n    height, width, channel = np_img.shape\n    bytes_per_line = 3 * width\n    qimg = QImage(np_img.data, width, height, bytes_per_line, QImage.Format_RGB888)\n    return QPixmap.fromImage(qimg)\nclass MaskViewer(QWidget):\n    def __init__(self):\n        super().__init__()\n        self.setWindowTitle(\"Visualização de Máscaras Discretas\")\n        self.setWindowIcon(QIcon(\"../../icon.ico\"))",
+        "detail": "src.functions.view_mask_debug",
+        "documentation": {}
+    },
+    {
+        "label": "get_widget",
+        "kind": 2,
+        "importPath": "src.functions.view_mask_debug",
+        "description": "src.functions.view_mask_debug",
+        "peekOfCode": "def get_widget():\n    return MaskViewer()\nif __name__ == \"__main__\":\n    app = QApplication(sys.argv)\n    window = MaskViewer()\n    window.show()\n    sys.exit(app.exec_())",
+        "detail": "src.functions.view_mask_debug",
+        "documentation": {}
+    },
+    {
+        "label": "colors",
+        "kind": 5,
+        "importPath": "src.functions.view_mask_debug",
+        "description": "src.functions.view_mask_debug",
+        "peekOfCode": "colors = {\n    0: (0, 0, 0),\n    1: (255, 0, 0),\n    2: (0, 255, 0),\n    3: (0, 0, 255),\n}\nbatch_size = 20\ndef load_mask_cv(path):\n    mask = cv2.imread(path, cv2.IMREAD_GRAYSCALE)\n    color_mask = np.zeros((mask.shape[0], mask.shape[1], 3), dtype=np.uint8)",
+        "detail": "src.functions.view_mask_debug",
+        "documentation": {}
+    },
+    {
+        "label": "batch_size",
+        "kind": 5,
+        "importPath": "src.functions.view_mask_debug",
+        "description": "src.functions.view_mask_debug",
+        "peekOfCode": "batch_size = 20\ndef load_mask_cv(path):\n    mask = cv2.imread(path, cv2.IMREAD_GRAYSCALE)\n    color_mask = np.zeros((mask.shape[0], mask.shape[1], 3), dtype=np.uint8)\n    for class_id, color in colors.items():\n        color_mask[mask == class_id] = color\n    # Convert BGR to RGB for Qt\n    color_mask = cv2.cvtColor(color_mask, cv2.COLOR_BGR2RGB)\n    return color_mask\ndef np_to_qpixmap(np_img):",
+        "detail": "src.functions.view_mask_debug",
+        "documentation": {}
+    },
+    {
+        "label": "UNet",
+        "kind": 6,
+        "importPath": "src.services.api_unet_freedon",
+        "description": "src.services.api_unet_freedon",
+        "peekOfCode": "class UNet(nn.Module):\n    def __init__(self, in_channels=3, out_channels=4):\n        super(UNet, self).__init__()\n        def CBR(in_ch, out_ch):\n            return nn.Sequential(\n                nn.Conv2d(in_ch, out_ch, 3, padding=1),\n                nn.BatchNorm2d(out_ch),\n                nn.ReLU(inplace=True)\n            )\n        self.enc1 = nn.Sequential(CBR(in_channels, 64), CBR(64, 64))",
+        "detail": "src.services.api_unet_freedon",
+        "documentation": {}
+    },
+    {
+        "label": "add_displacement_text",
+        "kind": 2,
+        "importPath": "src.services.api_unet_freedon",
+        "description": "src.services.api_unet_freedon",
+        "peekOfCode": "def add_displacement_text(map_img_np, deslocamentos_totais, class_names, class_colors):\n    img = map_img_np.copy()\n    img_height, img_width = img.shape[:2]\n    # 🔤 Configurações de fonte\n    font = cv2.FONT_HERSHEY_SIMPLEX\n    base_font_scale = (img_width / 1200 * 1.2) / 3  # 🔸 3x menor\n    base_thickness = max(int(img_width / 500 / 3), 1)  # 🔸 3x menor\n    # 🔖 Título\n    title_text = \"Displacement Map\"\n    (tw, th), _ = cv2.getTextSize(title_text, font, base_font_scale * 1.5, base_thickness + 1)",
+        "detail": "src.services.api_unet_freedon",
+        "documentation": {}
+    },
+    {
+        "label": "track_mouse_movement_in_video",
+        "kind": 2,
+        "importPath": "src.services.api_unet_freedon",
+        "description": "src.services.api_unet_freedon",
+        "peekOfCode": "def track_mouse_movement_in_video(video_bytes, model, device, transform,\n                                  target_classes=[1, 2, 3], batch_size=10,  fps_process=5 ):\n    \"\"\"\n    Processa vídeo (bytes) com modelo UNet que retorna mask logits em shape [batch, num_classes, Hm, Wm].\n    Calcula centróides por classe, converte para coordenadas do frame original e gera mapas de rastros.\n    Retorna um dict com deslocamentos, mapa_base e mapa_realista numpy arrays BGR, e caminhos por classe.\n    \"\"\"\n    # 1. Grava temporário\n    print(\"⏳ Criando arquivo temporário de vídeo...\")\n    with tempfile.NamedTemporaryFile(delete=False, suffix=\".mp4\") as temp_video:",
+        "detail": "src.services.api_unet_freedon",
+        "documentation": {}
+    },
+    {
+        "label": "convert_ndarrays_to_lists",
+        "kind": 2,
+        "importPath": "src.services.api_unet_freedon",
+        "description": "src.services.api_unet_freedon",
+        "peekOfCode": "def convert_ndarrays_to_lists(data):\n    if isinstance(data, np.ndarray):\n        return data.tolist()\n    elif isinstance(data, dict):\n        return {k: convert_ndarrays_to_lists(v) for k, v in data.items()}\n    elif isinstance(data, list):\n        return [convert_ndarrays_to_lists(item) for item in data]\n    else:\n        return data\n@app.post(\"/unet_freedom_track_image\", summary=\"Track mouse in UNET image\",  tags=[\"UNET\"])",
+        "detail": "src.services.api_unet_freedon",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "src.services.api_unet_freedon",
+        "description": "src.services.api_unet_freedon",
+        "peekOfCode": "app = FastAPI(title=\"Strong Vivarium: Thermal Mouse Analytics API\")\n# UNet modelo (mantido igual) treinamento\nclass UNet(nn.Module):\n    def __init__(self, in_channels=3, out_channels=4):\n        super(UNet, self).__init__()\n        def CBR(in_ch, out_ch):\n            return nn.Sequential(\n                nn.Conv2d(in_ch, out_ch, 3, padding=1),\n                nn.BatchNorm2d(out_ch),\n                nn.ReLU(inplace=True)",
+        "detail": "src.services.api_unet_freedon",
+        "documentation": {}
+    },
+    {
+        "label": "device",
+        "kind": 5,
+        "importPath": "src.services.api_unet_freedon",
+        "description": "src.services.api_unet_freedon",
+        "peekOfCode": "device = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\nmodel = UNet(in_channels=3, out_channels=4)\ncheckpoint = torch.load(\n    \"../models/model_unet_freedom/model_unet_freedon.pth\", map_location=device)\nmodel.load_state_dict(checkpoint['model_state_dict'])\nmodel.eval().to(device)\ntransform = transforms.Compose([\n    transforms.Resize((512, 512)),\n    transforms.ToTensor(),\n    transforms.Normalize(mean=[0.485, 0.456, 0.406],",
+        "detail": "src.services.api_unet_freedon",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "src.services.api_unet_freedon",
+        "description": "src.services.api_unet_freedon",
+        "peekOfCode": "model = UNet(in_channels=3, out_channels=4)\ncheckpoint = torch.load(\n    \"../models/model_unet_freedom/model_unet_freedon.pth\", map_location=device)\nmodel.load_state_dict(checkpoint['model_state_dict'])\nmodel.eval().to(device)\ntransform = transforms.Compose([\n    transforms.Resize((512, 512)),\n    transforms.ToTensor(),\n    transforms.Normalize(mean=[0.485, 0.456, 0.406],\n                         std=[0.229, 0.224, 0.225])",
+        "detail": "src.services.api_unet_freedon",
+        "documentation": {}
+    },
+    {
+        "label": "checkpoint",
+        "kind": 5,
+        "importPath": "src.services.api_unet_freedon",
+        "description": "src.services.api_unet_freedon",
+        "peekOfCode": "checkpoint = torch.load(\n    \"../models/model_unet_freedom/model_unet_freedon.pth\", map_location=device)\nmodel.load_state_dict(checkpoint['model_state_dict'])\nmodel.eval().to(device)\ntransform = transforms.Compose([\n    transforms.Resize((512, 512)),\n    transforms.ToTensor(),\n    transforms.Normalize(mean=[0.485, 0.456, 0.406],\n                         std=[0.229, 0.224, 0.225])\n])",
+        "detail": "src.services.api_unet_freedon",
+        "documentation": {}
+    },
+    {
+        "label": "transform",
+        "kind": 5,
+        "importPath": "src.services.api_unet_freedon",
+        "description": "src.services.api_unet_freedon",
+        "peekOfCode": "transform = transforms.Compose([\n    transforms.Resize((512, 512)),\n    transforms.ToTensor(),\n    transforms.Normalize(mean=[0.485, 0.456, 0.406],\n                         std=[0.229, 0.224, 0.225])\n])\ndef add_displacement_text(map_img_np, deslocamentos_totais, class_names, class_colors):\n    img = map_img_np.copy()\n    img_height, img_width = img.shape[:2]\n    # 🔤 Configurações de fonte",
+        "detail": "src.services.api_unet_freedon",
+        "documentation": {}
+    },
+    {
+        "label": "UNet",
+        "kind": 6,
+        "importPath": "src.services.api_unet_housing",
+        "description": "src.services.api_unet_housing",
+        "peekOfCode": "class UNet(nn.Module):\n    def __init__(self, in_channels=3, out_channels=4):\n        super(UNet, self).__init__()\n        def CBR(in_ch, out_ch):\n            return nn.Sequential(\n                nn.Conv2d(in_ch, out_ch, 3, padding=1),\n                nn.BatchNorm2d(out_ch),\n                nn.ReLU(inplace=True)\n            )\n        self.enc1 = nn.Sequential(CBR(in_channels, 64), CBR(64, 64))",
+        "detail": "src.services.api_unet_housing",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "src.services.api_unet_housing",
+        "description": "src.services.api_unet_housing",
+        "peekOfCode": "app = FastAPI(title=\"U-Net Thermal Mouse Segmentation API\")\n# UNet modelo (mantido igual) treinamento\nclass UNet(nn.Module):\n    def __init__(self, in_channels=3, out_channels=4):\n        super(UNet, self).__init__()\n        def CBR(in_ch, out_ch):\n            return nn.Sequential(\n                nn.Conv2d(in_ch, out_ch, 3, padding=1),\n                nn.BatchNorm2d(out_ch),\n                nn.ReLU(inplace=True)",
+        "detail": "src.services.api_unet_housing",
+        "documentation": {}
+    },
+    {
+        "label": "device",
+        "kind": 5,
+        "importPath": "src.services.api_unet_housing",
+        "description": "src.services.api_unet_housing",
+        "peekOfCode": "device = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\nmodel = UNet(in_channels=3, out_channels=4)\ncheckpoint = torch.load(\"unet_checkpoint_epoch_9.pth\", map_location=device)\nmodel.load_state_dict(checkpoint['model_state_dict'])\nmodel.eval().to(device)\ntransform = transforms.Compose([\n    transforms.Resize((512, 512)),\n    transforms.ToTensor(),\n    transforms.Normalize(mean=[0.485, 0.456, 0.406],\n                         std=[0.229, 0.224, 0.225])",
+        "detail": "src.services.api_unet_housing",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "src.services.api_unet_housing",
+        "description": "src.services.api_unet_housing",
+        "peekOfCode": "model = UNet(in_channels=3, out_channels=4)\ncheckpoint = torch.load(\"unet_checkpoint_epoch_9.pth\", map_location=device)\nmodel.load_state_dict(checkpoint['model_state_dict'])\nmodel.eval().to(device)\ntransform = transforms.Compose([\n    transforms.Resize((512, 512)),\n    transforms.ToTensor(),\n    transforms.Normalize(mean=[0.485, 0.456, 0.406],\n                         std=[0.229, 0.224, 0.225])\n])",
+        "detail": "src.services.api_unet_housing",
+        "documentation": {}
+    },
+    {
+        "label": "checkpoint",
+        "kind": 5,
+        "importPath": "src.services.api_unet_housing",
+        "description": "src.services.api_unet_housing",
+        "peekOfCode": "checkpoint = torch.load(\"unet_checkpoint_epoch_9.pth\", map_location=device)\nmodel.load_state_dict(checkpoint['model_state_dict'])\nmodel.eval().to(device)\ntransform = transforms.Compose([\n    transforms.Resize((512, 512)),\n    transforms.ToTensor(),\n    transforms.Normalize(mean=[0.485, 0.456, 0.406],\n                         std=[0.229, 0.224, 0.225])\n])\n@app.post(\"/predict/\")",
+        "detail": "src.services.api_unet_housing",
+        "documentation": {}
+    },
+    {
+        "label": "transform",
+        "kind": 5,
+        "importPath": "src.services.api_unet_housing",
+        "description": "src.services.api_unet_housing",
+        "peekOfCode": "transform = transforms.Compose([\n    transforms.Resize((512, 512)),\n    transforms.ToTensor(),\n    transforms.Normalize(mean=[0.485, 0.456, 0.406],\n                         std=[0.229, 0.224, 0.225])\n])\n@app.post(\"/predict/\")\nasync def predict(image: UploadFile = File(...)):\n    try:\n        contents = await image.read()",
+        "detail": "src.services.api_unet_housing",
+        "documentation": {}
+    },
+    {
+        "label": "SaveMetricsHook",
+        "kind": 6,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "class SaveMetricsHook(HookBase):\n    def __init__(self, output_path):\n        self.output_path = output_path\n        self.metrics = {\"train\": [], \"val\": []}\n    def after_step(self):\n        if self.trainer.storage.iter > 0:\n            metrics = self.trainer.storage.latest()\n            if \"total_loss\" in metrics:\n                self.metrics[\"train\"].append({\n                    \"iteration\": self.trainer.storage.iter,",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "Trainer",
+        "kind": 6,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "class Trainer(DefaultTrainer):\n    @classmethod\n    def build_evaluator(cls, cfg, dataset_name, output_folder=None):\n        return build_evaluator(cfg, dataset_name)\n# --- Treinamento com hook de métricas ---\ntrainer = Trainer(cfg)\nmetrics_output_path = os.path.join(cfg.OUTPUT_DIR, \"metrics_multiclass_detectron.json\")\ntrainer.register_hooks([SaveMetricsHook(metrics_output_path)])\ntrainer.resume_or_load(resume=False)\ntrainer.train()",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "save_split_json",
+        "kind": 2,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "def save_split_json(images_list, json_path):\n    subset = {\n        \"info\": panoptic_json[\"info\"],\n        \"licenses\": panoptic_json[\"licenses\"],\n        \"categories\": panoptic_json[\"categories\"],\n        \"images\": images_list,\n        \"annotations\": [ann for ann in panoptic_json[\"annotations\"] if ann[\"image_id\"] in {img[\"id\"] for img in images_list}],\n    }\n    with open(json_path, \"w\") as f:\n        json.dump(subset, f)",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "build_evaluator",
+        "kind": 2,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "def build_evaluator(cfg, dataset_name):\n    evaluators = [\n        COCOEvaluator(dataset_name, output_dir=cfg.OUTPUT_DIR),\n        SemSegEvaluator(dataset_name, distributed=False, output_dir=cfg.OUTPUT_DIR),\n        PanopticEvaluator(dataset_name, output_dir=cfg.OUTPUT_DIR),\n    ]\n    return DatasetEvaluators(evaluators)\n# --- Hook para salvar métricas ---\nclass SaveMetricsHook(HookBase):\n    def __init__(self, output_path):",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "DATA_ROOT",
+        "kind": 5,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "DATA_ROOT = os.getcwd()\nPANOPTIC_ANNOTATIONS_JSON = os.path.join(DATA_ROOT, \"panoptic_annotations.json\")\nPANOPTIC_MASKS_DIR = os.path.join(DATA_ROOT, \"output_masks_panoptic\")\nIMAGES_DIR = os.path.join(DATA_ROOT, \"output_images_panoptic\")\nTRAIN_DATASET_NAME = \"ratos_panoptic_train\"\nVAL_DATASET_NAME = \"ratos_panoptic_val\"\n# --- Dividir dataset em treino/validação (80/20) ---\nwith open(PANOPTIC_ANNOTATIONS_JSON, \"r\") as f:\n    panoptic_json = json.load(f)\ntotal_images = len(panoptic_json[\"images\"])",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "PANOPTIC_ANNOTATIONS_JSON",
+        "kind": 5,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "PANOPTIC_ANNOTATIONS_JSON = os.path.join(DATA_ROOT, \"panoptic_annotations.json\")\nPANOPTIC_MASKS_DIR = os.path.join(DATA_ROOT, \"output_masks_panoptic\")\nIMAGES_DIR = os.path.join(DATA_ROOT, \"output_images_panoptic\")\nTRAIN_DATASET_NAME = \"ratos_panoptic_train\"\nVAL_DATASET_NAME = \"ratos_panoptic_val\"\n# --- Dividir dataset em treino/validação (80/20) ---\nwith open(PANOPTIC_ANNOTATIONS_JSON, \"r\") as f:\n    panoptic_json = json.load(f)\ntotal_images = len(panoptic_json[\"images\"])\ntrain_count = int(0.8 * total_images)",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "PANOPTIC_MASKS_DIR",
+        "kind": 5,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "PANOPTIC_MASKS_DIR = os.path.join(DATA_ROOT, \"output_masks_panoptic\")\nIMAGES_DIR = os.path.join(DATA_ROOT, \"output_images_panoptic\")\nTRAIN_DATASET_NAME = \"ratos_panoptic_train\"\nVAL_DATASET_NAME = \"ratos_panoptic_val\"\n# --- Dividir dataset em treino/validação (80/20) ---\nwith open(PANOPTIC_ANNOTATIONS_JSON, \"r\") as f:\n    panoptic_json = json.load(f)\ntotal_images = len(panoptic_json[\"images\"])\ntrain_count = int(0.8 * total_images)\ntrain_images = panoptic_json[\"images\"][:train_count]",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "IMAGES_DIR",
+        "kind": 5,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "IMAGES_DIR = os.path.join(DATA_ROOT, \"output_images_panoptic\")\nTRAIN_DATASET_NAME = \"ratos_panoptic_train\"\nVAL_DATASET_NAME = \"ratos_panoptic_val\"\n# --- Dividir dataset em treino/validação (80/20) ---\nwith open(PANOPTIC_ANNOTATIONS_JSON, \"r\") as f:\n    panoptic_json = json.load(f)\ntotal_images = len(panoptic_json[\"images\"])\ntrain_count = int(0.8 * total_images)\ntrain_images = panoptic_json[\"images\"][:train_count]\nval_images = panoptic_json[\"images\"][train_count:]",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "TRAIN_DATASET_NAME",
+        "kind": 5,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "TRAIN_DATASET_NAME = \"ratos_panoptic_train\"\nVAL_DATASET_NAME = \"ratos_panoptic_val\"\n# --- Dividir dataset em treino/validação (80/20) ---\nwith open(PANOPTIC_ANNOTATIONS_JSON, \"r\") as f:\n    panoptic_json = json.load(f)\ntotal_images = len(panoptic_json[\"images\"])\ntrain_count = int(0.8 * total_images)\ntrain_images = panoptic_json[\"images\"][:train_count]\nval_images = panoptic_json[\"images\"][train_count:]\ndef save_split_json(images_list, json_path):",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "VAL_DATASET_NAME",
+        "kind": 5,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "VAL_DATASET_NAME = \"ratos_panoptic_val\"\n# --- Dividir dataset em treino/validação (80/20) ---\nwith open(PANOPTIC_ANNOTATIONS_JSON, \"r\") as f:\n    panoptic_json = json.load(f)\ntotal_images = len(panoptic_json[\"images\"])\ntrain_count = int(0.8 * total_images)\ntrain_images = panoptic_json[\"images\"][:train_count]\nval_images = panoptic_json[\"images\"][train_count:]\ndef save_split_json(images_list, json_path):\n    subset = {",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "total_images",
+        "kind": 5,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "total_images = len(panoptic_json[\"images\"])\ntrain_count = int(0.8 * total_images)\ntrain_images = panoptic_json[\"images\"][:train_count]\nval_images = panoptic_json[\"images\"][train_count:]\ndef save_split_json(images_list, json_path):\n    subset = {\n        \"info\": panoptic_json[\"info\"],\n        \"licenses\": panoptic_json[\"licenses\"],\n        \"categories\": panoptic_json[\"categories\"],\n        \"images\": images_list,",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "train_count",
+        "kind": 5,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "train_count = int(0.8 * total_images)\ntrain_images = panoptic_json[\"images\"][:train_count]\nval_images = panoptic_json[\"images\"][train_count:]\ndef save_split_json(images_list, json_path):\n    subset = {\n        \"info\": panoptic_json[\"info\"],\n        \"licenses\": panoptic_json[\"licenses\"],\n        \"categories\": panoptic_json[\"categories\"],\n        \"images\": images_list,\n        \"annotations\": [ann for ann in panoptic_json[\"annotations\"] if ann[\"image_id\"] in {img[\"id\"] for img in images_list}],",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "train_images",
+        "kind": 5,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "train_images = panoptic_json[\"images\"][:train_count]\nval_images = panoptic_json[\"images\"][train_count:]\ndef save_split_json(images_list, json_path):\n    subset = {\n        \"info\": panoptic_json[\"info\"],\n        \"licenses\": panoptic_json[\"licenses\"],\n        \"categories\": panoptic_json[\"categories\"],\n        \"images\": images_list,\n        \"annotations\": [ann for ann in panoptic_json[\"annotations\"] if ann[\"image_id\"] in {img[\"id\"] for img in images_list}],\n    }",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "val_images",
+        "kind": 5,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "val_images = panoptic_json[\"images\"][train_count:]\ndef save_split_json(images_list, json_path):\n    subset = {\n        \"info\": panoptic_json[\"info\"],\n        \"licenses\": panoptic_json[\"licenses\"],\n        \"categories\": panoptic_json[\"categories\"],\n        \"images\": images_list,\n        \"annotations\": [ann for ann in panoptic_json[\"annotations\"] if ann[\"image_id\"] in {img[\"id\"] for img in images_list}],\n    }\n    with open(json_path, \"w\") as f:",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "train_json_path",
+        "kind": 5,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "train_json_path = \"dataset_splits/panoptic_train.json\"\nval_json_path = \"dataset_splits/panoptic_val.json\"\nsave_split_json(train_images, train_json_path)\nsave_split_json(val_images, val_json_path)\n# --- Registrar datasets ---\nregister_coco_panoptic(TRAIN_DATASET_NAME, {}, train_json_path, PANOPTIC_MASKS_DIR, IMAGES_DIR)\nregister_coco_panoptic(VAL_DATASET_NAME, {}, val_json_path, PANOPTIC_MASKS_DIR, IMAGES_DIR)\nmetadata = MetadataCatalog.get(TRAIN_DATASET_NAME)\nmetadata.thing_classes = [c[\"name\"] for c in panoptic_json[\"categories\"] if c[\"isthing\"] == 1]\nmetadata.stuff_classes = [c[\"name\"] for c in panoptic_json[\"categories\"] if c[\"isthing\"] == 0]",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "val_json_path",
+        "kind": 5,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "val_json_path = \"dataset_splits/panoptic_val.json\"\nsave_split_json(train_images, train_json_path)\nsave_split_json(val_images, val_json_path)\n# --- Registrar datasets ---\nregister_coco_panoptic(TRAIN_DATASET_NAME, {}, train_json_path, PANOPTIC_MASKS_DIR, IMAGES_DIR)\nregister_coco_panoptic(VAL_DATASET_NAME, {}, val_json_path, PANOPTIC_MASKS_DIR, IMAGES_DIR)\nmetadata = MetadataCatalog.get(TRAIN_DATASET_NAME)\nmetadata.thing_classes = [c[\"name\"] for c in panoptic_json[\"categories\"] if c[\"isthing\"] == 1]\nmetadata.stuff_classes = [c[\"name\"] for c in panoptic_json[\"categories\"] if c[\"isthing\"] == 0]\nprint(f\"Thing classes: {metadata.thing_classes}\")",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "metadata",
+        "kind": 5,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "metadata = MetadataCatalog.get(TRAIN_DATASET_NAME)\nmetadata.thing_classes = [c[\"name\"] for c in panoptic_json[\"categories\"] if c[\"isthing\"] == 1]\nmetadata.stuff_classes = [c[\"name\"] for c in panoptic_json[\"categories\"] if c[\"isthing\"] == 0]\nprint(f\"Thing classes: {metadata.thing_classes}\")\nprint(f\"Stuff classes: {metadata.stuff_classes}\")\n# --- Configuração do modelo ---\ncfg = get_cfg()\ncfg.merge_from_file(\"detectron2/configs/COCO-PanopticSegmentation/panoptic_fpn_R_50_3x.yaml\")\ncfg.DATASETS.TRAIN = (TRAIN_DATASET_NAME,)\ncfg.DATASETS.TEST = (VAL_DATASET_NAME,)",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "metadata.thing_classes",
+        "kind": 5,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "metadata.thing_classes = [c[\"name\"] for c in panoptic_json[\"categories\"] if c[\"isthing\"] == 1]\nmetadata.stuff_classes = [c[\"name\"] for c in panoptic_json[\"categories\"] if c[\"isthing\"] == 0]\nprint(f\"Thing classes: {metadata.thing_classes}\")\nprint(f\"Stuff classes: {metadata.stuff_classes}\")\n# --- Configuração do modelo ---\ncfg = get_cfg()\ncfg.merge_from_file(\"detectron2/configs/COCO-PanopticSegmentation/panoptic_fpn_R_50_3x.yaml\")\ncfg.DATASETS.TRAIN = (TRAIN_DATASET_NAME,)\ncfg.DATASETS.TEST = (VAL_DATASET_NAME,)\ncfg.DATALOADER.NUM_WORKERS = 4",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "metadata.stuff_classes",
+        "kind": 5,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "metadata.stuff_classes = [c[\"name\"] for c in panoptic_json[\"categories\"] if c[\"isthing\"] == 0]\nprint(f\"Thing classes: {metadata.thing_classes}\")\nprint(f\"Stuff classes: {metadata.stuff_classes}\")\n# --- Configuração do modelo ---\ncfg = get_cfg()\ncfg.merge_from_file(\"detectron2/configs/COCO-PanopticSegmentation/panoptic_fpn_R_50_3x.yaml\")\ncfg.DATASETS.TRAIN = (TRAIN_DATASET_NAME,)\ncfg.DATASETS.TEST = (VAL_DATASET_NAME,)\ncfg.DATALOADER.NUM_WORKERS = 4\ncfg.MODEL.WEIGHTS = \"detectron2://COCO-PanopticSegmentation/panoptic_fpn_R_50_3x/137849600/model_final_c61702.pkl\"",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "cfg",
+        "kind": 5,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "cfg = get_cfg()\ncfg.merge_from_file(\"detectron2/configs/COCO-PanopticSegmentation/panoptic_fpn_R_50_3x.yaml\")\ncfg.DATASETS.TRAIN = (TRAIN_DATASET_NAME,)\ncfg.DATASETS.TEST = (VAL_DATASET_NAME,)\ncfg.DATALOADER.NUM_WORKERS = 4\ncfg.MODEL.WEIGHTS = \"detectron2://COCO-PanopticSegmentation/panoptic_fpn_R_50_3x/137849600/model_final_c61702.pkl\"\nnum_things = len(metadata.thing_classes)\nnum_stuffs = len(metadata.stuff_classes)\ncfg.MODEL.SEM_SEG_HEAD.NUM_CLASSES = num_things + num_stuffs\ncfg.MODEL.ROI_HEADS.NUM_CLASSES = num_things",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "cfg.DATASETS.TRAIN",
+        "kind": 5,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "cfg.DATASETS.TRAIN = (TRAIN_DATASET_NAME,)\ncfg.DATASETS.TEST = (VAL_DATASET_NAME,)\ncfg.DATALOADER.NUM_WORKERS = 4\ncfg.MODEL.WEIGHTS = \"detectron2://COCO-PanopticSegmentation/panoptic_fpn_R_50_3x/137849600/model_final_c61702.pkl\"\nnum_things = len(metadata.thing_classes)\nnum_stuffs = len(metadata.stuff_classes)\ncfg.MODEL.SEM_SEG_HEAD.NUM_CLASSES = num_things + num_stuffs\ncfg.MODEL.ROI_HEADS.NUM_CLASSES = num_things\ncfg.SOLVER.IMS_PER_BATCH = 2\ncfg.SOLVER.BASE_LR = 0.00025",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "cfg.DATASETS.TEST",
+        "kind": 5,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "cfg.DATASETS.TEST = (VAL_DATASET_NAME,)\ncfg.DATALOADER.NUM_WORKERS = 4\ncfg.MODEL.WEIGHTS = \"detectron2://COCO-PanopticSegmentation/panoptic_fpn_R_50_3x/137849600/model_final_c61702.pkl\"\nnum_things = len(metadata.thing_classes)\nnum_stuffs = len(metadata.stuff_classes)\ncfg.MODEL.SEM_SEG_HEAD.NUM_CLASSES = num_things + num_stuffs\ncfg.MODEL.ROI_HEADS.NUM_CLASSES = num_things\ncfg.SOLVER.IMS_PER_BATCH = 2\ncfg.SOLVER.BASE_LR = 0.00025\ncfg.SOLVER.MAX_ITER = 1000",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "cfg.DATALOADER.NUM_WORKERS",
+        "kind": 5,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "cfg.DATALOADER.NUM_WORKERS = 4\ncfg.MODEL.WEIGHTS = \"detectron2://COCO-PanopticSegmentation/panoptic_fpn_R_50_3x/137849600/model_final_c61702.pkl\"\nnum_things = len(metadata.thing_classes)\nnum_stuffs = len(metadata.stuff_classes)\ncfg.MODEL.SEM_SEG_HEAD.NUM_CLASSES = num_things + num_stuffs\ncfg.MODEL.ROI_HEADS.NUM_CLASSES = num_things\ncfg.SOLVER.IMS_PER_BATCH = 2\ncfg.SOLVER.BASE_LR = 0.00025\ncfg.SOLVER.MAX_ITER = 1000\ncfg.SOLVER.STEPS = []",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "cfg.MODEL.WEIGHTS",
+        "kind": 5,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "cfg.MODEL.WEIGHTS = \"detectron2://COCO-PanopticSegmentation/panoptic_fpn_R_50_3x/137849600/model_final_c61702.pkl\"\nnum_things = len(metadata.thing_classes)\nnum_stuffs = len(metadata.stuff_classes)\ncfg.MODEL.SEM_SEG_HEAD.NUM_CLASSES = num_things + num_stuffs\ncfg.MODEL.ROI_HEADS.NUM_CLASSES = num_things\ncfg.SOLVER.IMS_PER_BATCH = 2\ncfg.SOLVER.BASE_LR = 0.00025\ncfg.SOLVER.MAX_ITER = 1000\ncfg.SOLVER.STEPS = []\ncfg.INPUT.MASK_FORMAT = \"bitmask\"",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "num_things",
+        "kind": 5,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "num_things = len(metadata.thing_classes)\nnum_stuffs = len(metadata.stuff_classes)\ncfg.MODEL.SEM_SEG_HEAD.NUM_CLASSES = num_things + num_stuffs\ncfg.MODEL.ROI_HEADS.NUM_CLASSES = num_things\ncfg.SOLVER.IMS_PER_BATCH = 2\ncfg.SOLVER.BASE_LR = 0.00025\ncfg.SOLVER.MAX_ITER = 1000\ncfg.SOLVER.STEPS = []\ncfg.INPUT.MASK_FORMAT = \"bitmask\"\ncfg.MODEL.PANOPTIC_FPN.COMBINE.INSTANCES_CONFIDENCE_THRESH = 0.5",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "num_stuffs",
+        "kind": 5,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "num_stuffs = len(metadata.stuff_classes)\ncfg.MODEL.SEM_SEG_HEAD.NUM_CLASSES = num_things + num_stuffs\ncfg.MODEL.ROI_HEADS.NUM_CLASSES = num_things\ncfg.SOLVER.IMS_PER_BATCH = 2\ncfg.SOLVER.BASE_LR = 0.00025\ncfg.SOLVER.MAX_ITER = 1000\ncfg.SOLVER.STEPS = []\ncfg.INPUT.MASK_FORMAT = \"bitmask\"\ncfg.MODEL.PANOPTIC_FPN.COMBINE.INSTANCES_CONFIDENCE_THRESH = 0.5\ncfg.OUTPUT_DIR = \"./output_panoptic\"",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "cfg.MODEL.SEM_SEG_HEAD.NUM_CLASSES",
+        "kind": 5,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "cfg.MODEL.SEM_SEG_HEAD.NUM_CLASSES = num_things + num_stuffs\ncfg.MODEL.ROI_HEADS.NUM_CLASSES = num_things\ncfg.SOLVER.IMS_PER_BATCH = 2\ncfg.SOLVER.BASE_LR = 0.00025\ncfg.SOLVER.MAX_ITER = 1000\ncfg.SOLVER.STEPS = []\ncfg.INPUT.MASK_FORMAT = \"bitmask\"\ncfg.MODEL.PANOPTIC_FPN.COMBINE.INSTANCES_CONFIDENCE_THRESH = 0.5\ncfg.OUTPUT_DIR = \"./output_panoptic\"\nos.makedirs(cfg.OUTPUT_DIR, exist_ok=True)",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "cfg.MODEL.ROI_HEADS.NUM_CLASSES",
+        "kind": 5,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "cfg.MODEL.ROI_HEADS.NUM_CLASSES = num_things\ncfg.SOLVER.IMS_PER_BATCH = 2\ncfg.SOLVER.BASE_LR = 0.00025\ncfg.SOLVER.MAX_ITER = 1000\ncfg.SOLVER.STEPS = []\ncfg.INPUT.MASK_FORMAT = \"bitmask\"\ncfg.MODEL.PANOPTIC_FPN.COMBINE.INSTANCES_CONFIDENCE_THRESH = 0.5\ncfg.OUTPUT_DIR = \"./output_panoptic\"\nos.makedirs(cfg.OUTPUT_DIR, exist_ok=True)\n# --- Avaliadores Detectron2 ---",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "cfg.SOLVER.IMS_PER_BATCH",
+        "kind": 5,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "cfg.SOLVER.IMS_PER_BATCH = 2\ncfg.SOLVER.BASE_LR = 0.00025\ncfg.SOLVER.MAX_ITER = 1000\ncfg.SOLVER.STEPS = []\ncfg.INPUT.MASK_FORMAT = \"bitmask\"\ncfg.MODEL.PANOPTIC_FPN.COMBINE.INSTANCES_CONFIDENCE_THRESH = 0.5\ncfg.OUTPUT_DIR = \"./output_panoptic\"\nos.makedirs(cfg.OUTPUT_DIR, exist_ok=True)\n# --- Avaliadores Detectron2 ---\ndef build_evaluator(cfg, dataset_name):",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "cfg.SOLVER.BASE_LR",
+        "kind": 5,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "cfg.SOLVER.BASE_LR = 0.00025\ncfg.SOLVER.MAX_ITER = 1000\ncfg.SOLVER.STEPS = []\ncfg.INPUT.MASK_FORMAT = \"bitmask\"\ncfg.MODEL.PANOPTIC_FPN.COMBINE.INSTANCES_CONFIDENCE_THRESH = 0.5\ncfg.OUTPUT_DIR = \"./output_panoptic\"\nos.makedirs(cfg.OUTPUT_DIR, exist_ok=True)\n# --- Avaliadores Detectron2 ---\ndef build_evaluator(cfg, dataset_name):\n    evaluators = [",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "cfg.SOLVER.MAX_ITER",
+        "kind": 5,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "cfg.SOLVER.MAX_ITER = 1000\ncfg.SOLVER.STEPS = []\ncfg.INPUT.MASK_FORMAT = \"bitmask\"\ncfg.MODEL.PANOPTIC_FPN.COMBINE.INSTANCES_CONFIDENCE_THRESH = 0.5\ncfg.OUTPUT_DIR = \"./output_panoptic\"\nos.makedirs(cfg.OUTPUT_DIR, exist_ok=True)\n# --- Avaliadores Detectron2 ---\ndef build_evaluator(cfg, dataset_name):\n    evaluators = [\n        COCOEvaluator(dataset_name, output_dir=cfg.OUTPUT_DIR),",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "cfg.SOLVER.STEPS",
+        "kind": 5,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "cfg.SOLVER.STEPS = []\ncfg.INPUT.MASK_FORMAT = \"bitmask\"\ncfg.MODEL.PANOPTIC_FPN.COMBINE.INSTANCES_CONFIDENCE_THRESH = 0.5\ncfg.OUTPUT_DIR = \"./output_panoptic\"\nos.makedirs(cfg.OUTPUT_DIR, exist_ok=True)\n# --- Avaliadores Detectron2 ---\ndef build_evaluator(cfg, dataset_name):\n    evaluators = [\n        COCOEvaluator(dataset_name, output_dir=cfg.OUTPUT_DIR),\n        SemSegEvaluator(dataset_name, distributed=False, output_dir=cfg.OUTPUT_DIR),",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "cfg.INPUT.MASK_FORMAT",
+        "kind": 5,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "cfg.INPUT.MASK_FORMAT = \"bitmask\"\ncfg.MODEL.PANOPTIC_FPN.COMBINE.INSTANCES_CONFIDENCE_THRESH = 0.5\ncfg.OUTPUT_DIR = \"./output_panoptic\"\nos.makedirs(cfg.OUTPUT_DIR, exist_ok=True)\n# --- Avaliadores Detectron2 ---\ndef build_evaluator(cfg, dataset_name):\n    evaluators = [\n        COCOEvaluator(dataset_name, output_dir=cfg.OUTPUT_DIR),\n        SemSegEvaluator(dataset_name, distributed=False, output_dir=cfg.OUTPUT_DIR),\n        PanopticEvaluator(dataset_name, output_dir=cfg.OUTPUT_DIR),",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "cfg.MODEL.PANOPTIC_FPN.COMBINE.INSTANCES_CONFIDENCE_THRESH",
+        "kind": 5,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "cfg.MODEL.PANOPTIC_FPN.COMBINE.INSTANCES_CONFIDENCE_THRESH = 0.5\ncfg.OUTPUT_DIR = \"./output_panoptic\"\nos.makedirs(cfg.OUTPUT_DIR, exist_ok=True)\n# --- Avaliadores Detectron2 ---\ndef build_evaluator(cfg, dataset_name):\n    evaluators = [\n        COCOEvaluator(dataset_name, output_dir=cfg.OUTPUT_DIR),\n        SemSegEvaluator(dataset_name, distributed=False, output_dir=cfg.OUTPUT_DIR),\n        PanopticEvaluator(dataset_name, output_dir=cfg.OUTPUT_DIR),\n    ]",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "cfg.OUTPUT_DIR",
+        "kind": 5,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "cfg.OUTPUT_DIR = \"./output_panoptic\"\nos.makedirs(cfg.OUTPUT_DIR, exist_ok=True)\n# --- Avaliadores Detectron2 ---\ndef build_evaluator(cfg, dataset_name):\n    evaluators = [\n        COCOEvaluator(dataset_name, output_dir=cfg.OUTPUT_DIR),\n        SemSegEvaluator(dataset_name, distributed=False, output_dir=cfg.OUTPUT_DIR),\n        PanopticEvaluator(dataset_name, output_dir=cfg.OUTPUT_DIR),\n    ]\n    return DatasetEvaluators(evaluators)",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "trainer",
+        "kind": 5,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "trainer = Trainer(cfg)\nmetrics_output_path = os.path.join(cfg.OUTPUT_DIR, \"metrics_multiclass_detectron.json\")\ntrainer.register_hooks([SaveMetricsHook(metrics_output_path)])\ntrainer.resume_or_load(resume=False)\ntrainer.train()",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "metrics_output_path",
+        "kind": 5,
+        "importPath": "src.train.train_detectron",
+        "description": "src.train.train_detectron",
+        "peekOfCode": "metrics_output_path = os.path.join(cfg.OUTPUT_DIR, \"metrics_multiclass_detectron.json\")\ntrainer.register_hooks([SaveMetricsHook(metrics_output_path)])\ntrainer.resume_or_load(resume=False)\ntrainer.train()",
+        "detail": "src.train.train_detectron",
+        "documentation": {}
+    },
+    {
+        "label": "JointTransform",
+        "kind": 6,
+        "importPath": "src.train.train_unet",
+        "description": "src.train.train_unet",
+        "peekOfCode": "class JointTransform:\n    def __init__(self):\n        self.image_transform = transforms.Compose([\n            transforms.Resize((512, 512)),\n            transforms.RandomHorizontalFlip(p=0.5),\n            transforms.RandomVerticalFlip(p=0.5),\n            transforms.RandomRotation(degrees=15),\n        ])\n        self.to_tensor = transforms.ToTensor()\n        self.normalize = transforms.Normalize(mean=[0.5]*3, std=[0.5]*3)",
+        "detail": "src.train.train_unet",
+        "documentation": {}
+    },
+    {
+        "label": "ValTransform",
+        "kind": 6,
+        "importPath": "src.train.train_unet",
+        "description": "src.train.train_unet",
+        "peekOfCode": "class ValTransform:\n    def __init__(self):\n        self.resize = transforms.Resize((512, 512))\n        self.to_tensor = transforms.ToTensor()\n        self.normalize = transforms.Normalize(mean=[0.5]*3, std=[0.5]*3)\n    def __call__(self, image, mask):\n        image = self.resize(image)\n        mask = self.resize(mask)\n        image = self.normalize(self.to_tensor(image))\n        mask = torch.as_tensor(np.array(mask), dtype=torch.long)",
+        "detail": "src.train.train_unet",
+        "documentation": {}
+    },
+    {
+        "label": "SegmentationDataset",
+        "kind": 6,
+        "importPath": "src.train.train_unet",
+        "description": "src.train.train_unet",
+        "peekOfCode": "class SegmentationDataset(Dataset):\n    def __init__(self, images_dir, masks_dir, transform=None, use_mixup=False, use_cutmix=False):\n        self.images_dir = images_dir\n        self.masks_dir = masks_dir\n        self.transform = transform\n        self.use_mixup = use_mixup\n        self.use_cutmix = use_cutmix\n        image_files = [f for f in os.listdir(images_dir) if f.lower().endswith(('.jpg', '.png', '.jpeg'))]\n        mask_files = [f for f in os.listdir(masks_dir) if f.lower().endswith(('.jpg', '.png', '.jpeg'))]\n        image_bases = {os.path.splitext(f)[0]: f for f in image_files}",
+        "detail": "src.train.train_unet",
+        "documentation": {}
+    },
+    {
+        "label": "UNet",
+        "kind": 6,
+        "importPath": "src.train.train_unet",
+        "description": "src.train.train_unet",
+        "peekOfCode": "class UNet(nn.Module):\n    def __init__(self, in_channels=3, out_channels=4):\n        super(UNet, self).__init__()\n        def CBR(in_ch, out_ch):\n            return nn.Sequential(\n                nn.Conv2d(in_ch, out_ch, 3, padding=1),\n                nn.BatchNorm2d(out_ch),\n                nn.ReLU(inplace=True)\n            )\n        self.enc1 = nn.Sequential(CBR(in_channels, 64), CBR(64, 64))",
+        "detail": "src.train.train_unet",
+        "documentation": {}
+    },
+    {
+        "label": "evaluate_metrics",
+        "kind": 2,
+        "importPath": "src.train.train_unet",
+        "description": "src.train.train_unet",
+        "peekOfCode": "def evaluate_metrics(outputs, masks, n_classes=4):\n    preds = torch.argmax(torch.softmax(outputs, dim=1), dim=1)\n    preds_np = preds.cpu().numpy().flatten()\n    masks_np = masks.cpu().numpy().flatten()\n    ious, f1s, accs = [], [], []\n    for cls in range(1, n_classes):\n        pred_cls = preds_np == cls\n        true_cls = masks_np == cls\n        iou = np.logical_and(pred_cls, true_cls).sum() / np.logical_or(pred_cls, true_cls).sum() if np.logical_or(pred_cls, true_cls).sum() > 0 else 1.0\n        f1 = f1_score(true_cls, pred_cls, zero_division=1)",
+        "detail": "src.train.train_unet",
+        "documentation": {}
+    },
+    {
+        "label": "train_or_validate",
+        "kind": 2,
+        "importPath": "src.train.train_unet",
+        "description": "src.train.train_unet",
+        "peekOfCode": "def train_or_validate(model, dataloader, optimizer, criterion, device, n_classes, training=True):\n    model.train() if training else model.eval()\n    total_loss, total_metrics = 0.0, []\n    for i, (images, masks) in enumerate(tqdm(dataloader, desc=\"Treinando\" if training else \"Validando\")):\n        images, masks = images.to(device), masks.to(device)\n        if training:\n            optimizer.zero_grad()\n        with torch.set_grad_enabled(training):\n            outputs = model(images)\n            loss = criterion(outputs, masks)",
+        "detail": "src.train.train_unet",
+        "documentation": {}
+    },
+    {
+        "label": "save_confusion_matrix",
+        "kind": 2,
+        "importPath": "src.train.train_unet",
+        "description": "src.train.train_unet",
+        "peekOfCode": "def save_confusion_matrix(y_true, y_pred, classes, save_path):\n    disp = ConfusionMatrixDisplay(confusion_matrix=confusion_matrix(y_true, y_pred, labels=classes), display_labels=classes)\n    disp.plot(cmap=plt.cm.Blues)\n    plt.title(\"Matriz de Confusão\")\n    plt.savefig(save_path)\n    plt.close()\ndef save_roc_curve(y_true, y_probs, n_classes, save_path):\n    for i in range(n_classes):\n        fpr, tpr, _ = roc_curve((y_true == i).astype(int), y_probs[:, i])\n        plt.plot(fpr, tpr, label=f'Classe {i} (AUC = {auc(fpr, tpr):.2f})')",
+        "detail": "src.train.train_unet",
+        "documentation": {}
+    },
+    {
+        "label": "save_roc_curve",
+        "kind": 2,
+        "importPath": "src.train.train_unet",
+        "description": "src.train.train_unet",
+        "peekOfCode": "def save_roc_curve(y_true, y_probs, n_classes, save_path):\n    for i in range(n_classes):\n        fpr, tpr, _ = roc_curve((y_true == i).astype(int), y_probs[:, i])\n        plt.plot(fpr, tpr, label=f'Classe {i} (AUC = {auc(fpr, tpr):.2f})')\n    plt.plot([0, 1], [0, 1], 'k--')\n    plt.xlabel(\"FPR\"); plt.ylabel(\"TPR\"); plt.title(\"Curva ROC\"); plt.legend()\n    plt.savefig(save_path)\n    plt.close()\ndef save_sankey(y_true, y_pred, save_path):\n    labels = [f'Classe {i}' for i in sorted(set(y_true + y_pred))]",
+        "detail": "src.train.train_unet",
+        "documentation": {}
+    },
+    {
+        "label": "save_sankey",
+        "kind": 2,
+        "importPath": "src.train.train_unet",
+        "description": "src.train.train_unet",
+        "peekOfCode": "def save_sankey(y_true, y_pred, save_path):\n    labels = [f'Classe {i}' for i in sorted(set(y_true + y_pred))]\n    cm = confusion_matrix(y_true, y_pred)\n    source, target, value = [], [], []\n    for i, row in enumerate(cm):\n        for j, val in enumerate(row):\n            source.append(i)\n            target.append(j + len(cm))\n            value.append(val)\n    fig = go.Figure(data=[go.Sankey(node=dict(label=labels + labels), link=dict(source=source, target=target, value=value))])",
+        "detail": "src.train.train_unet",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "src.train.train_unet",
+        "description": "src.train.train_unet",
+        "peekOfCode": "def main():\n    os.makedirs(\"metrics\", exist_ok=True)\n    device = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n    images_dir = \"../models/model_unet_freedom/data/images/thermal_images\"\n    masks_dir = \"../models/model_unet_freedom/data/images/output\"\n    transform_train = JointTransform()\n    transform_val = ValTransform()\n    dataset = SegmentationDataset(images_dir, masks_dir, transform=transform_train, use_mixup=True, use_cutmix=True)\n    train_size = int(0.8 * len(dataset))\n    train_set, val_set = random_split(dataset, [train_size, len(dataset) - train_size])",
+        "detail": "src.train.train_unet",
+        "documentation": {}
+    },
+    {
+        "label": "get_language",
+        "kind": 2,
+        "importPath": "install",
+        "description": "install",
+        "peekOfCode": "def get_language():\n    lang = locale.getdefaultlocale()[0]\n    if lang and \"pt\" in lang.lower():\n        return \"pt\"\n    return \"en\"\nLANG = get_language()\nTEXTS = {\n    \"title\": {\"pt\": \"Biotério Forte\", \"en\": \"Installer\"},\n    \"choose\": {\"pt\": \"Escolha o tipo de instalação:\", \"en\": \"Choose installation type:\"},\n    \"btn_docker\": {\"pt\": \"Instalar COM Docker\", \"en\": \"Install WITH Docker\"},",
+        "detail": "install",
+        "documentation": {}
+    },
+    {
+        "label": "finish_install",
+        "kind": 2,
+        "importPath": "install",
+        "description": "install",
+        "peekOfCode": "def finish_install():\n    messagebox.showinfo(\"✅\", TEXTS[\"success\"][LANG])\n    install_window.quit()    # Sai do mainloop\n    install_window.destroy() # Fecha a janela\ndef run_script(script_name):\n    full_cmd = [\"bash\", script_name] if not IS_WINDOWS else [script_name]\n    try:\n        process = subprocess.Popen(\n            full_cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, shell=IS_WINDOWS\n        )",
+        "detail": "install",
+        "documentation": {}
+    },
+    {
+        "label": "run_script",
+        "kind": 2,
+        "importPath": "install",
+        "description": "install",
+        "peekOfCode": "def run_script(script_name):\n    full_cmd = [\"bash\", script_name] if not IS_WINDOWS else [script_name]\n    try:\n        process = subprocess.Popen(\n            full_cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, shell=IS_WINDOWS\n        )\n        # Limpar log na segunda tela\n        install_window.log_area.delete(\"1.0\", tk.END)\n        for line in process.stdout:\n            install_window.log_area.insert(tk.END, line)",
+        "detail": "install",
+        "documentation": {}
+    },
+    {
+        "label": "open_website",
+        "kind": 2,
+        "importPath": "install",
+        "description": "install",
+        "peekOfCode": "def open_website(event=None):\n    webbrowser.open_new(\"https://www.thotiacorp.com.br/\")\ndef show_license_text(text_widget):\n    license_text = (\n        \"📜 Biotério Forte: LICENÇA DE USO DE DADOS\\n\\n\"\n        \"Este conjunto de dados está licenciado sob a Creative Commons Atribuição-NãoComercial 4.0 Internacional (CC BY-NC 4.0).\\n\\n\"\n        \"✅ Gratuito para uso não comercial com atribuição ao autor original.\\n\"\n        \"❌ O uso comercial não é permitido sem autorização prévia.\\n\\n\"\n        \"Autor: Ronnei Borges\\n\"\n        \"Fonte: Kaggle - https://www.kaggle.com/datasets/ronneiborges/thermal-images-of-rats-mice-for-segmentation\\n\\n\"",
+        "detail": "install",
+        "documentation": {}
+    },
+    {
+        "label": "show_license_text",
+        "kind": 2,
+        "importPath": "install",
+        "description": "install",
+        "peekOfCode": "def show_license_text(text_widget):\n    license_text = (\n        \"📜 Biotério Forte: LICENÇA DE USO DE DADOS\\n\\n\"\n        \"Este conjunto de dados está licenciado sob a Creative Commons Atribuição-NãoComercial 4.0 Internacional (CC BY-NC 4.0).\\n\\n\"\n        \"✅ Gratuito para uso não comercial com atribuição ao autor original.\\n\"\n        \"❌ O uso comercial não é permitido sem autorização prévia.\\n\\n\"\n        \"Autor: Ronnei Borges\\n\"\n        \"Fonte: Kaggle - https://www.kaggle.com/datasets/ronneiborges/thermal-images-of-rats-mice-for-segmentation\\n\\n\"\n        \"Mais detalhes sobre a licença:\\n\"\n        \"https://creativecommons.org/licenses/by-nc/4.0/deed.pt\\n\"",
+        "detail": "install",
+        "documentation": {}
+    },
+    {
+        "label": "toggle_continue",
+        "kind": 2,
+        "importPath": "install",
+        "description": "install",
+        "peekOfCode": "def toggle_continue():\n    btn_continue.config(state=tk.NORMAL if license_accepted.get() else tk.DISABLED)\nchk_license = tk.Checkbutton(\n    frame_license, text=TEXTS[\"accept_license\"][LANG], variable=license_accepted,\n    command=toggle_continue, font=(\"Segoe UI\", 10)\n)\nchk_license.pack(pady=(10, 10))\ndef open_install_window():\n    license_window.destroy()\n    open_install_screen()",
+        "detail": "install",
+        "documentation": {}
+    },
+    {
+        "label": "open_install_window",
+        "kind": 2,
+        "importPath": "install",
+        "description": "install",
+        "peekOfCode": "def open_install_window():\n    license_window.destroy()\n    open_install_screen()\nbtn_continue = tk.Button(\n    frame_license, text=TEXTS[\"continue\"][LANG], state=tk.DISABLED,\n    command=open_install_window,\n    bg=\"#2196F3\", fg=\"white\", activebackground=\"#1e88e5\",\n    font=(\"Segoe UI\", 11), width=12, bd=0, relief=\"ridge\", cursor=\"hand2\"\n)\nbtn_continue.pack(pady=10)",
+        "detail": "install",
+        "documentation": {}
+    },
+    {
+        "label": "animate_installing",
+        "kind": 2,
+        "importPath": "install",
+        "description": "install",
+        "peekOfCode": "def animate_installing(label, dots=0):\n    if getattr(label, \"stop_animation\", False):\n        label.config(text=\"\")\n        return\n    dots = (dots + 1) % 4\n    label.config(text=\"Instalando\" + \".\" * dots)\n    label.after(500, animate_installing, label, dots)\ndef run_script_threaded(script_name, label):\n    def target():\n        try:",
+        "detail": "install",
+        "documentation": {}
+    },
+    {
+        "label": "run_script_threaded",
+        "kind": 2,
+        "importPath": "install",
+        "description": "install",
+        "peekOfCode": "def run_script_threaded(script_name, label):\n    def target():\n        try:\n            full_cmd = [\"bash\", script_name] if not IS_WINDOWS else [script_name]\n            process = subprocess.Popen(\n                full_cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, shell=IS_WINDOWS\n            )\n            install_window.log_area.delete(\"1.0\", tk.END)\n            captured_output = []\n            for line in process.stdout:",
+        "detail": "install",
+        "documentation": {}
+    },
+    {
+        "label": "run_full_install",
+        "kind": 2,
+        "importPath": "install",
+        "description": "install",
+        "peekOfCode": "def run_full_install():\n    script_path = os.path.join(\"src\", \"install\", \"install_nodocker.bat\")\n    run_script_threaded(script_path, install_window.install_label)\ndef open_install_screen():\n    global install_window\n    install_window = tk.Tk()\n    install_window.title(TEXTS[\"title\"][LANG])\n    install_window.geometry(\"520x500\")  # mais alto para caber tudo\n    install_window.resizable(False, False)\n    if IS_WINDOWS:",
+        "detail": "install",
+        "documentation": {}
+    },
+    {
+        "label": "open_install_screen",
+        "kind": 2,
+        "importPath": "install",
+        "description": "install",
+        "peekOfCode": "def open_install_screen():\n    global install_window\n    install_window = tk.Tk()\n    install_window.title(TEXTS[\"title\"][LANG])\n    install_window.geometry(\"520x500\")  # mais alto para caber tudo\n    install_window.resizable(False, False)\n    if IS_WINDOWS:\n        try:\n            install_window.iconbitmap(\"icon.ico\")\n        except Exception as e:",
+        "detail": "install",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALL_FLAG",
+        "kind": 5,
+        "importPath": "install",
+        "description": "install",
+        "peekOfCode": "INSTALL_FLAG = \"installed.flag\"\nIS_WINDOWS = platform.system() == \"Windows\"\ndef get_language():\n    lang = locale.getdefaultlocale()[0]\n    if lang and \"pt\" in lang.lower():\n        return \"pt\"\n    return \"en\"\nLANG = get_language()\nTEXTS = {\n    \"title\": {\"pt\": \"Biotério Forte\", \"en\": \"Installer\"},",
+        "detail": "install",
+        "documentation": {}
+    },
+    {
+        "label": "IS_WINDOWS",
+        "kind": 5,
+        "importPath": "install",
+        "description": "install",
+        "peekOfCode": "IS_WINDOWS = platform.system() == \"Windows\"\ndef get_language():\n    lang = locale.getdefaultlocale()[0]\n    if lang and \"pt\" in lang.lower():\n        return \"pt\"\n    return \"en\"\nLANG = get_language()\nTEXTS = {\n    \"title\": {\"pt\": \"Biotério Forte\", \"en\": \"Installer\"},\n    \"choose\": {\"pt\": \"Escolha o tipo de instalação:\", \"en\": \"Choose installation type:\"},",
+        "detail": "install",
+        "documentation": {}
+    },
+    {
+        "label": "LANG",
+        "kind": 5,
+        "importPath": "install",
+        "description": "install",
+        "peekOfCode": "LANG = get_language()\nTEXTS = {\n    \"title\": {\"pt\": \"Biotério Forte\", \"en\": \"Installer\"},\n    \"choose\": {\"pt\": \"Escolha o tipo de instalação:\", \"en\": \"Choose installation type:\"},\n    \"btn_docker\": {\"pt\": \"Instalar COM Docker\", \"en\": \"Install WITH Docker\"},\n    \"btn_nodocker\": {\"pt\": \"Instalar SEM Docker\", \"en\": \"Install WITHOUT Docker\"},\n    \"already_installed\": {\"pt\": \"O sistema já foi instalado.\", \"en\": \"System is already installed.\"},\n    \"success\": {\"pt\": \"Instalação concluída com sucesso!\", \"en\": \"Installation completed successfully!\"},\n    \"error\": {\"pt\": \"Erro ao executar o instalador.\", \"en\": \"Error during installation.\"},\n    \"exit\": {\"pt\": \"Sair\", \"en\": \"Exit\"},",
+        "detail": "install",
+        "documentation": {}
+    },
+    {
+        "label": "TEXTS",
+        "kind": 5,
+        "importPath": "install",
+        "description": "install",
+        "peekOfCode": "TEXTS = {\n    \"title\": {\"pt\": \"Biotério Forte\", \"en\": \"Installer\"},\n    \"choose\": {\"pt\": \"Escolha o tipo de instalação:\", \"en\": \"Choose installation type:\"},\n    \"btn_docker\": {\"pt\": \"Instalar COM Docker\", \"en\": \"Install WITH Docker\"},\n    \"btn_nodocker\": {\"pt\": \"Instalar SEM Docker\", \"en\": \"Install WITHOUT Docker\"},\n    \"already_installed\": {\"pt\": \"O sistema já foi instalado.\", \"en\": \"System is already installed.\"},\n    \"success\": {\"pt\": \"Instalação concluída com sucesso!\", \"en\": \"Installation completed successfully!\"},\n    \"error\": {\"pt\": \"Erro ao executar o instalador.\", \"en\": \"Error during installation.\"},\n    \"exit\": {\"pt\": \"Sair\", \"en\": \"Exit\"},\n    \"website\": {\"pt\": \"Visite nosso site\", \"en\": \"Visit our website\"},",
+        "detail": "install",
+        "documentation": {}
+    },
+    {
+        "label": "license_window",
+        "kind": 5,
+        "importPath": "install",
+        "description": "install",
+        "peekOfCode": "license_window = tk.Tk()\nlicense_window.title(TEXTS[\"title\"][LANG])\nlicense_window.geometry(\"520x440\")\nlicense_window.resizable(False, False)\nif IS_WINDOWS:\n    try:\n        license_window.iconbitmap(\"icon.ico\")  # Ícone na primeira tela\n    except Exception as e:\n        print(f\"Erro ao carregar ícone na tela de licença: {e}\")\nframe_license = tk.Frame(license_window, padx=20, pady=15)",
+        "detail": "install",
+        "documentation": {}
+    },
+    {
+        "label": "frame_license",
+        "kind": 5,
+        "importPath": "install",
+        "description": "install",
+        "peekOfCode": "frame_license = tk.Frame(license_window, padx=20, pady=15)\nframe_license.pack(expand=True, fill=tk.BOTH)\nlabel_license = tk.Label(frame_license, text=TEXTS[\"license_title\"][LANG], font=(\"Segoe UI\", 14, \"bold\"))\nlabel_license.pack(pady=(0, 15))\nlicense_text_area = scrolledtext.ScrolledText(frame_license, width=60, height=15, font=(\"Consolas\", 10))\nlicense_text_area.pack()\nshow_license_text(license_text_area)\nlicense_accepted = tk.BooleanVar(value=False)\ndef toggle_continue():\n    btn_continue.config(state=tk.NORMAL if license_accepted.get() else tk.DISABLED)",
+        "detail": "install",
+        "documentation": {}
+    },
+    {
+        "label": "label_license",
+        "kind": 5,
+        "importPath": "install",
+        "description": "install",
+        "peekOfCode": "label_license = tk.Label(frame_license, text=TEXTS[\"license_title\"][LANG], font=(\"Segoe UI\", 14, \"bold\"))\nlabel_license.pack(pady=(0, 15))\nlicense_text_area = scrolledtext.ScrolledText(frame_license, width=60, height=15, font=(\"Consolas\", 10))\nlicense_text_area.pack()\nshow_license_text(license_text_area)\nlicense_accepted = tk.BooleanVar(value=False)\ndef toggle_continue():\n    btn_continue.config(state=tk.NORMAL if license_accepted.get() else tk.DISABLED)\nchk_license = tk.Checkbutton(\n    frame_license, text=TEXTS[\"accept_license\"][LANG], variable=license_accepted,",
+        "detail": "install",
+        "documentation": {}
+    },
+    {
+        "label": "license_text_area",
+        "kind": 5,
+        "importPath": "install",
+        "description": "install",
+        "peekOfCode": "license_text_area = scrolledtext.ScrolledText(frame_license, width=60, height=15, font=(\"Consolas\", 10))\nlicense_text_area.pack()\nshow_license_text(license_text_area)\nlicense_accepted = tk.BooleanVar(value=False)\ndef toggle_continue():\n    btn_continue.config(state=tk.NORMAL if license_accepted.get() else tk.DISABLED)\nchk_license = tk.Checkbutton(\n    frame_license, text=TEXTS[\"accept_license\"][LANG], variable=license_accepted,\n    command=toggle_continue, font=(\"Segoe UI\", 10)\n)",
+        "detail": "install",
+        "documentation": {}
+    },
+    {
+        "label": "license_accepted",
+        "kind": 5,
+        "importPath": "install",
+        "description": "install",
+        "peekOfCode": "license_accepted = tk.BooleanVar(value=False)\ndef toggle_continue():\n    btn_continue.config(state=tk.NORMAL if license_accepted.get() else tk.DISABLED)\nchk_license = tk.Checkbutton(\n    frame_license, text=TEXTS[\"accept_license\"][LANG], variable=license_accepted,\n    command=toggle_continue, font=(\"Segoe UI\", 10)\n)\nchk_license.pack(pady=(10, 10))\ndef open_install_window():\n    license_window.destroy()",
+        "detail": "install",
+        "documentation": {}
+    },
+    {
+        "label": "chk_license",
+        "kind": 5,
+        "importPath": "install",
+        "description": "install",
+        "peekOfCode": "chk_license = tk.Checkbutton(\n    frame_license, text=TEXTS[\"accept_license\"][LANG], variable=license_accepted,\n    command=toggle_continue, font=(\"Segoe UI\", 10)\n)\nchk_license.pack(pady=(10, 10))\ndef open_install_window():\n    license_window.destroy()\n    open_install_screen()\nbtn_continue = tk.Button(\n    frame_license, text=TEXTS[\"continue\"][LANG], state=tk.DISABLED,",
+        "detail": "install",
+        "documentation": {}
+    },
+    {
+        "label": "btn_continue",
+        "kind": 5,
+        "importPath": "install",
+        "description": "install",
+        "peekOfCode": "btn_continue = tk.Button(\n    frame_license, text=TEXTS[\"continue\"][LANG], state=tk.DISABLED,\n    command=open_install_window,\n    bg=\"#2196F3\", fg=\"white\", activebackground=\"#1e88e5\",\n    font=(\"Segoe UI\", 11), width=12, bd=0, relief=\"ridge\", cursor=\"hand2\"\n)\nbtn_continue.pack(pady=10)\nlink = tk.Label(\n    frame_license, text=TEXTS[\"website\"][LANG] + \" →\",\n    font=(\"Segoe UI\", 10, \"underline\"), fg=\"#0645AD\", cursor=\"hand2\"",
+        "detail": "install",
+        "documentation": {}
+    },
+    {
+        "label": "link",
+        "kind": 5,
+        "importPath": "install",
+        "description": "install",
+        "peekOfCode": "link = tk.Label(\n    frame_license, text=TEXTS[\"website\"][LANG] + \" →\",\n    font=(\"Segoe UI\", 10, \"underline\"), fg=\"#0645AD\", cursor=\"hand2\"\n)\nlink.pack(side=tk.BOTTOM, pady=8)\nlink.bind(\"<Button-1>\", open_website)\n# --- TELA 2: Instalação ---\ndef animate_installing(label, dots=0):\n    if getattr(label, \"stop_animation\", False):\n        label.config(text=\"\")",
+        "detail": "install",
+        "documentation": {}
+    }
+]

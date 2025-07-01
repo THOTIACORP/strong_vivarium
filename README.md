@@ -637,7 +637,29 @@ model_freedon = unet_checkpoint_epoch_9.pth :
 | `val_loss`     | 0.0963       | **0.0825** ✅ |
 | `val_accuracy` | 0.9970       | 0.9969       |
 
+<br>
+
+2. To validate the latest model of free-ranging animals, we used data augmentation techniques and, due to an oversight, we missed the validation, which resulted in a fake validation with augmented data. We intend to go through it again to validate both ways, with and without fake data. This is important for the health area or any other area. In short, real data, real validations.
+
+<br>
+model_freedon = unet_checkpoint_epoch_7.pth :
+- Train : 1.664 imagens
+- Test augmented data: 4.560.267 amostra
+
+| Métrica        |  Época 7      | Época 10     |
+| -------------- | ---------------- | ----------------- |
+| Loss           | **0.0304**       | 🔽 0.0177 (menor) |
+| IoU Mean       | **0.9415**       | 0.9379            |
+| F1 Mean        | **0.9697**       | 0.9678            |
+| Pixel Accuracy | 0.99824          | 0.99817           |
+| Mean Accuracy  | **0.99900**      | 0.99893           |
+
+
+![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F12221778%2Ff2f337c83ee8e2fdd949fce19aebda5e%2Fevolucao_metricas_modelo.png?generation=1751379337003377&alt=media)
+
 <br><br>
+
+
 model_hounsing:
 | Métrica        | Época    | Época    |
 | -------------- | -------- | -------- |

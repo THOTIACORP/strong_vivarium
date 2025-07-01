@@ -18,16 +18,19 @@ CLASS_COLORS = [
     (0,   0,   255),  # 3: cauda
 ]
 
+
 def create_brush_cursor(size):
     diameter = size * 2
     pix = QPixmap(diameter+1, diameter+1)
     pix.fill(Qt.transparent)
     p = QPainter(pix)
-    pen = QPen(Qt.black); pen.setWidth(2)
+    pen = QPen(Qt.black)
+    pen.setWidth(2)
     p.setPen(pen)
     p.drawEllipse(0, 0, diameter, diameter)
     p.end()
     return QCursor(pix)
+
 
 class MaskEditor(QWidget):
     def __init__(self):
@@ -88,7 +91,8 @@ class MaskEditor(QWidget):
 
         # --- Troca de classes ---
         repl = QHBoxLayout()
-        self.cb_from = QComboBox(); self.cb_to = QComboBox()
+        self.cb_from = QComboBox()
+        self.cb_to = QComboBox()
         for i in range(NUM_CLASSES + 1):
             self.cb_from.addItem(f"{i}")
             self.cb_to.addItem(f"{i}")
@@ -108,37 +112,51 @@ class MaskEditor(QWidget):
 
         # --- Navegação e ações ---
         nav = QHBoxLayout()
-        prev = QPushButton("← Anterior"); prev.clicked.connect(self.prev_image)
-        nxt  = QPushButton("Próxima →"); nxt.clicked.connect(self.next_image)
-        sv   = QPushButton("💾 Salvar"); sv.clicked.connect(self.save_mask)
-        uz   = QPushButton("↶ Desfazer"); uz.clicked.connect(self.undo)
-        lb   = QPushButton("🔒 Trava Fundo"); lb.setCheckable(True)
+        prev = QPushButton("← Anterior")
+        prev.clicked.connect(self.prev_image)
+        nxt = QPushButton("Próxima →")
+        nxt.clicked.connect(self.next_image)
+        sv = QPushButton("💾 Salvar")
+        sv.clicked.connect(self.save_mask)
+        uz = QPushButton("↶ Desfazer")
+        uz.clicked.connect(self.undo)
+        lb = QPushButton("🔒 Trava Fundo")
+        lb.setCheckable(True)
         lb.clicked.connect(self.toggle_lock)
-        nav.addWidget(prev); nav.addWidget(nxt)
-        nav.addWidget(sv); nav.addWidget(uz); nav.addWidget(lb)
+        nav.addWidget(prev)
+        nav.addWidget(nxt)
+        nav.addWidget(sv)
+        nav.addWidget(uz)
+        nav.addWidget(lb)
         main.addLayout(nav)
 
         self.setLayout(main)
         self.setCursor(create_brush_cursor(self.brush_size))
 
-             # --- Atalhos de teclado para navegação ---
+        # --- Atalhos de teclado para navegação ---
         shortcut_prev = QShortcut(QKeySequence("A"), self)
         shortcut_prev.activated.connect(self.prev_image)
 
         shortcut_next = QShortcut(QKeySequence("D"), self)
         shortcut_next.activated.connect(self.next_image)
 
-            # --- Atalhos de teclado para seleção de classe (0 a NUM_CLASSES) ---
+        # --- Atalhos de teclado para seleção de classe (0 a NUM_CLASSES) ---
         for i in range(NUM_CLASSES + 1):
             shortcut = QShortcut(QKeySequence(str(i)), self)
             shortcut.activated.connect(lambda i=i: self.set_class(i))
+
+        # --- Botão para criar máscara (inicialmente oculto) ---
+        self.btn_create_mask = QPushButton("➕ Criar Máscara")
+        self.btn_create_mask.clicked.connect(self.create_empty_mask)
+        self.btn_create_mask.hide()  # esconde por padrão
+        main.addWidget(self.btn_create_mask)
 
     def browse_input(self):
         d = QFileDialog.getExistingDirectory(self, "Pasta Imagens")
         if d:
             self.input_folder.setText(d)
             self.img_files = sorted([f for f in os.listdir(d)
-                                     if f.lower().endswith(('.png','.jpg','.jpeg'))])
+                                     if f.lower().endswith(('.png', '.jpg', '.jpeg'))])
             self.index = 0
             self.load_and_show()
 
@@ -152,10 +170,16 @@ class MaskEditor(QWidget):
         if d:
             self.save_folder.setText(d)
 
+    def create_empty_mask(self):
+        self.mask = np.zeros((512, 512), np.uint8)
+        self.update_display()
+        self.btn_create_mask.hide()
+
     def load_by_name(self):
         name = self.image_name.text().strip()
-        if not name: return
-        for i,f in enumerate(self.img_files):
+        if not name:
+            return
+        for i, f in enumerate(self.img_files):
             if os.path.splitext(f)[0] == name:
                 self.index = i
                 self.load_and_show()
@@ -170,50 +194,70 @@ class MaskEditor(QWidget):
         self.setCursor(create_brush_cursor(v))
 
     def load_and_show(self):
-        if not self.img_files: return
-        # carrega imagem
+        if not self.img_files:
+            return
+
         ip = os.path.join(self.input_folder.text(), self.img_files[self.index])
-        self.img = cv2.resize(cv2.imread(ip), (512,512))
-        # carrega máscara
+        self.img = cv2.resize(cv2.imread(ip), (512, 512))
+
         bn = os.path.splitext(self.img_files[self.index])[0]
-        mp = os.path.join(self.mask_folder.text(), bn+".png")
+        mp = os.path.join(self.mask_folder.text(), bn + ".png")
         mr = cv2.imread(mp, cv2.IMREAD_GRAYSCALE)
-        self.mask = (np.zeros((512,512),np.uint8) if mr is None
-                     else cv2.resize(mr,(512,512),interpolation=cv2.INTER_NEAREST))
+
+        if mr is None:
+            self.mask = None  # <- NÃO CRIA a máscara ainda
+            self.btn_create_mask.show()
+        else:
+            self.mask = cv2.resize(
+                mr, (512, 512), interpolation=cv2.INTER_NEAREST)
+            self.btn_create_mask.hide()
+
         self.mask_history.clear()
         self.update_display()
 
     def update_display(self):
-        o = np.zeros_like(self.img, np.uint8)
-        for c in range(NUM_CLASSES+1):
-            o[self.mask==c] = CLASS_COLORS[c]
-        blend = cv2.addWeighted(self.img,0.6,o,0.4,0)
-        rgb = cv2.cvtColor(blend, cv2.COLOR_BGR2RGB)
-        h,w,ch = rgb.shape; bpl=ch*w
-        qt = QImage(rgb.data,w,h,bpl,QImage.Format_RGB888)
+        if self.mask is None:
+            rgb = cv2.cvtColor(self.img, cv2.COLOR_BGR2RGB)
+        else:
+            o = np.zeros_like(self.img, np.uint8)
+            for c in range(NUM_CLASSES+1):
+                o[self.mask == c] = CLASS_COLORS[c]
+            blend = cv2.addWeighted(self.img, 0.6, o, 0.4, 0)
+            rgb = cv2.cvtColor(blend, cv2.COLOR_BGR2RGB)
+
+        h, w, ch = rgb.shape
+        bpl = ch * w
+        qt = QImage(rgb.data, w, h, bpl, QImage.Format_RGB888)
         self.lbl.setPixmap(QPixmap.fromImage(qt))
 
     def mousePressEvent(self, e):
-        if e.button()==Qt.LeftButton: self.drawing=True; self.paint(e.pos())
+        if e.button() == Qt.LeftButton:
+            self.drawing = True
+            self.paint(e.pos())
 
     def mouseMoveEvent(self, e):
-        if self.drawing: self.paint(e.pos())
+        if self.drawing:
+            self.paint(e.pos())
 
     def mouseReleaseEvent(self, e):
-        if e.button()==Qt.LeftButton: self.drawing=False
+        if e.button() == Qt.LeftButton:
+            self.drawing = False
 
     def paint(self, pos):
-        x = pos.x()-self.lbl.pos().x(); y = pos.y()-self.lbl.pos().y()
-        if 0<=x<512 and 0<=y<512:
+        x = pos.x()-self.lbl.pos().x()
+        y = pos.y()-self.lbl.pos().y()
+        if 0 <= x < 512 and 0 <= y < 512:
             self.mask_history.append(self.mask.copy())
-            if len(self.mask_history)>20: self.mask_history.pop(0)
+            if len(self.mask_history) > 20:
+                self.mask_history.pop(0)
             if self.lock_background:
-                Y,X = np.ogrid[:512,:512]
+                Y, X = np.ogrid[:512, :512]
                 d = (X-x)**2+(Y-y)**2
-                m = d<=self.brush_size**2
-                self.mask[m & (self.mask!=0)] = self.current_class
+                m = d <= self.brush_size**2
+                self.mask[m & (self.mask != 0)] = self.current_class
             else:
-                cv2.circle(self.mask,(x,y),self.brush_size,self.current_class,-1)
+                cv2.circle(self.mask, (x, y), self.brush_size,
+                           self.current_class, -1)
             self.update_display()
 
     def undo(self):
@@ -226,19 +270,22 @@ class MaskEditor(QWidget):
 
     def prev_image(self):
         if self.index > 0:
-            self.save_mask()  # salva a máscara atual
+            if self.mask is not None:
+                self.save_mask()
             self.index -= 1
             self.load_and_show()
 
     def next_image(self):
         if self.index < len(self.img_files) - 1:
-            self.save_mask()  # salva a máscara atual
+            if self.mask is not None:
+                self.save_mask()
             self.index += 1
             self.load_and_show()
 
     def save_mask(self):
         sf = self.save_folder.text().strip()
-        if not sf: return
+        if not sf:
+            return
         os.makedirs(sf, exist_ok=True)
         bn = os.path.splitext(self.img_files[self.index])[0]
         fp = os.path.join(sf, f"{bn}.png")
@@ -248,12 +295,16 @@ class MaskEditor(QWidget):
     def replace_class(self):
         fc = self.cb_from.currentIndex()
         tc = self.cb_to.currentIndex()
-        if fc==tc: return
+        if fc == tc:
+            return
         self.mask_history.append(self.mask.copy())
-        self.mask[self.mask==fc] = tc
+        self.mask[self.mask == fc] = tc
         self.update_display()
+
+
 def get_widget():
     return MaskEditor()
+
 
 if __name__ == "__main__":
     import sys
@@ -262,4 +313,3 @@ if __name__ == "__main__":
     window = MaskEditor()
     window.show()
     sys.exit(app.exec_())
-
